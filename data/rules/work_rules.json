@@ -1,0 +1,556 @@
+{
+  "version": "2026-10-23",
+  "status_note": "Built from DHCS ACWDL 25-30 and 25-31 (both marked 'preliminary guidance and is subject to change') and the DHCS H.R.1 Implementation Plan (Jan 29, 2026). Neither ACWDL reflects the federal IFR (June 2026) or any later MEDIL. Code must treat every item in open_questions as unresolved.",
+  "jurisdiction": "California (Medi-Cal); county-administered. App focus: Alameda County.",
+  "effective_date": "2027-01-01",
+  "effective_date_source": {"doc": "acwdl-25-30", "page": 2, "quote": "Effective January 1, 2027, individuals enrolled in the MAGI New Adult Group must comply with federal work or community engagement requirements"},
+  "existing_member_start": {
+    "rule": "Members whose application date is on or before 2026-12-31 are not assessed until their next scheduled renewal in 2027. Applications on/after 2027-01-01 are assessed at application.",
+    "source": {"doc": "acwdl-25-30", "page": 2, "quote": "Counties will not assess work and community engagement requirements for MAGI New Adult Group members with an application date of December 31, 2026, or prior"}
+  },
+  "age_range": [19, 64],
+  "age_range_source": {"doc": "acwdl-25-30", "page": 1, "quote": "extends Medicaid eligibility to all adults aged 19 to 64"},
+  "aid_codes": ["M1"],
+  "aid_codes_source": {"doc": "acwdl-25-30", "page": 1, "quote": "The MAGI New Adult Group (i.e. aid code M1)"},
+  "applies_regardless_of_immigration_status": true,
+  "applies_regardless_of_immigration_status_source": {"doc": "acwdl-25-30", "page": 2, "quote": "only apply to applicants and members enrolled in Medi-Cal under the MAGI New Adult Group, regardless of immigration status"},
+  "excluded_populations": {
+    "summary": "Not subject at all: anyone in a coverage group other than the MAGI New Adult Group (Non-MAGI, children's group, pregnancy group) and anyone on restricted-scope (emergency) Medi-Cal or pregnancy services.",
+    "source": {"doc": "acwdl-25-30", "page": 2, "quote": "individuals eligible for restricted-scope (emergency) Medi-Cal or pregnancy services are also not subject to work and community engagement requirements"}
+  },
+  "individual_basis": true,
+  "individual_basis_source": {"doc": "acwdl-25-30", "page": 3, "quote": "one individual’s compliance cannot be used to satisfy another’s requirement"},
+
+  "federal_minimum_wage_hourly": 7.25,
+  "income_threshold_monthly": 580,
+  "income_threshold_source": {"doc": "acwdl-25-30", "page": 7, "quote": "federal minimum wage (currently $7.25 per hour x 80 hours). Currently, this amount is $580 a month."},
+  "income_threshold_test": {"doc": "acwdl-25-30", "page": 7, "quote": "An individual’s total gross income for a month must meet or exceed this amount"},
+  "hours_threshold_monthly": 80,
+  "hours_threshold_source": {"doc": "acwdl-25-30", "page": 7, "quote": "At least 80 hours of work Have a job (working at least 80 hours a month) including self-employment."},
+
+  "qualifying_activities": [
+    {
+      "id": "income",
+      "label_en": "Earned at least $580 in the month",
+      "label_es": "Ganó al menos $580 en el mes",
+      "measure": "gross_income_usd",
+      "monthly_minimum": 580,
+      "source": {"doc": "acwdl-25-30", "page": 7, "quote": "An individual’s total gross income for a month must meet or exceed this amount"}
+    },
+    {
+      "id": "income_average_6mo",
+      "label_en": "Income goes up and down, but averaged at least $580 a month over the last 6 months",
+      "label_es": "Sus ingresos suben y bajan, pero el promedio de los últimos 6 meses fue de al menos $580 al mes",
+      "measure": "gross_income_usd_6mo_average",
+      "monthly_minimum": 580,
+      "averaging_months": 6,
+      "note": "ACWDL 25-30 says 'fluctuates'; Implementation Plan p11 says 'Seasonal employment'. See open_questions.fluctuating_vs_seasonal.",
+      "source": {"doc": "acwdl-25-30", "page": 7, "quote": "An individual whose gross income (including earned income, unemployment benefits, State Disability Insurance, retirement income, dividends, etc.)"},
+      "source_2": {"doc": "acwdl-25-30", "page": 7, "quote": "fluctuates has an average monthly income over the preceding 6 months that meets or exceeds this amount."}
+    },
+    {
+      "id": "work",
+      "label_en": "Worked at least 80 hours (a job or self-employment, like driving)",
+      "label_es": "Trabajó al menos 80 horas (en un empleo o por su cuenta, como manejar)",
+      "measure": "hours",
+      "monthly_minimum": 80,
+      "includes_self_employment": true,
+      "source": {"doc": "acwdl-25-30", "page": 7, "quote": "Have a job (working at least 80 hours a month) including self-employment."}
+    },
+    {
+      "id": "work_program",
+      "label_en": "At least 80 hours in a job training program",
+      "label_es": "Al menos 80 horas en un programa de capacitación para el trabajo",
+      "measure": "hours",
+      "monthly_minimum": 80,
+      "definition_pending": true,
+      "source": {"doc": "acwdl-25-30", "page": 7, "quote": "At least 80 hours of work program Be in a job training program."}
+    },
+    {
+      "id": "community_service",
+      "label_en": "At least 80 hours of community service or volunteer work",
+      "label_es": "Al menos 80 horas de servicio comunitario o trabajo voluntario",
+      "measure": "hours",
+      "monthly_minimum": 80,
+      "definition_pending": true,
+      "source": {"doc": "acwdl-25-30", "page": 7, "quote": "At least 80 hours of community service Do community service or volunteer work."}
+    },
+    {
+      "id": "education_half_time",
+      "label_en": "Going to school at least half-time (college, trade school, GED/HSET, or adult literacy)",
+      "label_es": "Estudia por lo menos medio tiempo (colegio comunitario, universidad, escuela de oficios, GED/HSET o alfabetización para adultos)",
+      "measure": "enrollment_status",
+      "monthly_minimum": "half_time",
+      "eligible_programs": ["institution of higher education (community college, state college, public or private university)", "career and technical education", "GED or HSET preparation", "adult literacy program"],
+      "note": "Table on p7 says 'part-time or full-time'; p10 and Implementation Plan p11 say 'at least half-time'. Use half-time as the stricter reading.",
+      "source": {"doc": "acwdl-25-30", "page": 10, "quote": "enrollment in an educational program for at least half-time or more"},
+      "source_2": {"doc": "dhcs-hr1-implementation-plan", "page": 11, "quote": "Enroll at least half-time in an educational program;"}
+    },
+    {
+      "id": "combination",
+      "label_en": "A mix of work, job training, volunteering, and school adding up to 80 hours",
+      "label_es": "Una combinación de trabajo, capacitación, voluntariado y escuela que sume 80 horas",
+      "measure": "hours",
+      "monthly_minimum": 80,
+      "components": ["work", "work_program", "community_service", "education_half_time"],
+      "source": {"doc": "acwdl-25-30", "page": 8, "quote": "At least 80 hours of combined work, work program, community service, or school Do a mix of the things above"}
+    }
+  ],
+  "combinable": true,
+  "combinable_source": {"doc": "acwdl-25-30", "page": 8, "quote": "At least 80 hours of combined work, work program, community service, or school"},
+  "combinable_note": "Combination is stated in HOURS. Income is not listed as a combinable component; sources do not say income below $580 converts to hours. See open_questions.income_to_hours_conversion.",
+  "one_month_is_enough": true,
+
+  "income_counting": {
+    "method": "gross",
+    "method_detail": "ACWDL 25-30 says 'total gross income' for the monthly test, and lists earned income, unemployment benefits, State Disability Insurance, retirement income, dividends for the averaging test. Whether self-employment (gig) income is counted before or after business expenses, and whether MAGI rules apply, is NOT stated.",
+    "source": {"doc": "acwdl-25-30", "page": 7, "quote": "An individual’s total gross income for a month must meet or exceed this amount"},
+    "seasonal_averaging_months": 6,
+    "seasonal_averaging_source": {"doc": "acwdl-25-30", "page": 7, "quote": "fluctuates has an average monthly income over the preceding 6 months that meets or exceeds this amount."},
+    "seasonal_averaging_source_2": {"doc": "dhcs-hr1-implementation-plan", "page": 11, "quote": "Seasonal employment averaging at least at least 80 times the federal hourly minimum wage ($580) over the preceding six months;"},
+    "self_employment_expenses": null,
+    "self_employment_expenses_note": "Not addressed in any primary source. See open_questions.gross_vs_net."
+  },
+
+  "lookback": {
+    "application": {
+      "months": 1,
+      "definition": "The calendar month immediately before the month of application (p9). NOTE: p11 defines it as the month before the month the eligibility determination is made. These differ if a determination is delayed into a later month.",
+      "source": {"doc": "acwdl-25-30", "page": 9, "quote": "Counties shall verify compliance with the work and community engagement requirement in the month immediately prior to the month of application (“look-back month”)."},
+      "conflicting_source": {"doc": "acwdl-25-30", "page": 11, "quote": "For applications, the look-back month is the calendar month immediately preceding the month in which the eligibility determination is made."},
+      "corroborating_source": {"doc": "dhcs-hr1-implementation-plan", "page": 10, "quote": "the new requirement in the one month prior to the month in which they apply."}
+    },
+    "application_late_compliance": {
+      "rule": "If not compliant in the look-back month but compliant in a later month while the application is pending, coverage begins the 1st of the month AFTER the first compliant month; earlier months are denied. Delay by the county does not create eligibility.",
+      "source": {"doc": "acwdl-25-30", "page": 11, "quote": "the Beginning Date of Aid shall be the first day of the month following the month in which the individual first meets"},
+      "example_source": {"doc": "acwdl-25-30", "page": 12, "quote": "An individual applies in January but first meets the work and community engagement requirement in March. The Beginning Date of Aid is April 1"}
+    },
+    "application_compliant_in_lookback": {
+      "rule": "If compliant in the look-back month, eligibility starts the 1st of the application month (example: applied June 10, worked in May, approved effective June 1).",
+      "source": {"doc": "acwdl-25-30", "page": 12, "quote": "they meet the work and community engagement requirement at application and are approved for eligibility effective June 1."}
+    },
+    "renewal_or_verification": {
+      "months": "all months after the last eligibility determination and before the current renewal month (normally 6 under six-month renewals)",
+      "minimum_compliant_months": 1,
+      "consecutive_required": false,
+      "source": {"doc": "acwdl-25-30", "page": 13, "quote": "The look-back period for renewal includes all months after the last determination and before the current renewal."},
+      "source_2": {"doc": "acwdl-25-30", "page": 13, "quote": "Participation in one or more months (which do not have to be consecutive) within this period is sufficient to meet the requirement."},
+      "example": "Renewal due August -> look-back months February through July (ACWDL 25-30 p14). Renewal due November -> May through October (p15-16)."
+    },
+    "change_in_circumstance": {
+      "assessed": false,
+      "source": {"doc": "acwdl-25-30", "page": 16, "quote": "Counties shall not assess if someone is meeting the work and community engagement requirement when they report a change in circumstance to the county."}
+    },
+    "source": {"doc": "acwdl-25-30", "page": 9, "quote": "the work and community engagement requirements are only verified at application and six-month renewal."}
+  },
+
+  "retroactive_coverage": {
+    "months": 1,
+    "rule": "New Adult Group may request retro coverage for 1 month before the application month, only if they met the requirement or were exempt in that retro month.",
+    "source": {"doc": "acwdl-25-30", "page": 13, "quote": "applicants may request retroactive Medi-Cal coverage for up to one month prior to the month of application."}
+  },
+
+  "compliance_period_after_notice_days": 30,
+  "compliance_period_source": {"doc": "acwdl-25-30", "page": 10, "quote": "The NNC provides the applicant with 30 calendar days from the date of the notice to submit verification demonstrating:"},
+  "compliance_period_detail": {
+    "application": "30 calendar days from the Notice of Non-Compliance (NNC) to show past compliance in the look-back month or an exemption. p10 says it is NOT extra time to newly comply (but see application_late_compliance and open_questions.nnc_new_compliance).",
+    "application_source": {"doc": "acwdl-25-30", "page": 10, "quote": "The NNC period is not intended as additional time to satisfy the requirement after failing to meet it initially."},
+    "renewal": "30 calendar days to come into compliance.",
+    "renewal_source": {"doc": "acwdl-25-30", "page": 13, "quote": "the county must provide the member with 30 calendar days to come into compliance."},
+    "step3_options_source": {"doc": "acwdl-25-30", "page": 19, "quote": "Newly participate in one or more qualifying activities and provide proof of new employment or enrollment."},
+    "contact_attempts": 2,
+    "contact_attempts_source": {"doc": "acwdl-25-30", "page": 20, "quote": "Counties are required to make two separate contact attempts at both application and renewal"},
+    "notice_of_action_min_days": 10,
+    "notice_of_action_source": {"doc": "acwdl-25-30", "page": 20, "quote": "allowing a minimum of 10 days’ notice for existing Medi-Cal members"},
+    "cure_period_days": 90,
+    "cure_period_source": {"doc": "acwdl-25-30", "page": 21, "quote": "may return to coverage without a new application during the 90-day cure period once they provide information demonstrating compliance"},
+    "other_programs_checked_first": true,
+    "other_programs_source": {"doc": "acwdl-25-30", "page": 20, "quote": "the county must first evaluate the individual’s eligibility for all other Medi-Cal programs that are not subjected to work and community engagement requirements."},
+    "covered_california_subsidy_blocked": true,
+    "covered_california_source": {"doc": "acwdl-25-30", "page": 21, "quote": "will not be eligible for subsidized coverage through Covered California"}
+  },
+
+  "renewal_interval_months": 6,
+  "renewal_interval_source": {"doc": "acwdl-25-31", "page": 2, "quote": "states must conduct Medi-Cal eligibility renewals every six months for adult Medi-Cal members enrolled in the MAGI New Adult Group"},
+  "renewal_schedule": {
+    "new_applications_from_2027": {
+      "rule_text": "renewal set six months from the first month of eligibility",
+      "rule_source": {"doc": "acwdl-25-31", "page": 4, "quote": "will have their renewal set six months from the first month of eligibility."},
+      "table_note": "The county table on p5 puts the first renewal in application month + 5 (January -> June). Use the table literally; see open_questions.six_month_schedule_offset.",
+      "table_source": {"doc": "acwdl-25-31", "page": 5, "quote": "Counties shall use the following schedule to establish the six-month renewal date:"},
+      "first_renewal_by_application_month": {"1": 6, "2": 7, "3": 8, "4": 9, "5": 10, "6": 11, "7": 12, "8": 1, "9": 2, "10": 3, "11": 4, "12": 5},
+      "second_renewal_by_application_month": {"1": 12, "2": 1, "3": 2, "4": 3, "5": 4, "6": 5, "7": 6, "8": 7, "9": 8, "10": 9, "11": 10, "12": 11}
+    },
+    "existing_members_transition": {
+      "rule": "Existing New Adult Group members keep their 2027 annual renewal month; work requirement is assessed at that renewal; then they move to six-month renewals (renewal month + 6).",
+      "source": {"doc": "acwdl-25-31", "page": 19, "quote": "will transition from an annual renewal cycle to a Six-Month Renewal schedule after their first scheduled renewal in 2027."},
+      "first_post_transition_by_2027_renewal_month": {"1": 7, "2": 8, "3": 9, "4": 10, "5": 11, "6": 12, "7": 1, "8": 2, "9": 3, "10": 4, "11": 5, "12": 6}
+    },
+    "renewal_process_includes": ["automated and manual ex parte", "prepopulated renewal form", "30-day timeframe to verify", "two reminder letters", "timely notice", "90-day cure period"],
+    "renewal_process_source": {"doc": "acwdl-25-31", "page": 2, "quote": "The six-month renewal process must follow existing annual renewal procedures outlined in ACWDL 22-33"},
+    "six_month_exempt": ["other coverage groups (Non-MAGI, parent/caretaker, children)", "American Indian / Alaska Native", "pregnant or 12-month postpartum", "children under 19"],
+    "six_month_exempt_source": {"doc": "acwdl-25-31", "page": 2, "quote": "The following populations are exempt from the six-month renewal requirement and will continue to be subject to annual renewals every 12 months:"}
+  },
+
+  "exemption_month_rule": {
+    "rule": "An exemption covers a month if it applied for part or all of that month.",
+    "source": {"doc": "acwdl-25-30", "page": 3, "quote": "exempt from work and community engagement requirements for a month if, for part or all of that month"}
+  },
+  "exemption_hierarchy": {
+    "rule": "Ex parte checks run in this order; the first match is used and no further work-requirement assessment happens in that determination. Exempt status lasts for the eligibility period.",
+    "order": ["other_coverage_group", "high_unemployment_county", "medicare", "american_indian_alaska_native", "parent_caretaker_child_13_or_under", "pregnant_postpartum", "former_foster_youth_under_26", "incarcerated", "recently_released_90_days", "calfresh_work_requirements", "tanf_work_requirements", "caregiver_of_disabled_person", "disabled_veteran_total", "drug_alcohol_treatment", "medically_frail", "short_term_hardship", "federal_disaster_county"],
+    "source": {"doc": "acwdl-25-30", "page": 17, "quote": "When an individual meets more than one reason on the list, the county shall use the first reason identified"},
+    "duration_source": {"doc": "acwdl-25-30", "page": 17, "quote": "they are not subject to the work and community engagement requirements during this eligibility period"}
+  },
+  "mandatory_exemptions": [
+    {
+      "id": "high_unemployment_county",
+      "label_en": "Your county has very high unemployment",
+      "label_es": "Su condado tiene mucho desempleo",
+      "criteria_summary": "Lives in a county with unemployment at or above the lesser of 8% or 1.5x the national rate. The Implementation Plan (p12) calls this an optional short-term hardship applied automatically. Not something a person self-reports; app should not assume Alameda qualifies.",
+      "automatic": true,
+      "screener_question_en": null,
+      "screener_question_es": null,
+      "classification_conflict": "acwdl-25-30 lists as exemption; implementation plan lists as short-term hardship",
+      "source": {"doc": "acwdl-25-30", "page": 3, "quote": "Living in a county with an unemployment rate that is at or above the lesser of 8 percent, or 1.5 times the national unemployment rate"},
+      "source_2": {"doc": "dhcs-hr1-implementation-plan", "page": 12, "quote": "DHCS will automatically provide a short-term hardship exemption."}
+    },
+    {
+      "id": "medicare",
+      "label_en": "You have Medicare (Part A or Part B)",
+      "label_es": "Tiene Medicare (Parte A o Parte B)",
+      "criteria_summary": "Entitled to or enrolled in Medicare Part A, or enrolled in Part B.",
+      "screener_question_en": "Do you have Medicare Part A or Part B?",
+      "screener_question_es": "¿Tiene Medicare Parte A o Parte B?",
+      "source": {"doc": "acwdl-25-30", "page": 4, "quote": "Entitled to, or enrolled in, benefits under Medicare Part A of title XVIII or enrolled for benefits under Part B of title XVIII"}
+    },
+    {
+      "id": "american_indian_alaska_native",
+      "label_en": "You are American Indian or Alaska Native",
+      "label_es": "Es indígena americano o nativo de Alaska",
+      "criteria_summary": "Indian or Urban Indian (IHCIA), California Indian (IHCIA 809(a)), or eligible for Indian Health Service.",
+      "screener_question_en": "Are you American Indian or Alaska Native, or can you get care from the Indian Health Service?",
+      "screener_question_es": "¿Es usted indígena americano o nativo de Alaska, o puede recibir atención del Servicio de Salud Indígena (IHS)?",
+      "source": {"doc": "acwdl-25-30", "page": 4, "quote": "American Indians or Alaska Natives (AI/AN)"}
+    },
+    {
+      "id": "parent_caretaker_child_13_or_under",
+      "label_en": "You take care of a child age 13 or younger",
+      "label_es": "Cuida a un niño de 13 años o menos",
+      "criteria_summary": "Parent, guardian, caretaker relative, or family caregiver of a dependent child age 13 or younger. Both parents in a two-parent household qualify.",
+      "screener_question_en": "Are you a parent, guardian, or caregiver of a child who is 13 years old or younger?",
+      "screener_question_es": "¿Es usted padre, madre, tutor o cuidador de un niño de 13 años o menos?",
+      "source": {"doc": "acwdl-25-30", "page": 4, "quote": "When there are two parents in the household, both parents are eligible for this exemption."},
+      "source_2": {"doc": "acwdl-25-30", "page": 4, "quote": "Parents, guardians, or caretaker relatives (caretakers), or family caregivers of a dependent child age 13 or younger"}
+    },
+    {
+      "id": "pregnant_postpartum",
+      "label_en": "You are pregnant or had a baby (or pregnancy ended) in the last 12 months",
+      "label_es": "Está embarazada o tuvo un bebé (o terminó un embarazo) en los últimos 12 meses",
+      "criteria_summary": "Pregnant, or within 12 months after the end of a pregnancy regardless of outcome. Exempt immediately on report.",
+      "screener_question_en": "Are you pregnant, or did a pregnancy end in the last 12 months?",
+      "screener_question_es": "¿Está embarazada, o terminó un embarazo en los últimos 12 meses?",
+      "source": {"doc": "acwdl-25-30", "page": 23, "quote": "the individual becomes immediately exempt from the work and community engagement requirement for the duration of the pregnancy and for 12 months"}
+    },
+    {
+      "id": "former_foster_youth_under_26",
+      "label_en": "You were in foster care and are under 26",
+      "label_es": "Estuvo en cuidado de crianza (foster care) y tiene menos de 26 años",
+      "criteria_summary": "Former foster care youth under age 26.",
+      "screener_question_en": "Were you ever in foster care, and are you younger than 26?",
+      "screener_question_es": "¿Estuvo alguna vez en cuidado de crianza (foster care) y tiene menos de 26 años?",
+      "source": {"doc": "acwdl-25-30", "page": 4, "quote": "Former foster youth under age 26 Former foster care youth under age 26"}
+    },
+    {
+      "id": "incarcerated",
+      "label_en": "You are in jail or prison",
+      "label_es": "Está en la cárcel o en prisión",
+      "criteria_summary": "Inmate of a local, state, or federal public institution.",
+      "screener_question_en": "Are you in jail or prison right now?",
+      "screener_question_es": "¿Está en la cárcel o en prisión ahora?",
+      "source": {"doc": "acwdl-25-30", "page": 4, "quote": "In jail or prison Inmate of a local, state, or federal public institution"}
+    },
+    {
+      "id": "recently_released_90_days",
+      "label_en": "You got out of jail or prison in the last 90 days",
+      "label_es": "Salió de la cárcel o prisión en los últimos 90 días",
+      "criteria_summary": "Was an inmate at any point in the 3-month period ending on the first day of the month.",
+      "screener_question_en": "Did you get out of jail or prison in the last 3 months?",
+      "screener_question_es": "¿Salió de la cárcel o prisión en los últimos 3 meses?",
+      "source": {"doc": "acwdl-25-30", "page": 4, "quote": "At any point during the 3-month period ending on the first day of such month, the individual was an inmate"}
+    },
+    {
+      "id": "calfresh_work_requirements",
+      "label_en": "You get CalFresh and follow its work rules",
+      "label_es": "Recibe CalFresh y cumple con sus reglas de trabajo",
+      "criteria_summary": "Member of a household receiving SNAP (CalFresh) and not exempt from SNAP work requirements.",
+      "screener_question_en": "Does your household get CalFresh (food stamps), and do you have to meet CalFresh work rules?",
+      "screener_question_es": "¿Su hogar recibe CalFresh (estampillas de comida) y usted tiene que cumplir con las reglas de trabajo de CalFresh?",
+      "source": {"doc": "acwdl-25-30", "page": 4, "quote": "Is a member of a household that receives supplemental nutrition assistance program benefits under the Food and Nutrition Act"}
+    },
+    {
+      "id": "tanf_work_requirements",
+      "label_en": "You meet CalWORKs (TANF) work rules",
+      "label_es": "Cumple con las reglas de trabajo de CalWORKs (TANF)",
+      "criteria_summary": "In compliance with state TANF (CalWORKs) work requirements under SSA section 407.",
+      "screener_question_en": "Do you get CalWORKs and are you meeting its work rules?",
+      "screener_question_es": "¿Recibe CalWORKs y está cumpliendo con sus reglas de trabajo?",
+      "source": {"doc": "acwdl-25-30", "page": 5, "quote": "In compliance with any requirements imposed by the State pursuant to section 407 of the Social Security Act"}
+    },
+    {
+      "id": "caregiver_of_disabled_person",
+      "label_en": "You take care of someone with a disability",
+      "label_es": "Cuida a una persona con discapacidad",
+      "criteria_summary": "Parent, guardian, caretaker relative, or family caregiver of a disabled individual of any age.",
+      "screener_question_en": "Do you take care of a family member or someone you live with who has a disability?",
+      "screener_question_es": "¿Cuida a un familiar o a alguien con quien vive que tiene una discapacidad?",
+      "source": {"doc": "acwdl-25-30", "page": 5, "quote": "family caregivers (as defined in section 2 of the RAISE Family Caregivers Act (Public Law 115-119) of a disabled individual of any age."}
+    },
+    {
+      "id": "disabled_veteran_total",
+      "label_en": "You are a veteran with a total disability rating",
+      "label_es": "Es veterano con una calificación de discapacidad total",
+      "criteria_summary": "Veteran with a disability rated as total under 38 U.S.C. 1155.",
+      "screener_question_en": "Are you a veteran with a disability rating of total (100%) from the VA?",
+      "screener_question_es": "¿Es veterano y el VA le dio una calificación de discapacidad total (100%)?",
+      "source": {"doc": "acwdl-25-30", "page": 5, "quote": "Veteran with a disability rated as total under section 1155 of title 38, United States Code"}
+    },
+    {
+      "id": "drug_alcohol_treatment",
+      "label_en": "You are in a drug or alcohol treatment program",
+      "label_es": "Está en un programa de tratamiento por drogas o alcohol",
+      "criteria_summary": "Participating in a drug addiction or alcoholic treatment and rehabilitation program (Food and Nutrition Act 3(h)).",
+      "screener_question_en": "Are you in a drug or alcohol treatment program?",
+      "screener_question_es": "¿Está en un programa de tratamiento por drogas o alcohol?",
+      "source": {"doc": "acwdl-25-30", "page": 5, "quote": "Is participating in a drug addiction or alcoholic treatment and rehabilitation program"}
+    },
+    {
+      "id": "medically_frail",
+      "label_en": "You have a serious health problem or disability",
+      "label_es": "Tiene un problema de salud grave o una discapacidad",
+      "criteria_summary": "Blind or disabled (SSA 1614); substance use disorder; disabling mental disorder; physical, intellectual, or developmental disability that significantly impairs 1+ activities of daily living; serious or complex medical condition; or other special medical needs as defined by the Secretary. Definition still pending.",
+      "definition_pending": true,
+      "screener_question_en": "Do you have a disability, a serious or long-term health condition, a mental health condition, or a substance use problem that makes daily life or work hard?",
+      "screener_question_es": "¿Tiene una discapacidad, una enfermedad grave o de largo plazo, un problema de salud mental o de uso de sustancias que le hace difícil la vida diaria o trabajar?",
+      "source": {"doc": "acwdl-25-30", "page": 5, "quote": "Medically frail or otherwise has special medical needs (as defined by the Secretary), including an individual who is:"},
+      "pending_source": {"doc": "acwdl-25-30", "page": 26, "quote": "The definition of “medically frail,”"}
+    },
+    {
+      "id": "federal_disaster_county",
+      "label_en": "Your county has a federal disaster or emergency declaration",
+      "label_es": "Su condado tiene una declaración federal de desastre o emergencia",
+      "criteria_summary": "Lives in a county with an emergency or disaster declared by the President (National Emergencies Act or Stafford Act). Implementation Plan (p12) treats this as an automatic short-term hardship.",
+      "automatic": true,
+      "screener_question_en": null,
+      "screener_question_es": null,
+      "classification_conflict": "acwdl-25-30 lists as exemption; implementation plan lists as short-term hardship",
+      "source": {"doc": "acwdl-25-30", "page": 6, "quote": "Lives in a county in which there exists an emergency or disaster declared by the President"},
+      "source_2": {"doc": "dhcs-hr1-implementation-plan", "page": 12, "quote": "DHCS will automatically provide a short-term hardship exemption from the work requirements."}
+    }
+  ],
+  "exemptions_definitions_pending_source": {"doc": "acwdl-25-30", "page": 6, "quote": "Additional guidance will be provided in a future policy letter regarding the definition of exemptions."},
+
+  "short_term_hardship": {
+    "state_option_adopted": true,
+    "state_option_source": {"doc": "dhcs-hr1-implementation-plan", "page": 12, "quote": "DHCS will also implement optional short-term hardship exemptions and automatically apply them as applicable to applicants and members to the maximum extent possible."},
+    "must_be_requested_source": {"doc": "acwdl-25-30", "page": 6, "quote": "Exemptions for short-term hardship may also apply. Must be requested by the individual"},
+    "items": [
+      {
+        "id": "inpatient_care",
+        "label_en": "You (were) in the hospital, a nursing facility, or inpatient mental health care",
+        "label_es": "Estuvo internado en el hospital, en un centro de enfermería o en atención psiquiátrica",
+        "criteria_summary": "Received inpatient hospital care, nursing facility / ICF-IID services, inpatient psychiatric services, or similar-acuity services (including related outpatient care) during a month the person was subject to the requirement. Must be requested.",
+        "requires_request": true,
+        "screener_question_en": "Were you in the hospital, a nursing home, or an inpatient mental health program during the month we are checking?",
+        "screener_question_es": "¿Estuvo internado en un hospital, un asilo de ancianos o un programa psiquiátrico durante el mes que estamos revisando?",
+        "source": {"doc": "acwdl-25-30", "page": 6, "quote": "Receiving inpatient hospital care, nursing facility services in an intermediate care facility for individuals with intellectual disabilities, inpatient psychiatric hospital services"},
+        "source_2": {"doc": "dhcs-hr1-implementation-plan", "page": 12, "quote": "the individual may request a short-term hardship exemption from DHCS."}
+      },
+      {
+        "id": "medical_travel",
+        "label_en": "You or your dependent had to travel far for medical care for a long time",
+        "label_es": "Usted o un dependiente tuvo que viajar lejos por mucho tiempo para recibir atención médica",
+        "criteria_summary": "Person or their dependent must travel outside their community for an extended period for medical services for a serious or complex condition not available locally. Must be requested. 'Extended period' not defined.",
+        "requires_request": true,
+        "screener_question_en": "Did you or someone you care for have to travel outside your area for a long time to get treatment for a serious illness?",
+        "screener_question_es": "¿Usted o alguien que depende de usted tuvo que viajar fuera de su área por mucho tiempo para recibir tratamiento para una enfermedad grave?",
+        "source": {"doc": "acwdl-25-30", "page": 6, "quote": "Such individual or their dependent must travel outside of their community for an extended period of time to receive medical services"}
+      }
+    ],
+    "auto_applied_per_implementation_plan": ["federal_disaster_county", "high_unemployment_county"],
+    "auto_applied_note": "Implementation Plan p12 classifies disaster and high unemployment as short-term hardships DHCS applies automatically; ACWDL 25-30 lists them as exemptions. Both are kept in mandatory_exemptions with classification_conflict."
+  },
+
+  "verification": {
+    "ex_parte_first": true,
+    "ex_parte_first_source": {"doc": "acwdl-25-30", "page": 17, "quote": "must determine if someone meets any of the following through the ex parte process prior to contacting the applicant or member for additional information:"},
+    "electronic_exemption_accepted_without_docs": true,
+    "electronic_exemption_source": {"doc": "acwdl-25-30", "page": 18, "quote": "When exemption information is verified through electronic sources, counties shall accept this information without requesting additional documentation from the member ."},
+    "insert_not_required_to_process": true,
+    "insert_source": {"doc": "acwdl-25-30", "page": 8, "quote": "The Work and Community Engagement Requirement Application Insert is not required to be submitted with the initial application."},
+    "self_attestation": "Accepted for exemptions at application per ACWDL 25-30 p11 ('self-attestation or verification'), but standards for self-attestation are pending federal guidance. Secondary (IFR via Georgetown CCF): states may accept self-attestation of medical frailty in calendar year 2027 only; documentation required when reasonably available from 2028-01-01. Not confirmed in primary sources.",
+    "self_attestation_source": {"doc": "acwdl-25-30", "page": 11, "quote": "provides self-attestation or verification that they meet an exemption, such as being medically frail, the exemption applies retroactively to the date of application."},
+    "self_attestation_pending_source": {"doc": "acwdl-25-30", "page": 26, "quote": "Standards for self-attestation,"},
+    "documents_accepted": [
+      {"type": "pay_stubs", "note": "Used in example to show income in look-back month", "source": {"doc": "acwdl-25-30", "page": 12, "quote": "confirms through pay stubs that Applicant 1 worked part-time during May and earns $600 a month"}},
+      {"type": "sworn_statement_of_school_enrollment", "note": "Used in example with school verification", "source": {"doc": "acwdl-25-30", "page": 13, "quote": "submitted verification that they began attending school full-time on March 8 and provided a sworn statement of their enrollment."}},
+      {"type": "provider_treatment_records", "note": "For medical exemptions, 'if documentation is required by CMS'", "source": {"doc": "dhcs-hr1-implementation-plan", "page": 33, "quote": "treatment records for a serious or chronic medical or mental health condition, substance use disorder, or a recent inpatient stay."}}
+    ],
+    "documents_accepted_pending_source": {"doc": "acwdl-25-30", "page": 20, "quote": "DHCS will provide additional guidance in a future letter regarding the use of outreach materials, acceptable forms of verifications"},
+    "submission_channels": ["phone", "mail", "in-person", "online", "other county electronic sources"],
+    "submission_channels_source": {"doc": "acwdl-25-30", "page": 8, "quote": "applicants and members can provide work and community engagement requirement information by phone, mail, in- person, online"},
+    "state_data_sources": [
+      {"source": "EDD state quarterly wage data and IRS data", "status": "Currently in use"},
+      {"source": "Equifax Work Number (income and hours)", "status": "DHCS executed a one-year contract"},
+      {"source": "Gig economy data (e.g., TRUV)", "status": "California is assessing several options"},
+      {"source": "CalFresh, CalWORKs, GA/GR income in CalSAWS", "status": "Currently in use"}
+    ],
+    "state_data_sources_source": {"doc": "dhcs-hr1-implementation-plan", "page": 30, "quote": "Gig Economy Data California is assessing several options, including TRUV"},
+    "lookback_electronic_match_sticks": {"doc": "acwdl-25-30", "page": 18, "quote": "if electronic verification shows the individual met these requirements in the month immediately before the application month, counties shall accept that verification"},
+    "source": {"doc": "acwdl-25-30", "page": 19, "quote": "the information can be verified through electronic sources, no additional information is needed from the individual"}
+  },
+
+  "open_questions": [
+    {
+      "id": "gross_vs_net",
+      "text": "For gig/self-employment income, does the $580 test use gross receipts (what the app paid) or net after expenses (mileage, gas, platform fees)? And is it 'gross income' or MAGI?",
+      "what_sources_say": "ACWDL 25-30 p7: 'total gross income'. No primary source addresses self-employment expenses. Secondary (Georgetown CCF on the IFR) describes MAGI-based income ('only taxable income sources, plus a few adjustments'), which for self-employment would normally be net. Primary and secondary may disagree.",
+      "default_behavior": "show both; flag if they disagree"
+    },
+    {
+      "id": "hours_definition",
+      "text": "For rideshare/delivery, which hours count toward 80: logged-in/online time, or active (on-trip/engaged) time? Does waiting count?",
+      "what_sources_say": "Silent. ACWDL 25-30 p7 only says 'working at least 80 hours a month) including self-employment'. Implementation Plan p30 lists gig economy data (e.g., TRUV) as under assessment. Secondary (CCF) says hours can be converted from income using federal minimum wage; not in primary sources.",
+      "default_behavior": "show online hours and active hours separately; mark 'met' only if active hours >= 80; flag 'may count' if only online hours >= 80"
+    },
+    {
+      "id": "lookback_window",
+      "text": "At application, is the look-back month the month before the APPLICATION month or before the DETERMINATION month? Could more than one month be used?",
+      "what_sources_say": "ACWDL 25-30 p9 and Implementation Plan p10: month before application. ACWDL 25-30 p11: month before the determination month. Secondary (CCF on IFR): states may use 1 to 3 consecutive months before application; California has not confirmed which in primary sources.",
+      "default_behavior": "assess the month before application as primary; also show the month before the expected determination month; encourage keeping proof for the 3 months before applying"
+    },
+    {
+      "id": "renewal_lookback_boundaries",
+      "text": "Exactly which months count at a six-month renewal (is the month of the last determination itself included? the renewal month?).",
+      "what_sources_say": "ACWDL 25-30 p13: 'all months after the last determination and before the current renewal'. Examples: renewal due August -> February-July; due November -> May-October.",
+      "default_behavior": "use the 6 calendar months immediately before the renewal month, matching the examples; one compliant month is enough"
+    },
+    {
+      "id": "fluctuating_vs_seasonal",
+      "text": "Can a gig driver with up-and-down income use the 6-month average, or is it only for 'seasonal' workers?",
+      "what_sources_say": "ACWDL 25-30 p7 says 'fluctuating income' (broad). Implementation Plan p11 says 'Seasonal employment'. Secondary (CCF): 'seasonal workers' with six-month average, or state may use reasonably predictable changes.",
+      "default_behavior": "always compute the 6-month average; show as a backup path labeled 'may count (rules unclear)'; never rely on it alone for a 'met' status"
+    },
+    {
+      "id": "income_to_hours_conversion",
+      "text": "If a month has income below $580 and hours below 80, can they be combined (e.g., convert dollars to hours at $7.25)?",
+      "what_sources_say": "Primary sources list combination only for work, work program, community service, and school hours (ACWDL 25-30 p8). Income is a separate test. No conversion stated. Secondary (CCF) mentions converting hours from income via minimum wage.",
+      "default_behavior": "do not combine income with hours; show 'short month' with how much more income ($) OR hours would meet the rule"
+    },
+    {
+      "id": "education_hours_in_combination",
+      "text": "How many hours does half-time school count for in a combination month? Is it 'half-time' or 'part-time'?",
+      "what_sources_say": "ACWDL 25-30 p7 table: 'Go to school part-time or full-time'; p10 and Implementation Plan p11: 'at least half-time'. No hour value for school.",
+      "default_behavior": "treat half-time enrollment as meeting the month by itself; for combination, ask user for actual class/training hours and flag as unconfirmed"
+    },
+    {
+      "id": "nnc_new_compliance",
+      "text": "After a Notice of Non-Compliance at application, can someone start working now to qualify?",
+      "what_sources_say": "ACWDL 25-30 p10: NNC 'is not intended as additional time to satisfy the requirement'. But p10-12 and p19 allow coverage to start the month after a later compliant month while the application is pending, and Step 3 lists 'Newly participate'. At renewal (p13) the 30 days are 'to come into compliance'.",
+      "default_behavior": "application: show proof for look-back month first; if none, show that new compliance starts coverage the 1st of the following month (earlier months lost). Renewal: show 30-day window to comply."
+    },
+    {
+      "id": "exemption_classification",
+      "text": "Are high-unemployment county and federal disaster county mandatory exemptions or optional short-term hardships?",
+      "what_sources_say": "ACWDL 25-30 p3/p6 list them as exemptions; Implementation Plan p12 lists them as short-term hardships DHCS applies automatically.",
+      "default_behavior": "treat as automatic county-level checks the user cannot self-report; display as 'the county checks this'"
+    },
+    {
+      "id": "high_unemployment_geography",
+      "text": "Does Alameda County (or a smaller local area) currently meet the high-unemployment test, and what geography counts?",
+      "what_sources_say": "ACWDL 25-30 p3: county rate at or above lesser of 8% or 1.5x national. Implementation Plan p12: 'county or local jurisdiction (not yet defined by CMS)'. No current rates in sources.",
+      "default_behavior": "assume not exempt; do not show as met"
+    },
+    {
+      "id": "medically_frail_definition",
+      "text": "What exactly counts as medically frail, and what proof is needed?",
+      "what_sources_say": "ACWDL 25-30 p5 lists categories; p26 says definition awaits CMS; Implementation Plan p12 fn 11: more info later.",
+      "default_behavior": "screen with plain question; route to 'possible exemption, ask county/doctor'; never auto-decide"
+    },
+    {
+      "id": "exemption_timing_at_application",
+      "text": "At application, which month must an exemption cover?",
+      "what_sources_say": "ACWDL 25-30 p11: exemption 'applies retroactively to the date of application'. Implementation Plan p10 fn 10: 'DHCS is seeking guidance from CMS on the timing for exemptions at application.'",
+      "default_behavior": "ask whether exemption applied in the look-back month or the application month; flag if only one"
+    },
+    {
+      "id": "work_program_and_community_service_definitions",
+      "text": "What counts as a work program or community service?",
+      "what_sources_say": "ACWDL 25-30 p7: 'DHCS will provide additional guidance' for both.",
+      "default_behavior": "log hours with organization name and contact; flag as 'definition pending'"
+    },
+    {
+      "id": "acceptable_documents",
+      "text": "Which documents will counties accept (e.g., Uber/Lyft/DoorDash earnings statements, 1099s, bank deposits)?",
+      "what_sources_say": "ACWDL 25-30 p20 and p26: acceptable forms of verification pending. Examples show pay stubs and sworn statement of enrollment.",
+      "default_behavior": "collect platform earnings statements plus a signed self-statement; label each as 'likely' not 'confirmed'"
+    },
+    {
+      "id": "six_month_schedule_offset",
+      "text": "For new applicants, is the first renewal at application month +5 or +6?",
+      "what_sources_say": "ACWDL 25-31 p4 says 'six months from the first month of eligibility'; its p5 table puts it at +5 (January -> June). The transition table (p19) uses +6 (January renewal -> July).",
+      "default_behavior": "use the tables literally (new apps +5, transition +6) and tell the user to confirm the date on their notice"
+    },
+    {
+      "id": "six_month_start_date",
+      "text": "When do six-month renewals start?",
+      "what_sources_say": "ACWDL 25-31 p2 and Implementation Plan p13: effective January 1, 2027, with existing members transitioning at their first scheduled 2027 renewal. A DHCS changes page reportedly says March 1, 2027 (not verified; not in primary sources).",
+      "default_behavior": "use 2027-01-01 / first 2027 renewal; show a notice that DHCS may have changed this"
+    },
+    {
+      "id": "minimum_wage_basis",
+      "text": "Will the $580 change if the federal minimum wage changes?",
+      "what_sources_say": "ACWDL 25-30 p7 ties it to federal minimum wage 'currently $7.25'. California's higher state minimum wage is not used.",
+      "default_behavior": "compute threshold = 80 x federal_minimum_wage_hourly from this config"
+    },
+    {
+      "id": "guidance_superseded",
+      "text": "Have these preliminary ACWDLs been updated to match the June 2026 federal IFR?",
+      "what_sources_say": "Both ACWDLs say they are preliminary and subject to change. MEDIL I 26-25 (9/11/2026) exists but could not be read.",
+      "default_behavior": "show 'rules as of Dec 2025 state guidance' banner; re-check before demo"
+    }
+  ],
+
+  "key_dates": [
+    {"id": "hr1_enacted", "date": "2025-07-04", "label_en": "H.R. 1 became law", "label_es": "La ley H.R. 1 fue aprobada", "source": {"doc": "acwdl-25-30", "page": 1, "quote": "On July 4, 2025, Section 71119 of H.R. 1, (Public Law 119-21) established Medicaid"}},
+    {"id": "acwdls_issued", "date": "2025-12-30", "label_en": "State guidance (ACWDL 25-30 and 25-31) issued", "label_es": "El estado publicó sus instrucciones (ACWDL 25-30 y 25-31)", "source": {"doc": "acwdl-25-30", "page": 1, "quote": "DATE: December 30, 2025"}},
+    {"id": "ifr_expected", "date": "2026-06-01", "label_en": "Federal rule expected (published June 3, 2026, secondary)", "label_es": "Se esperaba la regla federal (publicada el 3 de junio de 2026, fuente secundaria)", "source": {"doc": "acwdl-25-30", "page": 1, "quote": "is expected to issue an interim final rule by June 1, 2026"}},
+    {"id": "member_notice_deadline", "date": "2026-07-31", "date_precision": "month", "label_en": "DHCS to notify members who may be affected (by July 2026)", "label_es": "DHCS avisará a los miembros que podrían ser afectados (a más tardar julio de 2026)", "source": {"doc": "acwdl-25-30", "page": 25, "quote": "No later than July 2026, DHCS will notify members who may be subject to work and community engagement requirements."}},
+    {"id": "qnc_change", "date": "2026-10-01", "label_en": "Some lawfully present immigrants move to restricted-scope Medi-Cal", "label_es": "Algunos inmigrantes con presencia legal pasan a Medi-Cal de alcance limitado", "source": {"doc": "dhcs-hr1-implementation-plan", "page": 9, "quote": "Effective October 1, 2026, Section 71109 of H.R.1 narrows noncitizen eligibility for federally-funded Medicaid."}},
+    {"id": "last_application_date_not_assessed", "date": "2026-12-31", "label_en": "Applications on or before this date are not checked until the 2027 renewal", "label_es": "Las solicitudes hechas hasta esta fecha no se revisan hasta la renovación de 2027", "source": {"doc": "acwdl-25-30", "page": 2, "quote": "with an application date of December 31, 2026, or prior until their next scheduled renewal in 2027."}},
+    {"id": "work_requirement_start", "date": "2027-01-01", "label_en": "Work requirement starts", "label_es": "Empieza el requisito de trabajo", "source": {"doc": "acwdl-25-30", "page": 2, "quote": "Effective January 1, 2027, individuals enrolled in the MAGI New Adult Group must comply"}},
+    {"id": "six_month_renewals_start", "date": "2027-01-01", "label_en": "Renewals every 6 months start (after your first 2027 renewal)", "label_es": "Empiezan las renovaciones cada 6 meses (después de su primera renovación en 2027)", "source": {"doc": "acwdl-25-31", "page": 2, "quote": "Effective January 1, 2027, states must conduct Medi-Cal eligibility renewals every six months"}},
+    {"id": "retro_one_month", "date": "2027-01-01", "label_en": "Back-coverage limited to 1 month before you apply", "label_es": "La cobertura retroactiva se limita a 1 mes antes de solicitar", "source": {"doc": "acwdl-25-30", "page": 13, "quote": "Effective January 1, 2027, for individuals in the MAGI New Adult Group, applicants may request retroactive Medi-Cal coverage for up to one month"}},
+    {"id": "cost_sharing_start", "date": "2028-10-01", "label_en": "Copays start for some New Adult Group members", "label_es": "Empiezan los copagos para algunos adultos del Grupo de Nuevos Adultos", "source": {"doc": "dhcs-hr1-implementation-plan", "page": 16, "quote": "Effective October 1, 2028, Section 71120 of H.R.1 creates new cost-sharing requirements"}}
+  ],
+
+  "secondary_context": {
+    "note": "Not primary. Used only to explain open questions. Do not drive compliance decisions from these.",
+    "items": [
+      {"doc": "federal-ifr-2026", "claim": "Application look-back may be 1 to 3 consecutive months before application (state choice).", "via": "georgetown-ccf-2026-07-16"},
+      {"doc": "federal-ifr-2026", "claim": "Income uses MAGI ('only taxable income sources, plus a few adjustments').", "via": "georgetown-ccf-2026-07-16"},
+      {"doc": "federal-ifr-2026", "claim": "Seasonal workers: average monthly income over preceding six months, or state may use reasonably predictable changes.", "via": "georgetown-ccf-2026-07-16"},
+      {"doc": "federal-ifr-2026", "claim": "If a state adopts short-term hardship, it must adopt all four events; disaster and unemployment applied automatically, inpatient and medical travel by request.", "via": "georgetown-ccf-2026-07-16"},
+      {"doc": "federal-ifr-2026", "claim": "Self-attestation of medical frailty allowed in calendar year 2027 only; documentation when reasonably available from 2028-01-01.", "via": "georgetown-ccf-2026-07-16"},
+      {"doc": "federal-ifr-2026", "claim": "Secretary may grant a state a good-faith exemption from the 2027-01-01 date, limited initially to six months.", "via": "georgetown-ccf-2026-07-16"}
+    ]
+  },
+
+  "sources": [
+    {"id": "acwdl-25-30", "title": "ACWDL 25-30: Work and Community Engagement Requirements for New Adult Group (preliminary)", "url": "https://www.dhcs.ca.gov/wp-content/uploads/2026/04/25-30.pdf", "date": "2025-12-30", "primary": true},
+    {"id": "acwdl-25-31", "title": "ACWDL 25-31: Six-Month Renewals for New Adult Group Requirements (preliminary)", "url": "https://www.dhcs.ca.gov/wp-content/uploads/2026/04/25-31.pdf", "date": "2025-12-30", "primary": true},
+    {"id": "dhcs-hr1-implementation-plan", "title": "DHCS Implementation Plan for New Federal Eligibility and Enrollment Changes under H.R.1", "url": "https://www.dhcs.ca.gov/wp-content/uploads/2026/05/DHCS-HR1-Implementation-Plan.pdf", "date": "2026-01-29", "primary": true},
+    {"id": "federal-ifr-2026", "title": "CMS Interim Final Rule on Medicaid community engagement (CMS-2454-IFC), 91 FR 33348", "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11094/", "date": "2026-06-03", "primary": false, "note": "Not read directly; claims come via Georgetown CCF explainer."},
+    {"id": "georgetown-ccf-2026-07-16", "title": "Georgetown CCF: explainer of the interim final rule", "url": "https://ccf.georgetown.edu/2026/07/16/new-federal-medicaid-work-reporting-requirements-rule-threatens-coverage-for-vulnerable-americans-an-explainer-of-the-interim-final-rule/", "date": "2026-07-16", "primary": false}
+  ]
+}

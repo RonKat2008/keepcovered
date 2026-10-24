@@ -1,47 +1,35 @@
 @AGENTS.md
 
-# Hackathon project. Read `docs/STATUS.md` first.
+# KeepCovered: Medi-Cal work-rule proof agent for gig drivers (Cal Hacks 13.0)
 
-This repo runs in **hackathon mode**: ship a working, deployed, well-pitched demo before the deadline. The main session runs the `hackathon:orchestrator` agent from the `hackathon` plugin (`~/.claude/skills/hackathon`). Run `/hackathon:mode` once per event to start tracking.
+Read `docs/STATUS.md` first. `docs/SPEC.md` is the plan.
 
-## Overrides to global rules
-- No TDD and no coverage targets. Done means `npm run verify` is green, the demo path works in a real browser, and critical demo steps have a smoke test if time allows.
-- `docs/SPEC.md` is the plan. Don't create other planning docs. Don't run ECC plan/tdd/orch/multi/santa/gan pipelines.
-- Reviews flag only correctness or security issues that could break the demo or leak data.
+## Core rule
+**Claude reads, extracts, classifies and explains. Code decides.** Whether a month meets the rule, exemption screening, reconciliation and deadline math are pure functions in `src/rules/` that read `data/rules/work_rules.json`. No LLM call may ever set `MonthStatus.overall`, `meets_*_path`, or an exemption outcome. The app never says "you are exempt" or "you comply". It says "the county decides".
 
 ## Stack
-- **Next.js 16** App Router under `src/`, with TypeScript and Tailwind v4. Read `node_modules/next/dist/docs/` before writing Next-specific code.
-- **shadcn/ui:** add components with `npx shadcn@latest add <name>`. `cn` comes from `@/lib/utils`.
-- **Supabase** via `@supabase/ssr`:
-  - browser client: `src/lib/supabase/client.ts`
-  - server client: `src/lib/supabase/server.ts`
-  - session refresh: `src/proxy.ts` (Next 16 renamed middleware to proxy)
-- **Claude:** `src/app/api/ai/route.ts` streams plain text. Invoke the `claude-api` skill before touching Claude code. The default model is `claude-sonnet-5-5`; override it with `ANTHROPIC_MODEL`.
-- **Deploy:** Vercel.
+- Next.js 16 App Router under `src/` (read `node_modules/next/dist/docs/` before Next-specific code), TypeScript, Tailwind v4, shadcn/ui.
+- Motion: `motion` (`motion/react`) for layout, gesture and presence; `animejs` v4 (`import { animate, stagger, createTimeline } from "animejs"`) for timelines, SVG and count-ups. Always respect `prefers-reduced-motion`.
+- Claude: `src/claude/` holds the client router. It uses Foundry (`@anthropic-ai/foundry-sdk`) when `ANTHROPIC_FOUNDRY_*` is set and the first-party API otherwise, with 1P only for Batches and Files. Invoke the `claude-api` skill before touching Claude code. Models: `claude-haiku-5-5` triage, `claude-sonnet-5-5` extract/explain, `claude-opus-5-5` adjudicate/portal. Forced `tool_choice` is a 400 on these models, so use structured outputs or `auto` + `strict`.
+- Embeddings: Voyage (`src/embeddings/`). The store goes behind `src/store/`: in-memory with a 1h TTL by default, Convex when `CONVEX_URL` is set.
+- Bank: `src/bank/` (`BankSource`: Nessie when `NESSIE_API_KEY` is set, mock otherwise).
 
 ## Commands
 | Command | Purpose |
 |---|---|
 | `npm run dev` | Dev server |
-| `npm run verify` | Typecheck + lint + build. **Must pass before every commit and deploy.** |
-| `npm run preflight` | Readiness check: env, Supabase link, Vercel link, verify |
-| `hack status` / `hack gate <id>` / `hack next` | Hackathon stage tracking (plugin CLI) |
-| `npx supabase migration new <name>` | New migration. RLS on every table. |
-| `npx supabase db push` | Apply migrations to the linked project (ask first) |
-| `npm run db:types` | Regenerate `src/lib/supabase/database.types.ts` from the linked project (`db:types:local` uses local Docker) |
-| `vercel deploy` / `vercel deploy --prod` | Preview / production deploy |
+| `npm test` | Vitest (rules engine must stay 100% green) |
+| `npm run verify` | Typecheck + lint + tests + build. Must pass before every commit. |
+| `npm run gen:drivers` | Regenerate synthetic drivers, screenshots and ground truth |
+| `npm run eval` / `npm run eval:smoke` | Batch eval (1P Message Batches) / 5-driver live smoke |
 
 ## Conventions
-- Server-only secrets never get the `NEXT_PUBLIC_` prefix. Never create Supabase or Anthropic clients at module top level.
-- Every table gets RLS plus explicit policies. API routes validate request bodies and return `{ error }` with the right status code.
-- `DEMO_MODE=true` serves seeded data and canned AI replies from `src/lib/demo.ts`. Every AI feature needs a canned path.
-- Commits are small (`feat:` / `fix:` / `chore:`), one after each green slice.
-
-## State (lives in files, not in chat)
-- `.hackathon/state.json`: stage, deadline, gates and prod URL. Change it **only** through the `hack` CLI (`hack status`, `hack gate <id>`, `hack next`). The status line and the hooks read it.
-- `docs/STATUS.md`: narrative (done, in progress, next, blockers, what's stubbed). Update it after every slice.
-- `docs/IDEA.md`, then `docs/SPEC.md`, then `docs/API.md` (the frozen contract), then `docs/PITCH.md`.
+- Zod (`src/lib/schemas.ts`) on every model output: retry once, then abstain. Never invent numbers or fill missing months.
+- Every rule value in `work_rules.json` carries a `{doc,page,quote}` source.
+- No real personal data anywhere. Synthetic only. `src/lib/redact.ts` runs on all logs and traces.
+- `DEMO_MODE=true` (or missing API keys) serves recorded Claude outputs from `fixtures/`, so the demo always works.
+- Small commits: `feat:` / `fix:` / `chore:`.
 
 ## Do NOT
-- Force-push, run `supabase db reset --linked`, drop remote tables, commit `.env*` files, or deploy with a red `verify`.
-- Add libraries without a reason recorded in SPEC.md, or build features that aren't in the demo script.
+- Commit `.env*`, `uploads/`, or anything that looks like a real SSN, case number or account number.
+- Let the portal agent click submit. Only user-initiated code clicks it.
