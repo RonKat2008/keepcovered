@@ -1,6 +1,6 @@
 // Deterministic helpers for the orchestrator: which months to assess, when to route to a
 // navigator, and the pre-written case summary a navigator receives.
-import type { CaseResult, CountyLetter, EarningsRecord, ExemptionScreen, MonthStatus } from "@/lib/schemas";
+import type { CaseResult, CountyLetter, EarningsRecord, ExemptionScreen, Lang, MonthStatus } from "@/lib/schemas";
 
 const DEFAULT_LOOKBACK_MONTHS = 3;
 
@@ -31,16 +31,29 @@ export function caseMonths(letter: CountyLetter | null, records: EarningsRecord[
   return months;
 }
 
-export function navigatorReasons(months: MonthStatus[], exemptions: ExemptionScreen[], unreadableCount: number): string[] {
+export function navigatorReasons(
+  months: MonthStatus[],
+  exemptions: ExemptionScreen[],
+  unreadableCount: number,
+  lang: Lang = "en",
+): string[] {
+  const es = lang === "es";
+  const fmt = (ms: string[]) => ms.map((m) => monthLabel(m, lang)).join(", ");
   const reasons: string[] = [];
   const unsure = months.filter((m) => m.overall === "unsure").map((m) => m.month);
   const missing = months.filter((m) => m.overall === "missing_data").map((m) => m.month);
-  if (unsure.length) reasons.push(`Unsure months: ${unsure.join(", ")} (depends on rules the state has not clarified)`);
-  if (missing.length) reasons.push(`Missing records for: ${missing.join(", ")}`);
-  const possible = exemptions.filter((e) => e.outcome !== "not_indicated").map((e) => e.label_en);
-  if (possible.length) reasons.push(`Possible exemption to discuss: ${possible.join("; ")}`);
-  if (unreadableCount) reasons.push(`${unreadableCount} document(s) could not be read`);
+  if (unsure.length)
+    reasons.push(es ? `Meses inciertos: ${fmt(unsure)} (dependen de reglas que el estado no ha aclarado o de pruebas que faltan)` : `Unsure months: ${fmt(unsure)} (depends on rules the state hasn't clarified or on missing proof)`);
+  if (missing.length) reasons.push(es ? `Faltan papeles de: ${fmt(missing)}` : `Missing records for: ${fmt(missing)}`);
+  const possible = exemptions.filter((e) => e.outcome !== "not_indicated").map((e) => (es ? e.label_es : e.label_en));
+  if (possible.length) reasons.push(es ? `Posible exención para hablar: ${possible.join("; ")}` : `Possible exemption to discuss: ${possible.join("; ")}`);
+  if (unreadableCount) reasons.push(es ? `No pudimos leer ${unreadableCount} documento(s)` : `${unreadableCount} document(s) could not be read`);
   return reasons;
+}
+
+export function monthLabel(month: string, lang: Lang): string {
+  const [y, m] = month.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, 15)).toLocaleDateString(lang === "es" ? "es-US" : "en-US", { month: "long", year: "numeric", timeZone: "UTC" });
 }
 
 /** Plain-text summary for a navigator. No names or case numbers are ever included. */

@@ -56,7 +56,7 @@ const COPY = {
     hours: "Another way is to work at least 80 hours in a month.",
     lookback: "The county looks at the month before you apply, called the look-back month.",
     month: (m: MonthStatus, status: string) =>
-      `For ${m.month}, your papers show $${m.gross_income.toFixed(2)} in earnings and ${m.online_hours.toFixed(1)} online hours. ${status}`,
+      `For ${monthName(m.month, "en")}, your papers show $${m.gross_income.toFixed(2)} in earnings and ${m.active_hours.toFixed(1)} active hours. ${status}`,
     status: {
       meets: "These numbers look like they reach the amount in the rule, but the county decides.",
       does_not_meet: "These numbers look lower than the amount in the rule. The county decides, and other activities may count.",
@@ -73,7 +73,7 @@ const COPY = {
     hours: "Otra forma es trabajar al menos 80 horas en un mes.",
     lookback: "El condado revisa el mes antes de su solicitud, llamado el mes de revisión.",
     month: (m: MonthStatus, status: string) =>
-      `En ${m.month}, sus papeles muestran $${m.gross_income.toFixed(2)} en ganancias y ${m.online_hours.toFixed(1)} horas en línea. ${status}`,
+      `En ${monthName(m.month, "es")}, sus papeles muestran $${m.gross_income.toFixed(2)} en ganancias y ${m.active_hours.toFixed(1)} horas activas. ${status}`,
     status: {
       meets: "Estos números parecen llegar a la cantidad de la regla, pero el condado decide.",
       does_not_meet: "Estos números parecen menores que la cantidad de la regla. El condado decide, y otras actividades pueden contar.",
@@ -97,6 +97,11 @@ function citeFirst(chunks: readonly RuleChunk[], needle: RegExp): ExplanationSpa
 }
 
 /** Deterministic, citation-backed explanation. Rule sentences appear only when a chunk supports them. */
+function monthName(month: string, lang: Lang): string {
+  const [y, m] = month.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, 15)).toLocaleDateString(lang === "es" ? "es-US" : "en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+}
+
 export function simulateExplanation(facts: ExplainFacts, chunks: readonly RuleChunk[], lang: Lang): ExplanationSpan[] {
   const t = COPY[lang];
   const spans: ExplanationSpan[] = [{ text: t.intro, citations: [] }];

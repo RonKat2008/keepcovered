@@ -217,8 +217,10 @@ export async function runCase(input: CaseInput): Promise<CaseResult> {
   emit({ step: "reconcile", kind: "start", title: "Matching app payouts to bank deposits", decided_by: "code" });
   let rec = reconcile({ records, transactions, labels: {}, suggestions });
   const questions = rec.unmatched_deposits.map(depositQuestion);
+  let depositLabels: Record<string, DepositLabel> = {};
   if (questions.length > 0) {
     const labels = await askAboutDeposits(input.sessionId, questions, emit);
+    depositLabels = labels;
     rec = reconcile({ records, transactions, labels, suggestions });
   }
   emit({
@@ -265,7 +267,7 @@ export async function runCase(input: CaseInput): Promise<CaseResult> {
   const explained = await explainCase({ facts, chunks, lang: input.lang });
   emitCalls(emit, "explain", "Explained with citations", explained.calls);
 
-  const reasons = navigatorReasons(monthStatuses, exemptions, unreadable.length);
+  const reasons = navigatorReasons(monthStatuses, exemptions, unreadable.length, input.lang);
   const result: CaseResult = {
     session_id: input.sessionId,
     lang: input.lang,
@@ -277,7 +279,8 @@ export async function runCase(input: CaseInput): Promise<CaseResult> {
     explanation: explained.data ?? [],
     deadlines,
     questions: [
-      ...questions,
+      // Only questions still open (unanswered or "not sure") stay on the result.
+      ...questions.filter((q) => (depositLabels[q.ref] ?? "unknown") === "unknown"),
       ...unreadable.map(
         (doc): UserQuestion => ({
           id: `reupload:${doc.id}`,
