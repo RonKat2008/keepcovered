@@ -214,3 +214,15 @@ describe("sixMonthAverage", () => {
     expect(sixMonthAverage([], "2027-05", rules)).toEqual({ average_gross: 0, months_counted: 0, meets_average: false });
   });
 });
+
+describe("bank-only months", () => {
+  it("treats a short month with only labeled bank deposits as missing statements, not does_not_meet", () => {
+    const rules = loadWorkRules();
+    const [m] = computeMonthlyStatus(
+      { months: ["2027-03"], records: [], labeledIncome: [{ id: "t1", date: "2027-03-10", amount: 300, description: "DOORDASH" }], activities: [] },
+      rules,
+    );
+    expect(m.overall).toBe("missing_data");
+    expect(m.reasons.map((r) => r.code)).toEqual(expect.arrayContaining(["missing_month", "bank_only_income"]));
+  });
+});

@@ -12,6 +12,8 @@ export interface ExpectedMonth {
   active_hours: number;
   online_hours: number;
   overall_expected: MonthStatus["overall"];
+  /** Statuses the ground truth accepts (e.g. "unsure" is acceptable when an open question applies). */
+  acceptable?: MonthStatus["overall"][];
 }
 
 export interface FieldScore {
@@ -68,11 +70,12 @@ export interface MonthScore {
 export function scoreMonths(expected: ExpectedMonth[], got: MonthStatus[]): MonthScore[] {
   return expected.map((e) => {
     const g = got.find((m) => m.month === e.month);
+    const acceptable = e.acceptable?.length ? e.acceptable : [e.overall_expected];
     return {
       month: e.month,
       totalWithinTolerance: g !== undefined && Math.abs(g.gross_income - e.gross_income) <= MONTH_TOTAL_TOLERANCE,
-      statusCorrect: g?.overall === e.overall_expected,
-      falseMeets: g?.overall === "meets" && e.overall_expected !== "meets",
+      statusCorrect: g !== undefined && acceptable.includes(g.overall),
+      falseMeets: g?.overall === "meets" && !acceptable.includes("meets"),
       expected: e.overall_expected,
       got: g?.overall ?? "absent",
     };

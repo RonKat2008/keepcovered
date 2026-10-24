@@ -137,7 +137,33 @@ export function reconcile(input: Input): ReconcileResult {
     });
   }
 
-  const unmatched = incomeLike.filter((t) => !matchedIds.has(t.id));
+  // A platform deposit dated inside a kept statement's payout window is already represented by
+  // that statement, even when amounts don't line up (monthly summaries paid weekly, instant
+  // cash-outs net of fees). Counting it again would double count, so it is never income on its own.
+  const platformOf = (t: BankTransaction): Platform | null => {
+    for (const [p, re] of Object.entries(PLATFORM_PATTERNS) as [Platform, RegExp][]) if (re.test(t.description)) return p;
+    return suggestionById.get(t.id)?.platform ?? null;
+  };
+  const coveredIds = new Set(
+    incomeLike
+      .filter((t) => !matchedIds.has(t.id))
+      .filter((t) => {
+        const platform = platformOf(t);
+        return (
+          platform !== null &&
+          kept.some((r) => {
+            if (r.platform !== platform || r.period_start === null || r.period_end === null || t.date < r.period_start) return false;
+            // Inside the earning period, a deposit belongs to this statement. After it, only an
+            // unmatched statement claims the deposit; a matched one leaves it for the member to label.
+            const matched = matches.some((m) => m.source_doc_id === r.source_doc_id);
+            return t.date <= (matched ? r.period_end : addDays(r.period_end, PAYOUT_WINDOW_DAYS));
+          })
+        );
+      })
+      .map((t) => t.id),
+  );
+
+  const unmatched = incomeLike.filter((t) => !matchedIds.has(t.id) && !coveredIds.has(t.id));
   return {
     records: kept,
     duplicates,
@@ -145,6 +171,8 @@ export function reconcile(input: Input): ReconcileResult {
     unmatched_deposits: unmatched
       .filter((t) => input.labels[t.id] !== "driving" && input.labels[t.id] !== "not_driving")
       .map((t) => ({ ...t, suggestion: suggestionById.get(t.id) ?? null })),
-    user_labeled_income: input.transactions.filter((t) => t.amount > 0 && !matchedIds.has(t.id) && input.labels[t.id] === "driving"),
+    user_labeled_income: input.transactions.filter(
+      (t) => t.amount > 0 && !matchedIds.has(t.id) && !coveredIds.has(t.id) && input.labels[t.id] === "driving",
+    ),
   };
 }

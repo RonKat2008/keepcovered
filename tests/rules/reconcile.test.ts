@@ -164,3 +164,26 @@ describe("unmatched and labeled deposits", () => {
     expect(JSON.stringify([records, t])).toBe(snap);
   });
 });
+
+describe("statement-covered deposits", () => {
+  it("never counts weekly deposits of a monthly statement as extra income, even when labeled driving", () => {
+    const monthly = rec({ source_doc_id: "m", platform: "doordash", period_start: "2027-03-01", period_end: "2027-03-31", gross_earnings: 900, net_payout: 800 });
+    const deposits = [
+      txn("d1", "2027-03-09", 190, "DOORDASH DASHER DIRECT"),
+      txn("d2", "2027-03-16", 210, "DOORDASH DASHER DIRECT"),
+      txn("d3", "2027-04-03", 205, "DOORDASH DASHER DIRECT"),
+      txn("v1", "2027-03-10", 45, "VENMO *J RIVERA"),
+    ];
+    const labels: Record<string, DepositLabel> = { d1: "driving", d2: "driving", d3: "driving", v1: "driving" };
+    const r = reconcile({ records: [monthly], transactions: deposits, labels, suggestions: [] });
+    expect(r.user_labeled_income.map((t) => t.id)).toEqual(["v1"]);
+    expect(r.unmatched_deposits).toEqual([]);
+  });
+
+  it("still asks about a platform deposit outside every statement window", () => {
+    const week1 = rec({ source_doc_id: "w", platform: "uber", period_start: "2027-03-01", period_end: "2027-03-07", gross_earnings: 300, net_payout: 280 });
+    const lone = txn("u9", "2027-05-20", 120, "UBER TECHNOLOGIES PAYOUT");
+    const r = reconcile({ records: [week1], transactions: [lone], labels: {}, suggestions: [] });
+    expect(r.unmatched_deposits.map((t) => t.id)).toEqual(["u9"]);
+  });
+});

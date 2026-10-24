@@ -218,6 +218,11 @@ function buildMonth(month: string, input: StatusInput, rules: WorkRules): MonthS
       rules,
     );
     overall = trusted.income === true || trusted.hours === true ? "meets" : "unsure";
+  } else if (allocs.length === 0 && activities.length === 0) {
+    // Only bank deposits: gross pay and hours are unknown, so a short month is missing
+    // statements, not proof of falling short.
+    overall = "missing_data";
+    reasons.unshift({ code: "missing_month", params: {} });
   } else if (all.income === "depends_on_open_question" || all.hours === "depends_on_open_question") overall = "unsure";
   else overall = "does_not_meet";
 
