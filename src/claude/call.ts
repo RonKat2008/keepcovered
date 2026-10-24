@@ -61,6 +61,7 @@ function metaFrom(
   },
   latency_ms: number,
   model: string = ROUTES[route].model,
+  cost_override?: number,
 ): ModelCallMeta {
   return {
     route,
@@ -70,7 +71,7 @@ function metaFrom(
     input_tokens: usage.input_tokens,
     output_tokens: usage.output_tokens,
     cache_read_tokens: usage.cache_read_input_tokens ?? 0,
-    cost_usd: costUsd(model, usage),
+    cost_usd: cost_override ?? costUsd(model, usage),
     latency_ms,
     simulated: provider === "fixture" || provider === "simulator",
   };
@@ -123,14 +124,46 @@ function keyFor(task: string, content: Content, fixtureInput?: Uint8Array | stri
   return fixtureKey(task, fixtureInput ?? JSON.stringify(content));
 }
 
+/** Fixture namespace and key used for replay; the batch path saves under the same pair. */
+export function structuredFixtureRef<T>(args: StructuredArgs<T>): { task: string; key: string } {
+  const task = args.task ?? args.route;
+  return { task, key: keyFor(task, args.content, args.fixtureInput) };
+}
+
+/**
+ * The exact Messages API params for a structured call. Shared by the live path and
+ * the Message Batches path so they cannot drift.
+ */
+export function buildStructuredParams<T>(
+  args: StructuredArgs<T>,
+  maxTokens: number = args.maxTokens,
+): Anthropic.MessageCreateParamsNonStreaming {
+  const { model, effort } = ROUTES[args.route];
+  const { type, schema } = zodOutputFormat(args.schema);
+  return {
+    model,
+    max_tokens: maxTokens,
+    system: systemBlocks(args.system),
+    messages: [{ role: "user", content: args.content }],
+    output_config: { effort, format: { type, schema } },
+  };
+}
+
+/** When set (eval --batch), recorded fixtures are replayed even with live credentials. */
+function replayFirst(): boolean {
+  return process.env.CLAUDE_REPLAY_FIXTURES === "1";
+}
+
+function replayFixture<T>(args: StructuredArgs<T>, fixture: FixtureEntry): Traced<T> {
+  const meta = metaFrom(args.route, "fixture", fixture.usage, fixture.latency_ms, fixture.model, fixture.cost_usd);
+  const checked = validate(args.schema, fixture.text);
+  return checked.ok ? { data: checked.data, calls: [meta] } : { data: null, calls: [meta], error: checked.error };
+}
+
 function replayStructured<T>(args: StructuredArgs<T>, key: string): Traced<T> {
   const task = args.task ?? args.route;
   const fixture = getFixture(task, key);
-  if (fixture?.text !== undefined) {
-    const meta = metaFrom(args.route, "fixture", fixture.usage, fixture.latency_ms, fixture.model);
-    const checked = validate(args.schema, fixture.text);
-    return checked.ok ? { data: checked.data, calls: [meta] } : { data: null, calls: [meta], error: checked.error };
-  }
+  if (fixture?.text !== undefined) return replayFixture(args, fixture);
   const simulated = args.simulate?.() ?? null;
   if (simulated === null) {
     return { data: null, calls: [], error: "no_fixture: no recorded output or ground truth for this input" };
@@ -166,14 +199,16 @@ function usageForFixture(usage: Anthropic.Usage): FixtureEntry["usage"] {
  * A refusal abstains immediately.
  */
 export async function callStructured<T>(args: StructuredArgs<T>): Promise<Traced<T>> {
-  const task = args.task ?? args.route;
-  const key = keyFor(task, args.content, args.fixtureInput);
+  const { task, key } = structuredFixtureRef(args);
   if (!isLive()) return replayStructured(args, key);
+  if (replayFirst()) {
+    const fixture = getFixture(task, key);
+    if (fixture?.text !== undefined) return replayFixture(args, fixture);
+  }
 
   const claude = getClaude("runtime");
   if (!claude) return { data: null, calls: [], error: "no_client" };
-  const { model, effort } = ROUTES[args.route];
-  const { type, schema } = zodOutputFormat(args.schema);
+  const { model } = ROUTES[args.route];
   const calls: ModelCallMeta[] = [];
   let lastError = "unknown";
   let maxTokens = args.maxTokens;
@@ -182,13 +217,7 @@ export async function callStructured<T>(args: StructuredArgs<T>): Promise<Traced
     const started = Date.now();
     let message: Anthropic.Message;
     try {
-      message = await claude.client.messages.create({
-        model,
-        max_tokens: maxTokens,
-        system: systemBlocks(args.system),
-        messages: [{ role: "user", content: args.content }],
-        output_config: { effort, format: { type, schema } },
-      });
+      message = await claude.client.messages.create(buildStructuredParams(args, maxTokens));
     } catch (err) {
       return { data: null, calls, error: describeApiError(err) };
     }

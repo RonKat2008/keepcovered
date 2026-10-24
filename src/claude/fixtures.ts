@@ -19,6 +19,9 @@ export type FixtureEntry = {
   usage: FixtureUsage;
   latency_ms: number;
   recorded_at: string;
+  /** Overrides the computed cost on replay (batch outputs bill at 50%). */
+  cost_usd?: number;
+  batch_id?: string;
 };
 
 export function sha256(data: Uint8Array | string): string {

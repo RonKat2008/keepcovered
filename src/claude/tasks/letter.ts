@@ -1,5 +1,5 @@
 import { CountyLetter, CountyLetterExtraction, type Confidence } from "@/lib/schemas";
-import { callStructured, type Traced } from "../call";
+import { callStructured, type StructuredArgs, type Traced } from "../call";
 import { docContent } from "../content";
 import { systemFor } from "../prompts";
 import { simulateFrom, truthLetter } from "../simulate";
@@ -31,8 +31,10 @@ export function letterConfidence(
   return conf;
 }
 
-function readLetter(doc: InputDoc, route: "letter" | "extract_secondary") {
-  return callStructured({
+/** Call args for one letter reader (Sonnet primary, Haiku secondary). Throws for unsupported file types. */
+export function letterArgs(doc: InputDoc, reader: "primary" | "secondary"): StructuredArgs<CountyLetterExtraction> {
+  const route = reader === "primary" ? "letter" : "extract_secondary";
+  return {
     route,
     task: route === "letter" ? "letter_primary" : "letter_secondary",
     system: systemFor("letter"),
@@ -41,14 +43,14 @@ function readLetter(doc: InputDoc, route: "letter" | "extract_secondary") {
     maxTokens: MAX_TOKENS,
     fixtureInput: doc.bytes,
     simulate: simulateFrom(doc.truthPath, truthLetter),
-  });
+  };
 }
 
 export async function extractCountyLetter(doc: InputDoc): Promise<Traced<CountyLetter>> {
   let primary: Traced<CountyLetterExtraction>;
   let secondary: Traced<CountyLetterExtraction>;
   try {
-    [primary, secondary] = await Promise.all([readLetter(doc, "letter"), readLetter(doc, "extract_secondary")]);
+    [primary, secondary] = await Promise.all([callStructured(letterArgs(doc, "primary")), callStructured(letterArgs(doc, "secondary"))]);
   } catch (err) {
     return { data: null, calls: [], error: (err as Error).message };
   }

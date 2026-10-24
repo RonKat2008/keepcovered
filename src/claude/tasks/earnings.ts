@@ -1,5 +1,5 @@
 import { EarningsExtraction, EarningsRecord } from "@/lib/schemas";
-import { callStructured, type ModelCallMeta, type Traced } from "../call";
+import { callStructured, type ModelCallMeta, type StructuredArgs, type Traced } from "../call";
 import { docContent } from "../content";
 import { sha256 } from "../fixtures";
 import { systemFor } from "../prompts";
@@ -9,25 +9,30 @@ import { buildRecord, compareReadings, unreadableRecord } from "../verify";
 
 const MAX_TOKENS = 4000;
 
-export async function extractEarnings(doc: InputDoc, reader: "primary" | "secondary"): Promise<Traced<EarningsExtraction>> {
-  let content;
-  try {
-    content = docContent(doc, "Extract the earnings summary from this screenshot.");
-  } catch (err) {
-    return { data: null, calls: [], error: (err as Error).message };
-  }
+/** Call args for one earnings reader. Throws UnsupportedDocError for unsupported file types. */
+export function extractArgs(doc: InputDoc, reader: "primary" | "secondary"): StructuredArgs<EarningsExtraction> {
   const route = reader === "primary" ? "extract_primary" : "extract_secondary";
-  return callStructured({
+  return {
     route,
     task: route,
     system: systemFor("extract"),
-    content,
+    content: docContent(doc, "Extract the earnings summary from this screenshot."),
     schema: EarningsExtraction,
     maxTokens: MAX_TOKENS,
     fixtureInput: doc.bytes,
     // Simulated secondary reader returns the same truth (agreement), never perturbed.
     simulate: simulateFrom(doc.truthPath, truthEarnings),
-  });
+  };
+}
+
+export async function extractEarnings(doc: InputDoc, reader: "primary" | "secondary"): Promise<Traced<EarningsExtraction>> {
+  let args;
+  try {
+    args = extractArgs(doc, reader);
+  } catch (err) {
+    return { data: null, calls: [], error: (err as Error).message };
+  }
+  return callStructured(args);
 }
 
 async function adjudicate(

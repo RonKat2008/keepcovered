@@ -2,9 +2,11 @@
 // driver and scores it against ground truth. Writes evals/results.md and evals/results.json.
 //   npx tsx evals/run.ts            all drivers (simulated when no API key)
 //   npx tsx evals/run.ts --smoke    first 5 drivers
+//   npx tsx evals/run.ts --batch    prefetch reads via Message Batches (50% cost, needs ANTHROPIC_API_KEY), then replay
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
+import { prefetchViaBatch, type BatchTask } from "@/claude/batch";
 import { isLive } from "@/claude/client";
 import type { ModelCallMeta } from "@/claude/call";
 import { extractCountyLetter } from "@/claude/tasks/letter";
@@ -230,7 +232,9 @@ function pct(v: { pct: number; correct: number; n: number }): string {
   return v.n === 0 ? "n/a" : `${v.pct.toFixed(1)}% (${v.correct}/${v.n})`;
 }
 
-function report(outcomes: DriverOutcome[], live: boolean): string {
+type BatchInfo = { batchId: string; succeeded: number; errored: number; costUsd: number };
+
+function report(outcomes: DriverOutcome[], live: boolean, batch: BatchInfo | null): string {
   const all = <K extends keyof DriverOutcome>(k: K) => outcomes.flatMap((o) => o[k] as unknown as boolean[]);
   const months = outcomes.flatMap((o) => o.months);
   const monthsTruth = outcomes.flatMap((o) => o.monthsGivenTruth);
@@ -258,6 +262,12 @@ function report(outcomes: DriverOutcome[], live: boolean): string {
     "# Eval results",
     "",
     `Run: ${new Date().toISOString()} · ${outcomes.length} synthetic drivers · mode: **${live ? "live Claude API" : "simulated (no API key; Claude outputs replayed from ground truth, so extraction numbers measure plumbing, not the model)"}**`,
+    ...(batch
+      ? [
+          "",
+          `mode: batch · Message Batch \`${batch.batchId}\` · ${batch.succeeded} succeeded, ${batch.errored} failed · batch cost $${batch.costUsd.toFixed(4)} (50% pricing; adjudication calls stay live)`,
+        ]
+      : []),
     "",
     "| Metric | Result | Target |",
     "|---|---|---|",
@@ -269,19 +279,35 @@ function report(outcomes: DriverOutcome[], live: boolean): string {
   ].join("\n");
 }
 
+const BATCH_TASKS: BatchTask[] = ["triage", "extract_primary", "extract_secondary", "letter"];
+
+/** Submits every read as one Message Batch; the normal loop then replays the saved fixtures. */
+async function runBatchPrefetch(gts: GroundTruth[]): Promise<BatchInfo | null> {
+  if (!isLive("batch")) {
+    process.stdout.write("--batch ignored: needs ANTHROPIC_API_KEY and DEMO_MODE off\n");
+    return null;
+  }
+  const docs = gts.flatMap((gt) => gt.documents.map((d, i) => loadDoc(gt.driver_id, d, i)));
+  const result = await prefetchViaBatch(docs, BATCH_TASKS, { onStatus: (s) => process.stdout.write(`${s}\n`) });
+  process.env.CLAUDE_REPLAY_FIXTURES = "1";
+  process.stdout.write(`batch ${result.batchId}: ${result.succeeded} ok, ${result.errored} failed, $${result.costUsd.toFixed(4)}\n`);
+  return result;
+}
+
 async function main() {
   const smoke = process.argv.includes("--smoke");
   const files = readdirSync(GT_DIR).filter((f) => f.endsWith(".json")).sort();
   const gts: GroundTruth[] = files.map((f) => JSON.parse(readFileSync(join(GT_DIR, f), "utf8")));
   const selected = smoke ? gts.slice(0, SMOKE_COUNT) : gts;
   const live = isLive();
+  const batch = process.argv.includes("--batch") ? await runBatchPrefetch(selected) : null;
   const outcomes: DriverOutcome[] = [];
   for (const gt of selected) {
     outcomes.push(await evalDriver(gt));
     process.stdout.write(".");
   }
   process.stdout.write("\n");
-  const md = report(outcomes, live);
+  const md = report(outcomes, live, batch);
   writeFileSync(smoke ? "evals/results.smoke.md" : "evals/results.md", md);
   writeFileSync(smoke ? "evals/results.smoke.json" : "evals/results.json", JSON.stringify(outcomes, null, 1));
   process.stdout.write(md.split("## Failure cases")[0]);
