@@ -1,0 +1,410 @@
+[
+  {
+    "id": "demo-maria-t001",
+    "date": "2026-09-01",
+    "amount": -1726,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "demo-maria-t002",
+    "date": "2026-09-02",
+    "amount": -181.68,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "demo-maria-t003",
+    "date": "2026-09-03",
+    "amount": -158.04,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "demo-maria-t004",
+    "date": "2026-09-04",
+    "amount": -70.1,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "demo-maria-t005",
+    "date": "2026-09-05",
+    "amount": -70.49,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "demo-maria-t006",
+    "date": "2026-09-07",
+    "amount": -133.95,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "demo-maria-t007",
+    "date": "2026-09-10",
+    "amount": 103.75,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t008",
+    "date": "2026-09-11",
+    "amount": -30.84,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "demo-maria-t009",
+    "date": "2026-09-13",
+    "amount": -174.25,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "demo-maria-t010",
+    "date": "2026-09-14",
+    "amount": -124.09,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "demo-maria-t011",
+    "date": "2026-09-17",
+    "amount": 154.28,
+    "description": "UBER TECHNOLOGIES PAYOUT 3663"
+  },
+  {
+    "id": "demo-maria-t012",
+    "date": "2026-09-17",
+    "amount": -106.75,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "demo-maria-t013",
+    "date": "2026-09-19",
+    "amount": -202.32,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "demo-maria-t014",
+    "date": "2026-09-22",
+    "amount": 155.07,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t015",
+    "date": "2026-09-25",
+    "amount": -126.46,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "demo-maria-t016",
+    "date": "2026-09-28",
+    "amount": -32.34,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "demo-maria-t017",
+    "date": "2026-09-30",
+    "amount": 134.05,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t018",
+    "date": "2026-10-01",
+    "amount": -1875,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "demo-maria-t019",
+    "date": "2026-10-03",
+    "amount": 150,
+    "description": "TRANSFER FROM SAVINGS"
+  },
+  {
+    "id": "demo-maria-t020",
+    "date": "2026-10-03",
+    "amount": 62.85,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t021",
+    "date": "2026-10-08",
+    "amount": 48.07,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "demo-maria-t022",
+    "date": "2026-10-09",
+    "amount": 34.28,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "demo-maria-t023",
+    "date": "2026-10-10",
+    "amount": 86.57,
+    "description": "UBER TECHNOLOGIES PAYOUT 3679"
+  },
+  {
+    "id": "demo-maria-t024",
+    "date": "2026-10-10",
+    "amount": -8.69,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "demo-maria-t025",
+    "date": "2026-10-16",
+    "amount": 26.03,
+    "description": "MAPLEBEAR INSTACART 8194"
+  },
+  {
+    "id": "demo-maria-t026",
+    "date": "2026-10-17",
+    "amount": 60.99,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t027",
+    "date": "2026-10-17",
+    "amount": 50.81,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "demo-maria-t028",
+    "date": "2026-10-17",
+    "amount": -94.24,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "demo-maria-t029",
+    "date": "2026-10-18",
+    "amount": -61.73,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "demo-maria-t030",
+    "date": "2026-10-20",
+    "amount": -26.95,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "demo-maria-t031",
+    "date": "2026-10-22",
+    "amount": -8.98,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "demo-maria-t032",
+    "date": "2026-10-23",
+    "amount": 29.38,
+    "description": "MAPLEBEAR INSTACART 4526"
+  },
+  {
+    "id": "demo-maria-t033",
+    "date": "2026-10-24",
+    "amount": 59.14,
+    "description": "UBER TECHNOLOGIES PAYOUT 1886"
+  },
+  {
+    "id": "demo-maria-t034",
+    "date": "2026-10-24",
+    "amount": 43.29,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "demo-maria-t035",
+    "date": "2026-10-29",
+    "amount": 32.04,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "demo-maria-t036",
+    "date": "2026-10-30",
+    "amount": 74.01,
+    "description": "UBER TECHNOLOGIES PAYOUT 3694"
+  },
+  {
+    "id": "demo-maria-t037",
+    "date": "2026-10-30",
+    "amount": 56.28,
+    "description": "DOORDASH DASHER DIRECT 9622"
+  },
+  {
+    "id": "demo-maria-t038",
+    "date": "2026-10-30",
+    "amount": -130.52,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "demo-maria-t039",
+    "date": "2026-10-31",
+    "amount": -6.73,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "demo-maria-t040",
+    "date": "2026-10-31",
+    "amount": -19.97,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "demo-maria-t041",
+    "date": "2026-11-01",
+    "amount": 12.01,
+    "description": "MAPLEBEAR INSTACART 8359"
+  },
+  {
+    "id": "demo-maria-t042",
+    "date": "2026-11-01",
+    "amount": -1223,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "demo-maria-t043",
+    "date": "2026-11-03",
+    "amount": 17.21,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t044",
+    "date": "2026-11-03",
+    "amount": 17.05,
+    "description": "DOORDASH DASHER DIRECT 3276"
+  },
+  {
+    "id": "demo-maria-t045",
+    "date": "2026-11-07",
+    "amount": -38.41,
+    "description": "CHEVRON 0042"
+  },
+  {
+    "id": "demo-maria-t046",
+    "date": "2026-11-08",
+    "amount": -43.76,
+    "description": "CHEVRON 0042"
+  },
+  {
+    "id": "demo-maria-t047",
+    "date": "2026-11-09",
+    "amount": 52.64,
+    "description": "MAPLEBEAR INSTACART 1357"
+  },
+  {
+    "id": "demo-maria-t048",
+    "date": "2026-11-10",
+    "amount": 109.07,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "demo-maria-t049",
+    "date": "2026-11-10",
+    "amount": 76.23,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t050",
+    "date": "2026-11-12",
+    "amount": 85,
+    "description": "VENMO *LUCIA R"
+  },
+  {
+    "id": "demo-maria-t051",
+    "date": "2026-11-16",
+    "amount": 162.96,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t052",
+    "date": "2026-11-16",
+    "amount": 30.98,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "demo-maria-t053",
+    "date": "2026-11-17",
+    "amount": 76.51,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "demo-maria-t054",
+    "date": "2026-11-17",
+    "amount": -10.38,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "demo-maria-t055",
+    "date": "2026-11-22",
+    "amount": 120.7,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t056",
+    "date": "2026-11-22",
+    "amount": 108.95,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "demo-maria-t057",
+    "date": "2026-11-24",
+    "amount": 42.29,
+    "description": "MAPLEBEAR INSTACART 2974"
+  },
+  {
+    "id": "demo-maria-t058",
+    "date": "2026-11-24",
+    "amount": -136.33,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "demo-maria-t059",
+    "date": "2026-11-25",
+    "amount": -65.01,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "demo-maria-t060",
+    "date": "2026-11-25",
+    "amount": -113.07,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "demo-maria-t061",
+    "date": "2026-11-28",
+    "amount": -24.4,
+    "description": "CHEVRON 0042"
+  },
+  {
+    "id": "demo-maria-t062",
+    "date": "2026-11-28",
+    "amount": -96.86,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "demo-maria-t063",
+    "date": "2026-11-30",
+    "amount": 99.86,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t064",
+    "date": "2026-11-30",
+    "amount": 62.55,
+    "description": "DOORDASH DASHER DIRECT 6668"
+  },
+  {
+    "id": "demo-maria-t065",
+    "date": "2026-11-30",
+    "amount": 51.93,
+    "description": "MAPLEBEAR INSTACART 9343"
+  },
+  {
+    "id": "demo-maria-t066",
+    "date": "2026-12-01",
+    "amount": 30.49,
+    "description": "UBER TECHNOLOGIES PAYOUT"
+  },
+  {
+    "id": "demo-maria-t067",
+    "date": "2026-12-02",
+    "amount": 10.26,
+    "description": "MAPLEBEAR INSTACART 8881"
+  },
+  {
+    "id": "demo-maria-t068",
+    "date": "2026-12-03",
+    "amount": 36.12,
+    "description": "DOORDASH DASHER DIRECT 1879"
+  }
+]

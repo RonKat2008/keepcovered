@@ -1,0 +1,19 @@
+{
+  "driver_id": "drv-07",
+  "display_name": "Rosa Tran",
+  "lang": "es",
+  "apps": [
+    "instacart",
+    "lyft",
+    "doordash"
+  ],
+  "months": [
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "traps": [
+    "net_below_gross_above"
+  ]
+}

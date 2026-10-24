@@ -1,0 +1,13 @@
+{
+  "platform": null,
+  "period_start": null,
+  "period_end": null,
+  "gross_earnings": null,
+  "tips": null,
+  "platform_fees": null,
+  "net_payout": null,
+  "online_hours": 50.2,
+  "active_hours": 44.6,
+  "trips_or_deliveries": 16,
+  "unreadable_reason": "The top of the screen is cut off: the period, total earnings and net payout are not visible; only the hours and trip counts can be read."
+}

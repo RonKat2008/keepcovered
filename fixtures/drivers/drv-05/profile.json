@@ -1,0 +1,18 @@
+{
+  "driver_id": "drv-05",
+  "display_name": "Riley Ferreira",
+  "lang": "en",
+  "apps": [
+    "lyft",
+    "doordash"
+  ],
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "traps": [
+    "duplicate_rephotographed"
+  ]
+}

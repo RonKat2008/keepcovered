@@ -1,0 +1,20 @@
+{
+  "driver_id": "drv-12",
+  "display_name": "Mateo Whitfield",
+  "lang": "es",
+  "apps": [
+    "doordash",
+    "uber"
+  ],
+  "months": [
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "unreadable_total"
+  ]
+}

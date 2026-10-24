@@ -108,9 +108,9 @@ describe("matching payouts", () => {
     const r = reconcile({ ...base, records: [week("r", "2027-03-01", "2027-03-07", 200)], transactions: [txn("a", "2027-03-08", 100.9, "UBER"), txn("b", "2027-03-08", 99.7, "UBER"), txn("c", "2027-03-08", 100, "UBER")] });
     expect(r.matches[0].txn_ids).toEqual(["b", "c"]);
   });
-  it("limits subset search to seven deposits", () => {
-    const eight = Array.from({ length: 8 }, (_, i) => txn(`t${i}`, "2027-03-08", 10, "UBER"));
-    const r = reconcile({ ...base, records: [week("r", "2027-03-01", "2027-03-07", 80)], transactions: eight });
+  it("limits subset search to seven deposits (when the whole window doesn't sum to the payout)", () => {
+    const nine = [...Array.from({ length: 8 }, (_, i) => txn(`t${i}`, "2027-03-08", 10, "UBER")), txn("t8", "2027-03-09", 3, "UBER")];
+    const r = reconcile({ ...base, records: [week("r", "2027-03-01", "2027-03-07", 80)], transactions: nine });
     expect(r.matches).toEqual([]);
   });
   it("each deposit matches at most once", () => {
@@ -185,5 +185,14 @@ describe("statement-covered deposits", () => {
     const lone = txn("u9", "2027-05-20", 120, "UBER TECHNOLOGIES PAYOUT");
     const r = reconcile({ records: [week1], transactions: [lone], labels: {}, suggestions: [] });
     expect(r.unmatched_deposits.map((t) => t.id)).toEqual(["u9"]);
+  });
+});
+
+describe("monthly statement window match", () => {
+  it("matches a monthly statement to the weekly deposits that sum to its net", () => {
+    const monthly = rec({ source_doc_id: "m", platform: "uber", period_start: "2027-03-01", period_end: "2027-03-31", gross_earnings: 700, net_payout: 600 });
+    const deposits = [txn("a", "2027-03-09", 150, "UBER"), txn("b", "2027-03-16", 150, "UBER"), txn("c", "2027-03-23", 150, "UBER"), txn("d", "2027-04-01", 150, "UBER")];
+    const r = reconcile({ records: [monthly], transactions: deposits, labels: {}, suggestions: [] });
+    expect(r.matches[0].txn_ids).toEqual(["a", "b", "c", "d"]);
   });
 });

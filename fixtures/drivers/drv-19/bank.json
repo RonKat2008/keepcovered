@@ -1,0 +1,632 @@
+[
+  {
+    "id": "drv-19-t001",
+    "date": "2026-08-01",
+    "amount": -1267,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-19-t002",
+    "date": "2026-08-06",
+    "amount": -73.37,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-19-t003",
+    "date": "2026-08-08",
+    "amount": 90.65,
+    "description": "MAPLEBEAR INSTACART 8263"
+  },
+  {
+    "id": "drv-19-t004",
+    "date": "2026-08-09",
+    "amount": 254.81,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t005",
+    "date": "2026-08-15",
+    "amount": 159.13,
+    "description": "DOORDASH DASHER DIRECT 9383"
+  },
+  {
+    "id": "drv-19-t006",
+    "date": "2026-08-15",
+    "amount": 141.84,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t007",
+    "date": "2026-08-16",
+    "amount": -62.61,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "drv-19-t008",
+    "date": "2026-08-17",
+    "amount": -150.72,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "drv-19-t009",
+    "date": "2026-08-20",
+    "amount": 28,
+    "description": "VENMO *J. RIVERA"
+  },
+  {
+    "id": "drv-19-t010",
+    "date": "2026-08-22",
+    "amount": 67,
+    "description": "ZELLE FROM M GARCIA"
+  },
+  {
+    "id": "drv-19-t011",
+    "date": "2026-08-23",
+    "amount": 106.4,
+    "description": "MAPLEBEAR INSTACART 4753"
+  },
+  {
+    "id": "drv-19-t012",
+    "date": "2026-08-23",
+    "amount": -110.01,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "drv-19-t013",
+    "date": "2026-08-24",
+    "amount": 100.2,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t014",
+    "date": "2026-08-27",
+    "amount": -39.39,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-19-t015",
+    "date": "2026-08-29",
+    "amount": 84.41,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t016",
+    "date": "2026-08-29",
+    "amount": -36.78,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-19-t017",
+    "date": "2026-08-30",
+    "amount": 135.13,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t018",
+    "date": "2026-08-30",
+    "amount": 29.41,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-19-t019",
+    "date": "2026-08-30",
+    "amount": 22.26,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-19-t020",
+    "date": "2026-08-30",
+    "amount": 13.72,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-19-t021",
+    "date": "2026-08-30",
+    "amount": -75.58,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-19-t022",
+    "date": "2026-08-31",
+    "amount": 24.2,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-19-t023",
+    "date": "2026-09-01",
+    "amount": -1582,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-19-t024",
+    "date": "2026-09-02",
+    "amount": 65.04,
+    "description": "MAPLEBEAR INSTACART 7357"
+  },
+  {
+    "id": "drv-19-t025",
+    "date": "2026-09-05",
+    "amount": 204,
+    "description": "ZELLE FROM S PATEL"
+  },
+  {
+    "id": "drv-19-t026",
+    "date": "2026-09-07",
+    "amount": -174.52,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-19-t027",
+    "date": "2026-09-09",
+    "amount": 47.53,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t028",
+    "date": "2026-09-10",
+    "amount": 170.19,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t029",
+    "date": "2026-09-11",
+    "amount": -148.3,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "drv-19-t030",
+    "date": "2026-09-16",
+    "amount": 558,
+    "description": "TRANSFER FROM SAVINGS"
+  },
+  {
+    "id": "drv-19-t031",
+    "date": "2026-09-16",
+    "amount": 175.21,
+    "description": "DOORDASH DASHER DIRECT 1718"
+  },
+  {
+    "id": "drv-19-t032",
+    "date": "2026-09-16",
+    "amount": 89.86,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t033",
+    "date": "2026-09-16",
+    "amount": -11.68,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-19-t034",
+    "date": "2026-09-17",
+    "amount": -66.21,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "drv-19-t035",
+    "date": "2026-09-21",
+    "amount": 369,
+    "description": "MOBILE CHECK DEPOSIT"
+  },
+  {
+    "id": "drv-19-t036",
+    "date": "2026-09-23",
+    "amount": 144.26,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t037",
+    "date": "2026-09-23",
+    "amount": 49.89,
+    "description": "MAPLEBEAR INSTACART 1961"
+  },
+  {
+    "id": "drv-19-t038",
+    "date": "2026-09-24",
+    "amount": -114.51,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "drv-19-t039",
+    "date": "2026-09-24",
+    "amount": -160.21,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-19-t040",
+    "date": "2026-09-29",
+    "amount": 73.68,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t041",
+    "date": "2026-10-01",
+    "amount": 104.07,
+    "description": "DOORDASH DASHER DIRECT 6102"
+  },
+  {
+    "id": "drv-19-t042",
+    "date": "2026-10-01",
+    "amount": -170.34,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-19-t043",
+    "date": "2026-10-01",
+    "amount": -1399,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-19-t044",
+    "date": "2026-10-02",
+    "amount": 12.66,
+    "description": "MAPLEBEAR INSTACART 5804"
+  },
+  {
+    "id": "drv-19-t045",
+    "date": "2026-10-03",
+    "amount": 25.78,
+    "description": "DOORDASH DASHER DIRECT 3442"
+  },
+  {
+    "id": "drv-19-t046",
+    "date": "2026-10-08",
+    "amount": 37.6,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t047",
+    "date": "2026-10-09",
+    "amount": 48.95,
+    "description": "DOORDASH DASHER DIRECT 3173"
+  },
+  {
+    "id": "drv-19-t048",
+    "date": "2026-10-12",
+    "amount": -121.19,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-19-t049",
+    "date": "2026-10-13",
+    "amount": -19.68,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-19-t050",
+    "date": "2026-10-14",
+    "amount": -66.73,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-19-t051",
+    "date": "2026-10-15",
+    "amount": 51.59,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t052",
+    "date": "2026-10-17",
+    "amount": 77.96,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t053",
+    "date": "2026-10-18",
+    "amount": -67.65,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-19-t054",
+    "date": "2026-10-18",
+    "amount": -101.69,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "drv-19-t055",
+    "date": "2026-10-23",
+    "amount": 57.33,
+    "description": "DOORDASH DASHER DIRECT 5396"
+  },
+  {
+    "id": "drv-19-t056",
+    "date": "2026-10-24",
+    "amount": 73.16,
+    "description": "MAPLEBEAR INSTACART 5500"
+  },
+  {
+    "id": "drv-19-t057",
+    "date": "2026-10-24",
+    "amount": -12.19,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-19-t058",
+    "date": "2026-10-24",
+    "amount": -14.06,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-19-t059",
+    "date": "2026-10-25",
+    "amount": 96,
+    "description": "VENMO *J. RIVERA"
+  },
+  {
+    "id": "drv-19-t060",
+    "date": "2026-10-27",
+    "amount": -31.88,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-19-t061",
+    "date": "2026-10-27",
+    "amount": -129.87,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "drv-19-t062",
+    "date": "2026-10-28",
+    "amount": -156.42,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "drv-19-t063",
+    "date": "2026-10-29",
+    "amount": 51.97,
+    "description": "MAPLEBEAR INSTACART 7237"
+  },
+  {
+    "id": "drv-19-t064",
+    "date": "2026-10-29",
+    "amount": -16.61,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-19-t065",
+    "date": "2026-10-31",
+    "amount": 87.02,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t066",
+    "date": "2026-11-01",
+    "amount": 33.95,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t067",
+    "date": "2026-11-01",
+    "amount": -1677,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-19-t068",
+    "date": "2026-11-02",
+    "amount": 16.59,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t069",
+    "date": "2026-11-04",
+    "amount": -56.35,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-19-t070",
+    "date": "2026-11-08",
+    "amount": 37.92,
+    "description": "DOORDASH DASHER DIRECT 4045"
+  },
+  {
+    "id": "drv-19-t071",
+    "date": "2026-11-08",
+    "amount": -29.9,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "drv-19-t072",
+    "date": "2026-11-10",
+    "amount": 61.84,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t073",
+    "date": "2026-11-11",
+    "amount": 181,
+    "description": "TRANSFER FROM SAVINGS"
+  },
+  {
+    "id": "drv-19-t074",
+    "date": "2026-11-15",
+    "amount": 119,
+    "description": "VENMO *J. RIVERA"
+  },
+  {
+    "id": "drv-19-t075",
+    "date": "2026-11-15",
+    "amount": 36.88,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t076",
+    "date": "2026-11-16",
+    "amount": 65.65,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t077",
+    "date": "2026-11-16",
+    "amount": -12.29,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-19-t078",
+    "date": "2026-11-17",
+    "amount": -39.98,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "drv-19-t079",
+    "date": "2026-11-22",
+    "amount": 53.11,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t080",
+    "date": "2026-11-22",
+    "amount": 49.78,
+    "description": "DOORDASH DASHER DIRECT 7304"
+  },
+  {
+    "id": "drv-19-t081",
+    "date": "2026-11-27",
+    "amount": -115.31,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-19-t082",
+    "date": "2026-11-29",
+    "amount": 51.45,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t083",
+    "date": "2026-11-30",
+    "amount": 49.68,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t084",
+    "date": "2026-11-30",
+    "amount": -98.73,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "drv-19-t085",
+    "date": "2026-12-01",
+    "amount": -124.04,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-19-t086",
+    "date": "2026-12-01",
+    "amount": -1757,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-19-t087",
+    "date": "2026-12-03",
+    "amount": 18.67,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t088",
+    "date": "2026-12-03",
+    "amount": 14.03,
+    "description": "DOORDASH DASHER DIRECT 8349"
+  },
+  {
+    "id": "drv-19-t089",
+    "date": "2026-12-04",
+    "amount": -94.51,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "drv-19-t090",
+    "date": "2026-12-06",
+    "amount": -52.67,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "drv-19-t091",
+    "date": "2026-12-06",
+    "amount": -126.18,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-19-t092",
+    "date": "2026-12-09",
+    "amount": 27.13,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-19-t093",
+    "date": "2026-12-10",
+    "amount": 15.54,
+    "description": "DOORDASH DASHER DIRECT 1526"
+  },
+  {
+    "id": "drv-19-t094",
+    "date": "2026-12-15",
+    "amount": 24.41,
+    "description": "DOORDASH DASHER DIRECT 3243"
+  },
+  {
+    "id": "drv-19-t095",
+    "date": "2026-12-16",
+    "amount": 32.55,
+    "description": "MAPLEBEAR INSTACART 6862"
+  },
+  {
+    "id": "drv-19-t096",
+    "date": "2026-12-21",
+    "amount": 149,
+    "description": "MOBILE CHECK DEPOSIT"
+  },
+  {
+    "id": "drv-19-t097",
+    "date": "2026-12-21",
+    "amount": 92,
+    "description": "ZELLE FROM L HERNANDEZ"
+  },
+  {
+    "id": "drv-19-t098",
+    "date": "2026-12-22",
+    "amount": 27.88,
+    "description": "MAPLEBEAR INSTACART 4450"
+  },
+  {
+    "id": "drv-19-t099",
+    "date": "2026-12-22",
+    "amount": -50.54,
+    "description": "CHEVRON 0042"
+  },
+  {
+    "id": "drv-19-t100",
+    "date": "2026-12-24",
+    "amount": 31.35,
+    "description": "DOORDASH DASHER DIRECT 6258"
+  },
+  {
+    "id": "drv-19-t101",
+    "date": "2026-12-24",
+    "amount": -106.69,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-19-t102",
+    "date": "2026-12-30",
+    "amount": 28.92,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-19-t103",
+    "date": "2026-12-30",
+    "amount": 27.96,
+    "description": "MAPLEBEAR INSTACART 9782"
+  },
+  {
+    "id": "drv-19-t104",
+    "date": "2027-01-01",
+    "amount": 13.8,
+    "description": "MAPLEBEAR INSTACART 5434"
+  },
+  {
+    "id": "drv-19-t105",
+    "date": "2027-01-01",
+    "amount": 9.68,
+    "description": "DOORDASH DASHER DIRECT 3457"
+  }
+]

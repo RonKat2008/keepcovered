@@ -1,0 +1,17 @@
+{
+  "letter_type": "verification_request",
+  "notice_date": "2026-11-12",
+  "response_deadline": "2026-11-26",
+  "requested_items": [
+    "Comprobante de ingresos de cada mes indicado (estados de ganancias, talones de pago o registros de trabajo por cuenta propia)",
+    "Comprobante de horas trabajadas de cada mes indicado (actividad de la aplicación o resúmenes de horas)",
+    "Cualquier documento que muestre una exención que usted cree que le corresponde"
+  ],
+  "months_requested": [
+    "2026-09",
+    "2026-10"
+  ],
+  "language": "es",
+  "county_name": "County of Alameda Social Services",
+  "unreadable_reason": null
+}

@@ -1,0 +1,758 @@
+[
+  {
+    "id": "drv-07-t001",
+    "date": "2026-07-01",
+    "amount": -1246,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-07-t002",
+    "date": "2026-07-02",
+    "amount": 489,
+    "description": "MOBILE CHECK DEPOSIT"
+  },
+  {
+    "id": "drv-07-t003",
+    "date": "2026-07-02",
+    "amount": 9.57,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t004",
+    "date": "2026-07-03",
+    "amount": -135.14,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "drv-07-t005",
+    "date": "2026-07-04",
+    "amount": 8.56,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t006",
+    "date": "2026-07-05",
+    "amount": 16.69,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t007",
+    "date": "2026-07-06",
+    "amount": 7.35,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t008",
+    "date": "2026-07-06",
+    "amount": -197.5,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "drv-07-t009",
+    "date": "2026-07-10",
+    "amount": 40.36,
+    "description": "MAPLEBEAR INSTACART 9387"
+  },
+  {
+    "id": "drv-07-t010",
+    "date": "2026-07-10",
+    "amount": 39.56,
+    "description": "DOORDASH DASHER DIRECT 5784"
+  },
+  {
+    "id": "drv-07-t011",
+    "date": "2026-07-10",
+    "amount": 10.95,
+    "description": "INSTACART EXPRESS CASH OUT"
+  },
+  {
+    "id": "drv-07-t012",
+    "date": "2026-07-11",
+    "amount": 85,
+    "description": "VENMO *J. RIVERA"
+  },
+  {
+    "id": "drv-07-t013",
+    "date": "2026-07-13",
+    "amount": -85.71,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-07-t014",
+    "date": "2026-07-14",
+    "amount": 15.99,
+    "description": "INSTACART EXPRESS CASH OUT"
+  },
+  {
+    "id": "drv-07-t015",
+    "date": "2026-07-14",
+    "amount": 13.95,
+    "description": "INSTACART EXPRESS CASH OUT"
+  },
+  {
+    "id": "drv-07-t016",
+    "date": "2026-07-15",
+    "amount": 19.34,
+    "description": "LYFT INC DIRECT DEP"
+  },
+  {
+    "id": "drv-07-t017",
+    "date": "2026-07-15",
+    "amount": -110.11,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "drv-07-t018",
+    "date": "2026-07-17",
+    "amount": 70.69,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-07-t019",
+    "date": "2026-07-17",
+    "amount": 49,
+    "description": "VENMO *J. RIVERA"
+  },
+  {
+    "id": "drv-07-t020",
+    "date": "2026-07-18",
+    "amount": -119.47,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-07-t021",
+    "date": "2026-07-22",
+    "amount": 44.76,
+    "description": "LYFT INC DIRECT DEP 3769"
+  },
+  {
+    "id": "drv-07-t022",
+    "date": "2026-07-22",
+    "amount": 22.92,
+    "description": "MAPLEBEAR INSTACART 2356"
+  },
+  {
+    "id": "drv-07-t023",
+    "date": "2026-07-22",
+    "amount": -35.74,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-07-t024",
+    "date": "2026-07-23",
+    "amount": 39.21,
+    "description": "DOORDASH DASHER DIRECT 4437"
+  },
+  {
+    "id": "drv-07-t025",
+    "date": "2026-07-24",
+    "amount": -14.63,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-07-t026",
+    "date": "2026-07-27",
+    "amount": -6.38,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-07-t027",
+    "date": "2026-07-29",
+    "amount": 64.34,
+    "description": "DOORDASH DASHER DIRECT 5872"
+  },
+  {
+    "id": "drv-07-t028",
+    "date": "2026-07-29",
+    "amount": 35.34,
+    "description": "MAPLEBEAR INSTACART 8699"
+  },
+  {
+    "id": "drv-07-t029",
+    "date": "2026-07-30",
+    "amount": 21.8,
+    "description": "LYFT INC DIRECT DEP 6745"
+  },
+  {
+    "id": "drv-07-t030",
+    "date": "2026-08-01",
+    "amount": -1857,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-07-t031",
+    "date": "2026-08-02",
+    "amount": 14.7,
+    "description": "DOORDASH DASHER DIRECT 8287"
+  },
+  {
+    "id": "drv-07-t032",
+    "date": "2026-08-02",
+    "amount": 14.44,
+    "description": "LYFT INC DIRECT DEP 5883"
+  },
+  {
+    "id": "drv-07-t033",
+    "date": "2026-08-02",
+    "amount": 13.94,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-07-t034",
+    "date": "2026-08-06",
+    "amount": -139.05,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "drv-07-t035",
+    "date": "2026-08-08",
+    "amount": 44.81,
+    "description": "MAPLEBEAR INSTACART 8197"
+  },
+  {
+    "id": "drv-07-t036",
+    "date": "2026-08-09",
+    "amount": 12.84,
+    "description": "LYFT INC DIRECT DEP 5530"
+  },
+  {
+    "id": "drv-07-t037",
+    "date": "2026-08-09",
+    "amount": 12.36,
+    "description": "INSTACART EXPRESS CASH OUT"
+  },
+  {
+    "id": "drv-07-t038",
+    "date": "2026-08-10",
+    "amount": 21.57,
+    "description": "DOORDASH DASHER DIRECT 4513"
+  },
+  {
+    "id": "drv-07-t039",
+    "date": "2026-08-14",
+    "amount": 15.91,
+    "description": "INSTACART EXPRESS CASH OUT"
+  },
+  {
+    "id": "drv-07-t040",
+    "date": "2026-08-14",
+    "amount": 13.9,
+    "description": "INSTACART EXPRESS CASH OUT"
+  },
+  {
+    "id": "drv-07-t041",
+    "date": "2026-08-14",
+    "amount": -8.4,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-07-t042",
+    "date": "2026-08-16",
+    "amount": 17.68,
+    "description": "DOORDASH DASHER DIRECT 6807"
+  },
+  {
+    "id": "drv-07-t043",
+    "date": "2026-08-17",
+    "amount": 13.41,
+    "description": "LYFT INC DIRECT DEP 7472"
+  },
+  {
+    "id": "drv-07-t044",
+    "date": "2026-08-17",
+    "amount": -84.98,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-07-t045",
+    "date": "2026-08-21",
+    "amount": -13.35,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-07-t046",
+    "date": "2026-08-22",
+    "amount": 32.08,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-07-t047",
+    "date": "2026-08-23",
+    "amount": 34.88,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-07-t048",
+    "date": "2026-08-24",
+    "amount": 193,
+    "description": "TRANSFER FROM SAVINGS"
+  },
+  {
+    "id": "drv-07-t049",
+    "date": "2026-08-24",
+    "amount": 16.12,
+    "description": "LYFT INC DIRECT DEP 7773"
+  },
+  {
+    "id": "drv-07-t050",
+    "date": "2026-08-24",
+    "amount": -58.32,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "drv-07-t051",
+    "date": "2026-08-25",
+    "amount": -55.34,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-07-t052",
+    "date": "2026-08-27",
+    "amount": -11.54,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-07-t053",
+    "date": "2026-08-27",
+    "amount": -85.23,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-07-t054",
+    "date": "2026-08-29",
+    "amount": 54.63,
+    "description": "MAPLEBEAR INSTACART 3592"
+  },
+  {
+    "id": "drv-07-t055",
+    "date": "2026-08-29",
+    "amount": 23.21,
+    "description": "LYFT INC DIRECT DEP 3780"
+  },
+  {
+    "id": "drv-07-t056",
+    "date": "2026-08-29",
+    "amount": 18.54,
+    "description": "DOORDASH DASHER DIRECT 8069"
+  },
+  {
+    "id": "drv-07-t057",
+    "date": "2026-09-01",
+    "amount": -1105,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-07-t058",
+    "date": "2026-09-02",
+    "amount": 17.82,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t059",
+    "date": "2026-09-03",
+    "amount": 23.11,
+    "description": "MAPLEBEAR INSTACART 5498"
+  },
+  {
+    "id": "drv-07-t060",
+    "date": "2026-09-03",
+    "amount": 17.14,
+    "description": "DOORDASH DASHER DIRECT 5726"
+  },
+  {
+    "id": "drv-07-t061",
+    "date": "2026-09-03",
+    "amount": 7.24,
+    "description": "LYFT INC DIRECT DEP"
+  },
+  {
+    "id": "drv-07-t062",
+    "date": "2026-09-04",
+    "amount": 35.08,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-07-t063",
+    "date": "2026-09-04",
+    "amount": 24.59,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t064",
+    "date": "2026-09-04",
+    "amount": 16.14,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t065",
+    "date": "2026-09-05",
+    "amount": 17.44,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t066",
+    "date": "2026-09-07",
+    "amount": 42,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-07-t067",
+    "date": "2026-09-09",
+    "amount": 89.43,
+    "description": "MAPLEBEAR INSTACART 2808"
+  },
+  {
+    "id": "drv-07-t068",
+    "date": "2026-09-09",
+    "amount": -76.26,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-07-t069",
+    "date": "2026-09-10",
+    "amount": -67.16,
+    "description": "SAFEWAY #1234"
+  },
+  {
+    "id": "drv-07-t070",
+    "date": "2026-09-11",
+    "amount": 256,
+    "description": "TRANSFER FROM SAVINGS"
+  },
+  {
+    "id": "drv-07-t071",
+    "date": "2026-09-12",
+    "amount": -13.5,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-07-t072",
+    "date": "2026-09-15",
+    "amount": 91.5,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-07-t073",
+    "date": "2026-09-16",
+    "amount": -53.47,
+    "description": "CHEVRON 0042"
+  },
+  {
+    "id": "drv-07-t074",
+    "date": "2026-09-17",
+    "amount": 108.36,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-07-t075",
+    "date": "2026-09-17",
+    "amount": 60.87,
+    "description": "LYFT INC DIRECT DEP 6655"
+  },
+  {
+    "id": "drv-07-t076",
+    "date": "2026-09-18",
+    "amount": -16.63,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-07-t077",
+    "date": "2026-09-21",
+    "amount": 82,
+    "description": "VENMO *J. RIVERA"
+  },
+  {
+    "id": "drv-07-t078",
+    "date": "2026-09-21",
+    "amount": -30.18,
+    "description": "WALGREENS #77"
+  },
+  {
+    "id": "drv-07-t079",
+    "date": "2026-09-22",
+    "amount": -14.51,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-07-t080",
+    "date": "2026-09-24",
+    "amount": 78.51,
+    "description": "LYFT INC DIRECT DEP"
+  },
+  {
+    "id": "drv-07-t081",
+    "date": "2026-09-24",
+    "amount": 57.1,
+    "description": "MAPLEBEAR INSTACART 1480"
+  },
+  {
+    "id": "drv-07-t082",
+    "date": "2026-09-24",
+    "amount": 52.76,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-07-t083",
+    "date": "2026-09-27",
+    "amount": 368,
+    "description": "MOBILE CHECK DEPOSIT"
+  },
+  {
+    "id": "drv-07-t084",
+    "date": "2026-09-27",
+    "amount": 34.97,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-07-t085",
+    "date": "2026-09-28",
+    "amount": 29.81,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-07-t086",
+    "date": "2026-09-28",
+    "amount": 18.56,
+    "description": "DOORDASH FAST PAY"
+  },
+  {
+    "id": "drv-07-t087",
+    "date": "2026-09-28",
+    "amount": -7.81,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-07-t088",
+    "date": "2026-09-29",
+    "amount": -97.23,
+    "description": "GEICO AUTO INS"
+  },
+  {
+    "id": "drv-07-t089",
+    "date": "2026-10-01",
+    "amount": 88.09,
+    "description": "MAPLEBEAR INSTACART 7765"
+  },
+  {
+    "id": "drv-07-t090",
+    "date": "2026-10-01",
+    "amount": 42.25,
+    "description": "LYFT INC DIRECT DEP"
+  },
+  {
+    "id": "drv-07-t091",
+    "date": "2026-10-01",
+    "amount": 24.66,
+    "description": "DOORDASH DASHER DIRECT 9172"
+  },
+  {
+    "id": "drv-07-t092",
+    "date": "2026-10-01",
+    "amount": -151.42,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-07-t093",
+    "date": "2026-10-01",
+    "amount": -1498,
+    "description": "RENT PAYMENT DEMO PROPERTIES"
+  },
+  {
+    "id": "drv-07-t094",
+    "date": "2026-10-02",
+    "amount": -190.24,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "drv-07-t095",
+    "date": "2026-10-03",
+    "amount": 15.56,
+    "description": "LYFT INC DIRECT DEP 1200"
+  },
+  {
+    "id": "drv-07-t096",
+    "date": "2026-10-03",
+    "amount": 13.88,
+    "description": "MAPLEBEAR INSTACART 5927"
+  },
+  {
+    "id": "drv-07-t097",
+    "date": "2026-10-04",
+    "amount": -186.96,
+    "description": "PG&E WEB PAYMENT"
+  },
+  {
+    "id": "drv-07-t098",
+    "date": "2026-10-07",
+    "amount": -15.62,
+    "description": "MCDONALDS F1234"
+  },
+  {
+    "id": "drv-07-t099",
+    "date": "2026-10-09",
+    "amount": 148.08,
+    "description": "LYFT INC DIRECT DEP 2313"
+  },
+  {
+    "id": "drv-07-t100",
+    "date": "2026-10-09",
+    "amount": 125,
+    "description": "ZELLE FROM R KIM"
+  },
+  {
+    "id": "drv-07-t101",
+    "date": "2026-10-09",
+    "amount": 87.94,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-07-t102",
+    "date": "2026-10-09",
+    "amount": 21.23,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t103",
+    "date": "2026-10-09",
+    "amount": -81.99,
+    "description": "AT&T WIRELESS"
+  },
+  {
+    "id": "drv-07-t104",
+    "date": "2026-10-10",
+    "amount": 206.65,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-07-t105",
+    "date": "2026-10-10",
+    "amount": 126,
+    "description": "VENMO *J. RIVERA"
+  },
+  {
+    "id": "drv-07-t106",
+    "date": "2026-10-11",
+    "amount": 35.51,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t107",
+    "date": "2026-10-11",
+    "amount": 30.59,
+    "description": "INSTACART EXPRESS CASH OUT"
+  },
+  {
+    "id": "drv-07-t108",
+    "date": "2026-10-11",
+    "amount": 21.29,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t109",
+    "date": "2026-10-11",
+    "amount": -124.56,
+    "description": "COSTCO WHSE #118"
+  },
+  {
+    "id": "drv-07-t110",
+    "date": "2026-10-12",
+    "amount": -26.43,
+    "description": "SHELL OIL 5710"
+  },
+  {
+    "id": "drv-07-t111",
+    "date": "2026-10-13",
+    "amount": 20.49,
+    "description": "INSTACART EXPRESS CASH OUT"
+  },
+  {
+    "id": "drv-07-t112",
+    "date": "2026-10-13",
+    "amount": -38.29,
+    "description": "CHEVRON 0042"
+  },
+  {
+    "id": "drv-07-t113",
+    "date": "2026-10-16",
+    "amount": 127.14,
+    "description": "DOORDASH DASHER DIRECT"
+  },
+  {
+    "id": "drv-07-t114",
+    "date": "2026-10-23",
+    "amount": 144.35,
+    "description": "LYFT INC DIRECT DEP 9671"
+  },
+  {
+    "id": "drv-07-t115",
+    "date": "2026-10-23",
+    "amount": 89.07,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-07-t116",
+    "date": "2026-10-24",
+    "amount": 191.73,
+    "description": "DOORDASH DASHER DIRECT 7690"
+  },
+  {
+    "id": "drv-07-t117",
+    "date": "2026-10-25",
+    "amount": 30.72,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t118",
+    "date": "2026-10-28",
+    "amount": 29.18,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t119",
+    "date": "2026-10-31",
+    "amount": 349,
+    "description": "TRANSFER FROM SAVINGS"
+  },
+  {
+    "id": "drv-07-t120",
+    "date": "2026-10-31",
+    "amount": 149.67,
+    "description": "DOORDASH DASHER DIRECT 4424"
+  },
+  {
+    "id": "drv-07-t121",
+    "date": "2026-10-31",
+    "amount": 55.84,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-07-t122",
+    "date": "2026-10-31",
+    "amount": 26.06,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t123",
+    "date": "2026-10-31",
+    "amount": 17,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t124",
+    "date": "2026-10-31",
+    "amount": 16.61,
+    "description": "LYFT EXPRESS PAY"
+  },
+  {
+    "id": "drv-07-t125",
+    "date": "2026-11-01",
+    "amount": 26.15,
+    "description": "MAPLEBEAR INSTACART"
+  },
+  {
+    "id": "drv-07-t126",
+    "date": "2026-11-02",
+    "amount": 84.33,
+    "description": "DOORDASH DASHER DIRECT"
+  }
+]

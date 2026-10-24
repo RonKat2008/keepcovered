@@ -1,0 +1,13 @@
+{
+  "platform": "uber",
+  "period_start": "2026-09-01",
+  "period_end": "2026-09-30",
+  "gross_earnings": 441.67,
+  "tips": 53.99,
+  "platform_fees": 90.08,
+  "net_payout": 351.59,
+  "online_hours": 14.4,
+  "active_hours": 12.5,
+  "trips_or_deliveries": 28,
+  "unreadable_reason": null
+}

@@ -230,7 +230,7 @@ export async function runCase(input: CaseInput): Promise<CaseResult> {
 
   emit({ step: "status", kind: "start", title: "Applying the DHCS rule to each month", decided_by: "code" });
   const monthStatuses: MonthStatus[] = computeMonthlyStatus(
-    { months, records: rec.records, labeledIncome: rec.user_labeled_income, activities: [] },
+    { months, records: rec.records, labeledIncome: rec.user_labeled_income, activities: [], unreadableDocIds: unreadable.map((d) => d.id) },
     rules,
   );
   emit({

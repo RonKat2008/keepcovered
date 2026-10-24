@@ -1,0 +1,13 @@
+{
+  "platform": "lyft",
+  "period_start": "2026-12-22",
+  "period_end": "2026-12-28",
+  "gross_earnings": 55.49,
+  "tips": 6.75,
+  "platform_fees": 6.57,
+  "net_payout": 48.92,
+  "online_hours": 3.7,
+  "active_hours": 3.2,
+  "trips_or_deliveries": 4,
+  "unreadable_reason": null
+}

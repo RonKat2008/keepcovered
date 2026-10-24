@@ -1,0 +1,19 @@
+{
+  "driver_id": "drv-06",
+  "display_name": "Reese Whitfield",
+  "lang": "en",
+  "apps": [
+    "lyft",
+    "uber"
+  ],
+  "months": [
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "income_low_hours",
+    "instant_cashout_list"
+  ]
+}

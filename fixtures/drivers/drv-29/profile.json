@@ -1,0 +1,19 @@
+{
+  "driver_id": "drv-29",
+  "display_name": "Carlos Nakamura",
+  "lang": "es",
+  "apps": [
+    "instacart",
+    "lyft",
+    "doordash"
+  ],
+  "months": [
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "online_not_active"
+  ]
+}

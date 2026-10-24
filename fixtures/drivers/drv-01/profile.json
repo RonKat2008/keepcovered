@@ -1,0 +1,18 @@
+{
+  "driver_id": "drv-01",
+  "display_name": "Jamie Nakamura",
+  "lang": "en",
+  "apps": [
+    "doordash",
+    "uber"
+  ],
+  "months": [
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "traps": [
+    "instant_cashout_list"
+  ]
+}

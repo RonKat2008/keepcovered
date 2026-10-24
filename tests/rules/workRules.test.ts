@@ -98,12 +98,14 @@ describe("income path", () => {
 describe("bank-labeled income", () => {
   it("counts toward gross and net with bank_only_income", () => {
     const s = one({ labeledIncome: [txn("t1", "2027-03-05", 400, "UBER"), txn("t2", "2027-03-20", 250.5, "UBER"), txn("t3", "2027-04-02", 999, "x")] });
-    expect(s).toMatchObject({ gross_income: 650.5, net_income: 650.5, overall: "meets", evidence_doc_ids: ["txn:t1", "txn:t2"] });
+    // Self-labeled deposits count toward totals but cannot make a month "meets" on their own.
+    expect(s).toMatchObject({ gross_income: 650.5, net_income: 650.5, overall: "unsure", evidence_doc_ids: ["txn:t1", "txn:t2"] });
     expect(s.reasons).toContainEqual({ code: "bank_only_income", params: { amount: 650.5, count: 2 } });
   });
-  it("adds to screenshot income", () => {
+  it("adds to screenshot income but a month carried by labeled deposits is unsure", () => {
     const s = one({ records: [rec({ source_doc_id: "a", gross_earnings: 300, net_payout: 300 })], labeledIncome: [txn("t1", "2027-03-05", 280, "x")] });
-    expect(s.overall).toBe("meets");
+    expect(s.gross_income).toBe(580);
+    expect(s.overall).toBe("unsure");
   });
 });
 
@@ -224,5 +226,28 @@ describe("bank-only months", () => {
     );
     expect(m.overall).toBe("missing_data");
     expect(m.reasons.map((r) => r.code)).toEqual(expect.arrayContaining(["missing_month", "bank_only_income"]));
+  });
+});
+
+describe("self-labeled deposits", () => {
+  it("never lets labeled bank deposits alone push a month to meets", () => {
+    const rules = loadWorkRules();
+    const statement = rec({ source_doc_id: "s", period_start: "2027-03-01", period_end: "2027-03-31", gross_earnings: 521, net_payout: 431.66 });
+    const [m] = computeMonthlyStatus(
+      { months: ["2027-03"], records: [statement], labeledIncome: [txn("t1", "2027-03-10", 200, "DOORDASH")], activities: [] },
+      rules,
+    );
+    expect(m.overall).toBe("unsure");
+    expect(m.reasons.map((r) => r.code)).toContain("relies_on_bank_only_income");
+  });
+});
+
+describe("unreadable documents", () => {
+  it("turns a short month into unsure while a photo is unreadable", () => {
+    const rules = loadWorkRules();
+    const statement = rec({ source_doc_id: "s", period_start: "2027-03-01", period_end: "2027-03-31", gross_earnings: 260, net_payout: 230 });
+    const [m] = computeMonthlyStatus({ months: ["2027-03"], records: [statement], labeledIncome: [], activities: [], unreadableDocIds: ["x"] }, rules);
+    expect(m.overall).toBe("unsure");
+    expect(m.reasons.map((r) => r.code)).toContain("unreadable_document");
   });
 });

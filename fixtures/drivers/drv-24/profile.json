@@ -1,0 +1,18 @@
+{
+  "driver_id": "drv-24",
+  "display_name": "Ximena Castellanos",
+  "lang": "es",
+  "apps": [
+    "lyft",
+    "doordash",
+    "uber"
+  ],
+  "months": [
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "traps": [
+    "income_low_hours"
+  ]
+}

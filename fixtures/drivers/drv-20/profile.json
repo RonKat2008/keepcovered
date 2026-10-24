@@ -1,0 +1,18 @@
+{
+  "driver_id": "drv-20",
+  "display_name": "Alex Lindqvist",
+  "lang": "en",
+  "apps": [
+    "uber",
+    "instacart"
+  ],
+  "months": [
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "online_not_active",
+    "instant_cashout_list"
+  ]
+}

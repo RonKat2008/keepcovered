@@ -1,0 +1,1140 @@
+{
+  "driver_id": "drv-15",
+  "documents": [
+    {
+      "file": "IMG_5985.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-07-01",
+        "period_end": "2026-07-31",
+        "gross_earnings": 652.91,
+        "tips": 74.84,
+        "platform_fees": 138.17,
+        "net_payout": 514.74,
+        "online_hours": 37.1,
+        "active_hours": 25.6,
+        "trips_or_deliveries": 47,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-07-01",
+        "period_end": "2026-07-31",
+        "variant": "monthly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_8176.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-08-01",
+        "period_end": "2026-08-31",
+        "gross_earnings": 273.91,
+        "tips": 23.08,
+        "platform_fees": 41.42,
+        "net_payout": 232.49,
+        "online_hours": 18.7,
+        "active_hours": 17.8,
+        "trips_or_deliveries": 20,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-08-01",
+        "period_end": "2026-08-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6728.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "gross_earnings": 491.24,
+        "tips": 54.51,
+        "platform_fees": 75.82,
+        "net_payout": 415.42,
+        "online_hours": 20,
+        "active_hours": 13.3,
+        "trips_or_deliveries": 34,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_9346.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 84.98,
+        "tips": 9.16,
+        "platform_fees": 14.04,
+        "net_payout": 70.94,
+        "online_hours": 20,
+        "active_hours": 15.6,
+        "trips_or_deliveries": 7,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_1550.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 99.57,
+        "tips": 11.11,
+        "platform_fees": 11.04,
+        "net_payout": 88.53,
+        "online_hours": 23.5,
+        "active_hours": 18.8,
+        "trips_or_deliveries": 6,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6766.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-07-01",
+        "period_end": "2026-07-31",
+        "gross_earnings": 234.25,
+        "tips": 26.85,
+        "platform_fees": 51.02,
+        "net_payout": 183.23,
+        "online_hours": 13,
+        "active_hours": 8.8,
+        "trips_or_deliveries": 22,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-07-01",
+        "period_end": "2026-07-31",
+        "variant": "monthly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_7302.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-08-01",
+        "period_end": "2026-08-31",
+        "gross_earnings": 314.16,
+        "tips": 26.48,
+        "platform_fees": 47.96,
+        "net_payout": 266.2,
+        "online_hours": 24.7,
+        "active_hours": 23.1,
+        "trips_or_deliveries": 31,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-08-01",
+        "period_end": "2026-08-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_2728.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "gross_earnings": 514.17,
+        "tips": 57.06,
+        "platform_fees": 80.94,
+        "net_payout": 433.23,
+        "online_hours": 21,
+        "active_hours": 14.1,
+        "trips_or_deliveries": 52,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_3029.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 76.15,
+        "tips": 8.21,
+        "platform_fees": 11.34,
+        "net_payout": 64.81,
+        "online_hours": 22.1,
+        "active_hours": 17.2,
+        "trips_or_deliveries": 9,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_5036.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 77.52,
+        "tips": 8.65,
+        "platform_fees": 9.27,
+        "net_payout": 68.25,
+        "online_hours": 18.8,
+        "active_hours": 15.5,
+        "trips_or_deliveries": 9,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_1043.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-07-01",
+        "period_end": "2026-07-07",
+        "gross_earnings": 98.22,
+        "tips": 11,
+        "platform_fees": 19.47,
+        "net_payout": 78.75,
+        "online_hours": 5.1,
+        "active_hours": 3.5,
+        "trips_or_deliveries": 4,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-07-01",
+        "period_end": "2026-07-07",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_7527.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-07-08",
+        "period_end": "2026-07-14",
+        "gross_earnings": 70.89,
+        "tips": 7.77,
+        "platform_fees": 13.08,
+        "net_payout": 57.81,
+        "online_hours": 3.6,
+        "active_hours": 2.6,
+        "trips_or_deliveries": 3,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-07-08",
+        "period_end": "2026-07-14",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_4350.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-07-15",
+        "period_end": "2026-07-21",
+        "gross_earnings": 81.39,
+        "tips": 9.55,
+        "platform_fees": 14.76,
+        "net_payout": 66.63,
+        "online_hours": 4.2,
+        "active_hours": 2.8,
+        "trips_or_deliveries": 5,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-07-15",
+        "period_end": "2026-07-21",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_2856.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-07-22",
+        "period_end": "2026-07-28",
+        "gross_earnings": 56.75,
+        "tips": 7.15,
+        "platform_fees": 11.56,
+        "net_payout": 45.19,
+        "online_hours": 3.2,
+        "active_hours": 2.2,
+        "trips_or_deliveries": 2,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-07-22",
+        "period_end": "2026-07-28",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_3729.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-07-29",
+        "period_end": "2026-07-31",
+        "gross_earnings": 41.91,
+        "tips": 4.55,
+        "platform_fees": 8.2,
+        "net_payout": 33.71,
+        "online_hours": 2.1,
+        "active_hours": 1.4,
+        "trips_or_deliveries": 2,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-07-29",
+        "period_end": "2026-07-31",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_9815.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-08-01",
+        "period_end": "2026-08-07",
+        "gross_earnings": 117.23,
+        "tips": 10.1,
+        "platform_fees": 20.38,
+        "net_payout": 96.85,
+        "online_hours": 9.2,
+        "active_hours": 8.7,
+        "trips_or_deliveries": 6,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-08-01",
+        "period_end": "2026-08-07",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_9565.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-08-08",
+        "period_end": "2026-08-14",
+        "gross_earnings": 87.41,
+        "tips": 7.19,
+        "platform_fees": 14.34,
+        "net_payout": 73.07,
+        "online_hours": 6.7,
+        "active_hours": 6.2,
+        "trips_or_deliveries": 4,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-08-08",
+        "period_end": "2026-08-14",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_9748.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-08-15",
+        "period_end": "2026-08-21",
+        "gross_earnings": 121.47,
+        "tips": 10.3,
+        "platform_fees": 18.23,
+        "net_payout": 103.24,
+        "online_hours": 8.1,
+        "active_hours": 7.5,
+        "trips_or_deliveries": 5,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-08-15",
+        "period_end": "2026-08-21",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_2690.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-08-22",
+        "period_end": "2026-08-28",
+        "gross_earnings": 105.74,
+        "tips": 8.76,
+        "platform_fees": 15.74,
+        "net_payout": 90,
+        "online_hours": 7.4,
+        "active_hours": 7,
+        "trips_or_deliveries": 6,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-08-22",
+        "period_end": "2026-08-28",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_2087.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-08-29",
+        "period_end": "2026-08-31",
+        "gross_earnings": 27.15,
+        "tips": 2.33,
+        "platform_fees": 3.96,
+        "net_payout": 23.19,
+        "online_hours": 2.2,
+        "active_hours": 2.1,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-08-29",
+        "period_end": "2026-08-31",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_7580.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-07",
+        "gross_earnings": 56.15,
+        "tips": 5.83,
+        "platform_fees": 7.3,
+        "net_payout": 48.85,
+        "online_hours": 2.5,
+        "active_hours": 1.6,
+        "trips_or_deliveries": 3,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-07",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_1869.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-09-08",
+        "period_end": "2026-09-14",
+        "gross_earnings": 46.33,
+        "tips": 5.18,
+        "platform_fees": 5.78,
+        "net_payout": 40.55,
+        "online_hours": 2,
+        "active_hours": 1.4,
+        "trips_or_deliveries": 3,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-09-08",
+        "period_end": "2026-09-14",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5703.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-09-15",
+        "period_end": "2026-09-21",
+        "gross_earnings": 80.51,
+        "tips": 9.08,
+        "platform_fees": 11.31,
+        "net_payout": 69.2,
+        "online_hours": 3.8,
+        "active_hours": 2.6,
+        "trips_or_deliveries": 4,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-09-15",
+        "period_end": "2026-09-21",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_5544.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-09-22",
+        "period_end": "2026-09-28",
+        "gross_earnings": 80.66,
+        "tips": 8.86,
+        "platform_fees": 10.16,
+        "net_payout": 70.5,
+        "online_hours": 3.3,
+        "active_hours": 2.3,
+        "trips_or_deliveries": 5,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-09-22",
+        "period_end": "2026-09-28",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_3100.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-09-29",
+        "period_end": "2026-09-30",
+        "gross_earnings": 15.09,
+        "tips": 1.98,
+        "platform_fees": 2.04,
+        "net_payout": 13.05,
+        "online_hours": 0.8,
+        "active_hours": 0.5,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-09-29",
+        "period_end": "2026-09-30",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_3202.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-07",
+        "gross_earnings": 20.4,
+        "tips": 1.9,
+        "platform_fees": 2.83,
+        "net_payout": 17.57,
+        "online_hours": 6.4,
+        "active_hours": 5,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-07",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_4651.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "gross_earnings": 29.45,
+        "tips": 3.43,
+        "platform_fees": 4.43,
+        "net_payout": 25.02,
+        "online_hours": 10.4,
+        "active_hours": 8,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_2273.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-10-15",
+        "period_end": "2026-10-21",
+        "gross_earnings": 19.33,
+        "tips": 2.07,
+        "platform_fees": 2.56,
+        "net_payout": 16.77,
+        "online_hours": 6.4,
+        "active_hours": 4.8,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-10-15",
+        "period_end": "2026-10-21",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_9311.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-10-22",
+        "period_end": "2026-10-28",
+        "gross_earnings": 24.05,
+        "tips": 2.62,
+        "platform_fees": 3.89,
+        "net_payout": 20.16,
+        "online_hours": 8.9,
+        "active_hours": 6.9,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-10-22",
+        "period_end": "2026-10-28",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_4354.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-10-29",
+        "period_end": "2026-10-31",
+        "gross_earnings": 8.55,
+        "tips": 0.95,
+        "platform_fees": 1.31,
+        "net_payout": 7.24,
+        "online_hours": 2.8,
+        "active_hours": 2.2,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-10-29",
+        "period_end": "2026-10-31",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_9049.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-07",
+        "gross_earnings": 22.68,
+        "tips": 2.38,
+        "platform_fees": 2.7,
+        "net_payout": 19.98,
+        "online_hours": 5.4,
+        "active_hours": 4.4,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-07",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_4809.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-08",
+        "period_end": "2026-11-14",
+        "gross_earnings": 34.74,
+        "tips": 3.77,
+        "platform_fees": 3.77,
+        "net_payout": 30.97,
+        "online_hours": 7.2,
+        "active_hours": 6,
+        "trips_or_deliveries": 2,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-08",
+        "period_end": "2026-11-14",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6865.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-15",
+        "period_end": "2026-11-21",
+        "gross_earnings": 26.46,
+        "tips": 3.17,
+        "platform_fees": 3.37,
+        "net_payout": 23.09,
+        "online_hours": 6.5,
+        "active_hours": 5.2,
+        "trips_or_deliveries": 2,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-15",
+        "period_end": "2026-11-21",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5471.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-22",
+        "period_end": "2026-11-28",
+        "gross_earnings": 20.44,
+        "tips": 2.2,
+        "platform_fees": 2.49,
+        "net_payout": 17.95,
+        "online_hours": 4.5,
+        "active_hours": 3.7,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-22",
+        "period_end": "2026-11-28",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6521.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-29",
+        "period_end": "2026-11-30",
+        "gross_earnings": 8.22,
+        "tips": 1.03,
+        "platform_fees": 1.04,
+        "net_payout": 7.18,
+        "online_hours": 1.9,
+        "active_hours": 1.5,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-29",
+        "period_end": "2026-11-30",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_8085.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-08",
+        "period_end": "2026-11-14",
+        "gross_earnings": 34.74,
+        "tips": 3.77,
+        "platform_fees": 3.77,
+        "net_payout": 30.97,
+        "online_hours": 7.2,
+        "active_hours": 6,
+        "trips_or_deliveries": 2,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-08",
+        "period_end": "2026-11-14",
+        "variant": "dup_rephoto",
+        "photo": true,
+        "trap": "duplicate_rephotographed",
+        "duplicate_of": "IMG_4809.png"
+      }
+    },
+    {
+      "file": "IMG_8246.png",
+      "kind": "county_letter",
+      "truth": {
+        "letter_type": "work_rule_notice",
+        "notice_date": "2026-12-07",
+        "response_deadline": "2027-01-06",
+        "requested_items": [
+          "Report your work, income, or community activity each month starting with your next report"
+        ],
+        "months_requested": [],
+        "language": "en",
+        "county_name": "County of Alameda Social Services",
+        "unreadable_reason": null
+      },
+      "meta": {
+        "variant": "work_rule_notice",
+        "lang": "en"
+      }
+    }
+  ],
+  "bank_truth": {
+    "drv-15-t001": "not_driving",
+    "drv-15-t002": "not_driving",
+    "drv-15-t003": "driving",
+    "drv-15-t004": "driving",
+    "drv-15-t005": "driving",
+    "drv-15-t006": "not_driving",
+    "drv-15-t007": "not_driving",
+    "drv-15-t008": "not_driving",
+    "drv-15-t009": "not_driving",
+    "drv-15-t010": "not_driving",
+    "drv-15-t011": "driving",
+    "drv-15-t012": "driving",
+    "drv-15-t013": "driving",
+    "drv-15-t014": "not_driving",
+    "drv-15-t015": "driving",
+    "drv-15-t016": "driving",
+    "drv-15-t017": "not_driving",
+    "drv-15-t018": "not_driving",
+    "drv-15-t019": "driving",
+    "drv-15-t020": "not_driving",
+    "drv-15-t021": "not_driving",
+    "drv-15-t022": "driving",
+    "drv-15-t023": "driving",
+    "drv-15-t024": "not_driving",
+    "drv-15-t025": "driving",
+    "drv-15-t026": "driving",
+    "drv-15-t027": "driving",
+    "drv-15-t028": "not_driving",
+    "drv-15-t029": "driving",
+    "drv-15-t030": "driving",
+    "drv-15-t031": "driving",
+    "drv-15-t032": "not_driving",
+    "drv-15-t033": "not_driving",
+    "drv-15-t034": "not_driving",
+    "drv-15-t035": "driving",
+    "drv-15-t036": "driving",
+    "drv-15-t037": "driving",
+    "drv-15-t038": "not_driving",
+    "drv-15-t039": "driving",
+    "drv-15-t040": "driving",
+    "drv-15-t041": "driving",
+    "drv-15-t042": "driving",
+    "drv-15-t043": "driving",
+    "drv-15-t044": "not_driving",
+    "drv-15-t045": "not_driving",
+    "drv-15-t046": "driving",
+    "drv-15-t047": "not_driving",
+    "drv-15-t048": "not_driving",
+    "drv-15-t049": "driving",
+    "drv-15-t050": "driving",
+    "drv-15-t051": "not_driving",
+    "drv-15-t052": "driving",
+    "drv-15-t053": "driving",
+    "drv-15-t054": "driving",
+    "drv-15-t055": "not_driving",
+    "drv-15-t056": "not_driving",
+    "drv-15-t057": "driving",
+    "drv-15-t058": "driving",
+    "drv-15-t059": "not_driving",
+    "drv-15-t060": "driving",
+    "drv-15-t061": "driving",
+    "drv-15-t062": "driving",
+    "drv-15-t063": "driving",
+    "drv-15-t064": "driving",
+    "drv-15-t065": "not_driving",
+    "drv-15-t066": "not_driving",
+    "drv-15-t067": "not_driving",
+    "drv-15-t068": "not_driving",
+    "drv-15-t069": "driving",
+    "drv-15-t070": "driving",
+    "drv-15-t071": "not_driving",
+    "drv-15-t072": "driving",
+    "drv-15-t073": "driving",
+    "drv-15-t074": "driving",
+    "drv-15-t075": "driving",
+    "drv-15-t076": "not_driving",
+    "drv-15-t077": "driving",
+    "drv-15-t078": "driving",
+    "drv-15-t079": "driving",
+    "drv-15-t080": "not_driving",
+    "drv-15-t081": "driving",
+    "drv-15-t082": "driving",
+    "drv-15-t083": "driving",
+    "drv-15-t084": "driving",
+    "drv-15-t085": "driving",
+    "drv-15-t086": "driving",
+    "drv-15-t087": "not_driving",
+    "drv-15-t088": "not_driving",
+    "drv-15-t089": "driving",
+    "drv-15-t090": "driving",
+    "drv-15-t091": "not_driving",
+    "drv-15-t092": "driving",
+    "drv-15-t093": "driving",
+    "drv-15-t094": "driving",
+    "drv-15-t095": "not_driving",
+    "drv-15-t096": "not_driving",
+    "drv-15-t097": "not_driving",
+    "drv-15-t098": "driving",
+    "drv-15-t099": "not_driving",
+    "drv-15-t100": "not_driving",
+    "drv-15-t101": "not_driving",
+    "drv-15-t102": "not_driving",
+    "drv-15-t103": "driving",
+    "drv-15-t104": "driving",
+    "drv-15-t105": "driving",
+    "drv-15-t106": "not_driving",
+    "drv-15-t107": "not_driving",
+    "drv-15-t108": "not_driving",
+    "drv-15-t109": "driving",
+    "drv-15-t110": "driving",
+    "drv-15-t111": "driving",
+    "drv-15-t112": "driving",
+    "drv-15-t113": "not_driving",
+    "drv-15-t114": "driving",
+    "drv-15-t115": "driving",
+    "drv-15-t116": "not_driving",
+    "drv-15-t117": "not_driving",
+    "drv-15-t118": "driving",
+    "drv-15-t119": "driving",
+    "drv-15-t120": "not_driving",
+    "drv-15-t121": "driving",
+    "drv-15-t122": "not_driving",
+    "drv-15-t123": "not_driving",
+    "drv-15-t124": "driving",
+    "drv-15-t125": "not_driving",
+    "drv-15-t126": "driving",
+    "drv-15-t127": "driving",
+    "drv-15-t128": "not_driving",
+    "drv-15-t129": "driving",
+    "drv-15-t130": "driving",
+    "drv-15-t131": "driving",
+    "drv-15-t132": "not_driving",
+    "drv-15-t133": "not_driving",
+    "drv-15-t134": "not_driving",
+    "drv-15-t135": "driving",
+    "drv-15-t136": "driving",
+    "drv-15-t137": "driving",
+    "drv-15-t138": "driving"
+  },
+  "expected_months": [
+    {
+      "month": "2026-07",
+      "gross_income": 1236.32,
+      "net_income": 980.06,
+      "active_hours": 46.9,
+      "online_hours": 68.3,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1236.32,
+        "net_income": 980.06,
+        "active_hours": 46.9,
+        "online_hours": 68.3,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-08",
+      "gross_income": 1047.07,
+      "net_income": 885.04,
+      "active_hours": 72.4,
+      "online_hours": 77,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1047.07,
+        "net_income": 885.04,
+        "active_hours": 72.4,
+        "online_hours": 77,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-09",
+      "gross_income": 1284.15,
+      "net_income": 1090.8,
+      "active_hours": 35.8,
+      "online_hours": 53.4,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1284.15,
+        "net_income": 1090.8,
+        "active_hours": 35.8,
+        "online_hours": 53.4,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-10",
+      "gross_income": 262.91,
+      "net_income": 222.51,
+      "active_hours": 59.7,
+      "online_hours": 77,
+      "overall_expected": "does_not_meet",
+      "acceptable": [
+        "does_not_meet"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 262.91,
+        "net_income": 222.51,
+        "active_hours": 59.7,
+        "online_hours": 77,
+        "overall": "does_not_meet"
+      }
+    },
+    {
+      "month": "2026-11",
+      "gross_income": 289.63,
+      "net_income": 255.95,
+      "active_hours": 55.1,
+      "online_hours": 67.8,
+      "overall_expected": "does_not_meet",
+      "acceptable": [
+        "does_not_meet"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 289.63,
+        "net_income": 255.95,
+        "active_hours": 55.1,
+        "online_hours": 67.8,
+        "overall": "does_not_meet"
+      }
+    }
+  ],
+  "letter_truth": {
+    "letter_type": "work_rule_notice",
+    "notice_date": "2026-12-07",
+    "response_deadline": "2027-01-06",
+    "requested_items": [
+      "Report your work, income, or community activity each month starting with your next report"
+    ],
+    "months_requested": [],
+    "language": "en",
+    "county_name": "County of Alameda Social Services",
+    "unreadable_reason": null
+  }
+}

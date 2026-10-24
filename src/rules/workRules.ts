@@ -152,6 +152,8 @@ type StatusInput = {
   records: EarningsRecord[];
   labeledIncome: BankTransaction[];
   activities: OtherActivity[];
+  /** Documents we could not read. Their month is unknown, so a short month might be missing them. */
+  unreadableDocIds?: string[];
 };
 type Reason = MonthStatus["reasons"][number];
 
@@ -217,14 +219,29 @@ function buildMonth(month: string, input: StatusInput, rules: WorkRules): MonthS
       activities,
       rules,
     );
-    overall = trusted.income === true || trusted.hours === true ? "meets" : "unsure";
+    const trustedMeets = trusted.income === true || trusted.hours === true;
+    // Deposits the member labeled as driving are self-attested: they can support a month but
+    // never make it "meets" on their own. Statements must carry it.
+    const withoutLabeled = evaluate(
+      allocs.filter((x) => lowFields(x.record).length === 0),
+      [],
+      activities,
+      rules,
+    );
+    const meetsWithoutLabeled = withoutLabeled.income === true || withoutLabeled.hours === true;
+    if (trustedMeets && !meetsWithoutLabeled && labeled.length > 0)
+      reasons.push({ code: "relies_on_bank_only_income", params: { amount: round2(sum(labeled.map((x) => x.amount))) } });
+    overall = trustedMeets && meetsWithoutLabeled ? "meets" : "unsure";
   } else if (allocs.length === 0 && activities.length === 0) {
     // Only bank deposits: gross pay and hours are unknown, so a short month is missing
     // statements, not proof of falling short.
     overall = "missing_data";
     reasons.unshift({ code: "missing_month", params: {} });
   } else if (all.income === "depends_on_open_question" || all.hours === "depends_on_open_question") overall = "unsure";
-  else overall = "does_not_meet";
+  else if ((input.unreadableDocIds?.length ?? 0) > 0) {
+    overall = "unsure";
+    reasons.push({ code: "unreadable_document", params: { count: input.unreadableDocIds!.length } });
+  } else overall = "does_not_meet";
 
   const known = new Set(rules.open_questions.map((q) => q.id));
   return {

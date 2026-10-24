@@ -1,0 +1,18 @@
+{
+  "letter_type": "renewal",
+  "notice_date": "2026-12-08",
+  "response_deadline": "2027-01-07",
+  "requested_items": [
+    "Comprobante de ingresos de cada mes indicado",
+    "Estados de cuenta bancarios que muestren los depósitos de los mismos meses",
+    "Formulario de renovación firmado"
+  ],
+  "months_requested": [
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "language": "es",
+  "county_name": "County of Alameda Social Services",
+  "unreadable_reason": null
+}

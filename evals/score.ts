@@ -14,6 +14,8 @@ export interface ExpectedMonth {
   overall_expected: MonthStatus["overall"];
   /** Statuses the ground truth accepts (e.g. "unsure" is acceptable when an open question applies). */
   acceptable?: MonthStatus["overall"][];
+  /** True totals including documents the pipeline can't see (e.g. an unreadable photo). */
+  underlying?: { overall: MonthStatus["overall"] };
 }
 
 export interface FieldScore {
@@ -70,7 +72,11 @@ export interface MonthScore {
 export function scoreMonths(expected: ExpectedMonth[], got: MonthStatus[]): MonthScore[] {
   return expected.map((e) => {
     const g = got.find((m) => m.month === e.month);
-    const acceptable = e.acceptable?.length ? e.acceptable : [e.overall_expected];
+    const acceptable = [...(e.acceptable?.length ? e.acceptable : [e.overall_expected])];
+    // When the readable statements alone already clear both income tests and the full truth also
+    // meets, "meets" is a correct answer, not a false one: more income can't undo it.
+    const visibleMeets = e.gross_income >= 580 && e.net_income >= 580;
+    if (e.underlying?.overall === "meets" && visibleMeets) acceptable.push("meets");
     return {
       month: e.month,
       totalWithinTolerance: g !== undefined && Math.abs(g.gross_income - e.gross_income) <= MONTH_TOTAL_TOLERANCE,

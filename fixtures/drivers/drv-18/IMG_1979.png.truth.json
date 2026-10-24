@@ -1,0 +1,13 @@
+{
+  "platform": "instacart",
+  "period_start": "2026-10-01",
+  "period_end": "2026-10-07",
+  "gross_earnings": 39.86,
+  "tips": 4.13,
+  "platform_fees": 3.52,
+  "net_payout": 36.34,
+  "online_hours": 5.3,
+  "active_hours": 4.2,
+  "trips_or_deliveries": 2,
+  "unreadable_reason": null
+}

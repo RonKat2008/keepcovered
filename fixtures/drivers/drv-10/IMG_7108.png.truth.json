@@ -1,0 +1,17 @@
+{
+  "letter_type": "verification_request",
+  "notice_date": "2026-12-08",
+  "response_deadline": "2026-12-22",
+  "requested_items": [
+    "Proof of income for each month listed (earnings statements, pay stubs, or self-employment records)",
+    "Proof of hours worked for each month listed (app activity or hours summaries)",
+    "Any documents showing an exemption you believe applies to you"
+  ],
+  "months_requested": [
+    "2026-10",
+    "2026-11"
+  ],
+  "language": "en",
+  "county_name": "County of Alameda Social Services",
+  "unreadable_reason": null
+}

@@ -1,0 +1,18 @@
+{
+  "letter_type": "renewal",
+  "notice_date": "2026-12-11",
+  "response_deadline": "2027-01-10",
+  "requested_items": [
+    "Proof of income for each month listed",
+    "Bank statements showing deposits for the same months",
+    "Signed renewal form"
+  ],
+  "months_requested": [
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "language": "en",
+  "county_name": "County of Alameda Social Services",
+  "unreadable_reason": null
+}

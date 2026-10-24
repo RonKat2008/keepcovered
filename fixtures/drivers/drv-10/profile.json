@@ -1,0 +1,19 @@
+{
+  "driver_id": "drv-10",
+  "display_name": "Alex Tran",
+  "lang": "en",
+  "apps": [
+    "instacart",
+    "uber",
+    "doordash"
+  ],
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "traps": [
+    "straddle_week"
+  ]
+}

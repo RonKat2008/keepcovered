@@ -1,0 +1,18 @@
+{
+  "driver_id": "drv-04",
+  "display_name": "Camila Tran",
+  "lang": "es",
+  "apps": [
+    "lyft"
+  ],
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "near_miss_income"
+  ]
+}

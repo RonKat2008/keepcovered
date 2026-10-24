@@ -1,0 +1,17 @@
+{
+  "driver_id": "drv-22",
+  "display_name": "Rosa Dube",
+  "lang": "es",
+  "apps": [
+    "doordash",
+    "lyft"
+  ],
+  "months": [
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "straddle_week"
+  ]
+}

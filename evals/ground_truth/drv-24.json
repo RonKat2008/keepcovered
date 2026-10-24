@@ -1,0 +1,696 @@
+{
+  "driver_id": "drv-24",
+  "documents": [
+    {
+      "file": "IMG_7296.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "gross_earnings": 386.27,
+        "tips": 48.4,
+        "platform_fees": 71.77,
+        "net_payout": 314.5,
+        "online_hours": 11.3,
+        "active_hours": 8.6,
+        "trips_or_deliveries": 29,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_9320.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 161.48,
+        "tips": 16.98,
+        "platform_fees": 27.99,
+        "net_payout": 133.49,
+        "online_hours": 15.2,
+        "active_hours": 13.2,
+        "trips_or_deliveries": 11,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_3127.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 443.43,
+        "tips": 27.85,
+        "platform_fees": 53.3,
+        "net_payout": 390.13,
+        "online_hours": 15.8,
+        "active_hours": 11.4,
+        "trips_or_deliveries": 28,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_3575.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-07",
+        "gross_earnings": 137.18,
+        "tips": 18.93,
+        "platform_fees": 25.37,
+        "net_payout": 111.81,
+        "online_hours": 5.2,
+        "active_hours": 3.9,
+        "trips_or_deliveries": 13,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-07",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_3286.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-09-08",
+        "period_end": "2026-09-14",
+        "gross_earnings": 146.33,
+        "tips": 18.69,
+        "platform_fees": 25.42,
+        "net_payout": 120.91,
+        "online_hours": 4.7,
+        "active_hours": 3.4,
+        "trips_or_deliveries": 15,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-09-08",
+        "period_end": "2026-09-14",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_4097.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-09-15",
+        "period_end": "2026-09-21",
+        "gross_earnings": 167.06,
+        "tips": 20.18,
+        "platform_fees": 36.12,
+        "net_payout": 130.94,
+        "online_hours": 5.9,
+        "active_hours": 4.4,
+        "trips_or_deliveries": 16,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-09-15",
+        "period_end": "2026-09-21",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_6296.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-09-22",
+        "period_end": "2026-09-28",
+        "gross_earnings": 162.83,
+        "tips": 19.2,
+        "platform_fees": 30.82,
+        "net_payout": 132.01,
+        "online_hours": 5,
+        "active_hours": 3.7,
+        "trips_or_deliveries": 19,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-09-22",
+        "period_end": "2026-09-28",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_8993.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-09-29",
+        "period_end": "2026-09-30",
+        "gross_earnings": 29.78,
+        "tips": 3.58,
+        "platform_fees": 5.72,
+        "net_payout": 24.06,
+        "online_hours": 1,
+        "active_hours": 0.8,
+        "trips_or_deliveries": 4,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-09-29",
+        "period_end": "2026-09-30",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_2394.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-07",
+        "gross_earnings": 84.14,
+        "tips": 9.07,
+        "platform_fees": 13.05,
+        "net_payout": 71.09,
+        "online_hours": 6.9,
+        "active_hours": 5.9,
+        "trips_or_deliveries": 9,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-07",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_6498.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "gross_earnings": 99.55,
+        "tips": 9.77,
+        "platform_fees": 15.86,
+        "net_payout": 83.69,
+        "online_hours": 8.2,
+        "active_hours": 7,
+        "trips_or_deliveries": 11,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_5113.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-15",
+        "period_end": "2026-10-21",
+        "gross_earnings": 76.29,
+        "tips": 7.85,
+        "platform_fees": 14.61,
+        "net_payout": 61.68,
+        "online_hours": 6.5,
+        "active_hours": 5.6,
+        "trips_or_deliveries": 6,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-15",
+        "period_end": "2026-10-21",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5943.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-22",
+        "period_end": "2026-10-28",
+        "gross_earnings": 106.35,
+        "tips": 10.86,
+        "platform_fees": 17.16,
+        "net_payout": 89.19,
+        "online_hours": 8.3,
+        "active_hours": 6.9,
+        "trips_or_deliveries": 13,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-22",
+        "period_end": "2026-10-28",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5424.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-29",
+        "period_end": "2026-10-31",
+        "gross_earnings": 36.79,
+        "tips": 4.85,
+        "platform_fees": 6.78,
+        "net_payout": 30.01,
+        "online_hours": 3.6,
+        "active_hours": 2.9,
+        "trips_or_deliveries": 4,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-29",
+        "period_end": "2026-10-31",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_7451.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-07",
+        "gross_earnings": 198.72,
+        "tips": 14.1,
+        "platform_fees": 26.85,
+        "net_payout": 171.87,
+        "online_hours": 7.5,
+        "active_hours": 5.4,
+        "trips_or_deliveries": 18,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-07",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_1891.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-08",
+        "period_end": "2026-11-14",
+        "gross_earnings": 303.09,
+        "tips": 17.1,
+        "platform_fees": 33.8,
+        "net_payout": 269.29,
+        "online_hours": 10.1,
+        "active_hours": 7.1,
+        "trips_or_deliveries": 39,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-08",
+        "period_end": "2026-11-14",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_4619.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-15",
+        "period_end": "2026-11-21",
+        "gross_earnings": 183.42,
+        "tips": 12.33,
+        "platform_fees": 20.23,
+        "net_payout": 163.19,
+        "online_hours": 6.5,
+        "active_hours": 4.6,
+        "trips_or_deliveries": 23,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-15",
+        "period_end": "2026-11-21",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_4094.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-22",
+        "period_end": "2026-11-28",
+        "gross_earnings": 158.05,
+        "tips": 9.29,
+        "platform_fees": 17.76,
+        "net_payout": 140.29,
+        "online_hours": 5.6,
+        "active_hours": 4,
+        "trips_or_deliveries": 19,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-22",
+        "period_end": "2026-11-28",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_8723.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-29",
+        "period_end": "2026-11-30",
+        "gross_earnings": 78.45,
+        "tips": 5.08,
+        "platform_fees": 9.12,
+        "net_payout": 69.33,
+        "online_hours": 3.4,
+        "active_hours": 2.4,
+        "trips_or_deliveries": 9,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-29",
+        "period_end": "2026-11-30",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_7138.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "gross_earnings": 598.95,
+        "tips": 75.04,
+        "platform_fees": 125.25,
+        "net_payout": 473.7,
+        "online_hours": 15.8,
+        "active_hours": 11.8,
+        "trips_or_deliveries": 39,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_9523.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 320.08,
+        "tips": 33.67,
+        "platform_fees": 53,
+        "net_payout": 267.08,
+        "online_hours": 22.2,
+        "active_hours": 18.9,
+        "trips_or_deliveries": 23,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_2976.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 373.03,
+        "tips": 23.43,
+        "platform_fees": 52.59,
+        "net_payout": 320.44,
+        "online_hours": 14.2,
+        "active_hours": 10.4,
+        "trips_or_deliveries": 22,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_7976.png",
+      "kind": "county_letter",
+      "truth": {
+        "letter_type": "work_rule_notice",
+        "notice_date": "2026-12-07",
+        "response_deadline": "2027-01-06",
+        "requested_items": [
+          "Informe su trabajo, ingresos o actividad comunitaria cada mes a partir de su próximo informe"
+        ],
+        "months_requested": [],
+        "language": "es",
+        "county_name": "County of Alameda Social Services",
+        "unreadable_reason": null
+      },
+      "meta": {
+        "variant": "work_rule_notice",
+        "lang": "es"
+      }
+    }
+  ],
+  "bank_truth": {
+    "drv-24-t001": "not_driving",
+    "drv-24-t002": "not_driving",
+    "drv-24-t003": "not_driving",
+    "drv-24-t004": "driving",
+    "drv-24-t005": "driving",
+    "drv-24-t006": "driving",
+    "drv-24-t007": "driving",
+    "drv-24-t008": "driving",
+    "drv-24-t009": "driving",
+    "drv-24-t010": "driving",
+    "drv-24-t011": "not_driving",
+    "drv-24-t012": "driving",
+    "drv-24-t013": "driving",
+    "drv-24-t014": "driving",
+    "drv-24-t015": "driving",
+    "drv-24-t016": "not_driving",
+    "drv-24-t017": "driving",
+    "drv-24-t018": "driving",
+    "drv-24-t019": "driving",
+    "drv-24-t020": "driving",
+    "drv-24-t021": "driving",
+    "drv-24-t022": "not_driving",
+    "drv-24-t023": "not_driving",
+    "drv-24-t024": "driving",
+    "drv-24-t025": "driving",
+    "drv-24-t026": "driving",
+    "drv-24-t027": "not_driving",
+    "drv-24-t028": "driving",
+    "drv-24-t029": "driving",
+    "drv-24-t030": "driving",
+    "drv-24-t031": "not_driving",
+    "drv-24-t032": "not_driving",
+    "drv-24-t033": "not_driving",
+    "drv-24-t034": "not_driving",
+    "drv-24-t035": "driving",
+    "drv-24-t036": "not_driving",
+    "drv-24-t037": "driving",
+    "drv-24-t038": "driving",
+    "drv-24-t039": "driving",
+    "drv-24-t040": "driving",
+    "drv-24-t041": "driving",
+    "drv-24-t042": "driving",
+    "drv-24-t043": "driving",
+    "drv-24-t044": "driving",
+    "drv-24-t045": "driving",
+    "drv-24-t046": "driving",
+    "drv-24-t047": "driving",
+    "drv-24-t048": "driving",
+    "drv-24-t049": "not_driving",
+    "drv-24-t050": "not_driving",
+    "drv-24-t051": "not_driving",
+    "drv-24-t052": "driving",
+    "drv-24-t053": "driving",
+    "drv-24-t054": "not_driving",
+    "drv-24-t055": "not_driving",
+    "drv-24-t056": "driving",
+    "drv-24-t057": "driving",
+    "drv-24-t058": "driving",
+    "drv-24-t059": "not_driving",
+    "drv-24-t060": "not_driving",
+    "drv-24-t061": "driving",
+    "drv-24-t062": "driving",
+    "drv-24-t063": "not_driving",
+    "drv-24-t064": "driving",
+    "drv-24-t065": "not_driving",
+    "drv-24-t066": "driving",
+    "drv-24-t067": "driving",
+    "drv-24-t068": "driving",
+    "drv-24-t069": "driving",
+    "drv-24-t070": "driving",
+    "drv-24-t071": "driving",
+    "drv-24-t072": "not_driving",
+    "drv-24-t073": "driving",
+    "drv-24-t074": "driving",
+    "drv-24-t075": "not_driving",
+    "drv-24-t076": "not_driving",
+    "drv-24-t077": "not_driving",
+    "drv-24-t078": "driving",
+    "drv-24-t079": "driving",
+    "drv-24-t080": "driving",
+    "drv-24-t081": "driving",
+    "drv-24-t082": "driving",
+    "drv-24-t083": "driving",
+    "drv-24-t084": "not_driving",
+    "drv-24-t085": "not_driving",
+    "drv-24-t086": "not_driving",
+    "drv-24-t087": "driving",
+    "drv-24-t088": "driving",
+    "drv-24-t089": "driving",
+    "drv-24-t090": "not_driving",
+    "drv-24-t091": "driving",
+    "drv-24-t092": "driving",
+    "drv-24-t093": "driving",
+    "drv-24-t094": "driving"
+  },
+  "expected_months": [
+    {
+      "month": "2026-09",
+      "gross_income": 1628.4,
+      "net_income": 1307.93,
+      "active_hours": 36.6,
+      "online_hours": 48.9,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1628.4,
+        "net_income": 1307.93,
+        "active_hours": 36.6,
+        "online_hours": 48.9,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-10",
+      "gross_income": 884.68,
+      "net_income": 736.23,
+      "active_hours": 60.4,
+      "online_hours": 70.9,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 884.68,
+        "net_income": 736.23,
+        "active_hours": 60.4,
+        "online_hours": 70.9,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-11",
+      "gross_income": 1738.19,
+      "net_income": 1524.54,
+      "active_hours": 45.3,
+      "online_hours": 63.1,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1738.19,
+        "net_income": 1524.54,
+        "active_hours": 45.3,
+        "online_hours": 63.1,
+        "overall": "meets"
+      }
+    }
+  ],
+  "letter_truth": {
+    "letter_type": "work_rule_notice",
+    "notice_date": "2026-12-07",
+    "response_deadline": "2027-01-06",
+    "requested_items": [
+      "Informe su trabajo, ingresos o actividad comunitaria cada mes a partir de su próximo informe"
+    ],
+    "months_requested": [],
+    "language": "es",
+    "county_name": "County of Alameda Social Services",
+    "unreadable_reason": null
+  }
+}

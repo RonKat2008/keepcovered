@@ -1,0 +1,21 @@
+{
+  "driver_id": "drv-08",
+  "display_name": "Jordan Vance",
+  "lang": "en",
+  "apps": [
+    "doordash",
+    "uber"
+  ],
+  "months": [
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "online_not_active",
+    "instant_cashout_list"
+  ]
+}

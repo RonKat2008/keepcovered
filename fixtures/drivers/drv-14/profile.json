@@ -1,0 +1,20 @@
+{
+  "driver_id": "drv-14",
+  "display_name": "Mateo Castellanos",
+  "lang": "es",
+  "apps": [
+    "doordash",
+    "instacart",
+    "lyft"
+  ],
+  "months": [
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "traps": [
+    "near_miss_income"
+  ]
+}

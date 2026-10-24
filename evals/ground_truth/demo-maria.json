@@ -1,0 +1,352 @@
+{
+  "driver_id": "demo-maria",
+  "documents": [
+    {
+      "file": "IMG_6844.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "gross_earnings": 690,
+        "tips": 69,
+        "platform_fees": 80,
+        "net_payout": 610,
+        "online_hours": 66,
+        "active_hours": 52,
+        "trips_or_deliveries": 48,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_7722.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 372.4,
+        "tips": 38,
+        "platform_fees": 74.48,
+        "net_payout": 297.92,
+        "online_hours": 29,
+        "active_hours": 21,
+        "trips_or_deliveries": 22,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_2442.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 612.8,
+        "tips": 61.28,
+        "platform_fees": 122.56,
+        "net_payout": 490.24,
+        "online_hours": 45,
+        "active_hours": 33,
+        "trips_or_deliveries": 40,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_1944.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 418.3,
+        "tips": 52,
+        "platform_fees": 25.1,
+        "net_payout": 393.2,
+        "online_hours": 36.5,
+        "active_hours": 26.5,
+        "trips_or_deliveries": 50,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_7461.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 148.6,
+        "tips": 15,
+        "platform_fees": 14.86,
+        "net_payout": 133.74,
+        "online_hours": 12,
+        "active_hours": 9.5,
+        "trips_or_deliveries": 8,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_7976.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 209,
+        "tips": 23,
+        "platform_fees": 20.9,
+        "net_payout": 188.1,
+        "online_hours": 16,
+        "active_hours": 12,
+        "trips_or_deliveries": 9,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5438.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 612.8,
+        "tips": 61.28,
+        "platform_fees": 122.56,
+        "net_payout": 490.24,
+        "online_hours": 45,
+        "active_hours": 33,
+        "trips_or_deliveries": 40,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "dup_rephoto",
+        "photo": true,
+        "trap": "duplicate_rephotographed",
+        "duplicate_of": "IMG_2442.png"
+      }
+    },
+    {
+      "file": "IMG_9736.png",
+      "kind": "county_letter",
+      "truth": {
+        "letter_type": "verification_request",
+        "notice_date": "2026-11-24",
+        "response_deadline": "2026-12-08",
+        "requested_items": [
+          "Comprobante de ingresos de cada mes indicado (estados de ganancias, talones de pago o registros de trabajo por cuenta propia)",
+          "Comprobante de horas trabajadas de cada mes indicado (actividad de la aplicación o resúmenes de horas)",
+          "Cualquier documento que muestre una exención que usted cree que le corresponde"
+        ],
+        "months_requested": [
+          "2026-10",
+          "2026-11"
+        ],
+        "language": "es",
+        "county_name": "County of Alameda Social Services",
+        "unreadable_reason": null
+      },
+      "meta": {
+        "variant": "verification_request",
+        "lang": "es"
+      }
+    }
+  ],
+  "bank_truth": {
+    "demo-maria-t001": "not_driving",
+    "demo-maria-t002": "not_driving",
+    "demo-maria-t003": "not_driving",
+    "demo-maria-t004": "not_driving",
+    "demo-maria-t005": "not_driving",
+    "demo-maria-t006": "not_driving",
+    "demo-maria-t007": "driving",
+    "demo-maria-t008": "not_driving",
+    "demo-maria-t009": "not_driving",
+    "demo-maria-t010": "not_driving",
+    "demo-maria-t011": "driving",
+    "demo-maria-t012": "not_driving",
+    "demo-maria-t013": "not_driving",
+    "demo-maria-t014": "driving",
+    "demo-maria-t015": "not_driving",
+    "demo-maria-t016": "not_driving",
+    "demo-maria-t017": "driving",
+    "demo-maria-t018": "not_driving",
+    "demo-maria-t019": "not_driving",
+    "demo-maria-t020": "driving",
+    "demo-maria-t021": "driving",
+    "demo-maria-t022": "driving",
+    "demo-maria-t023": "driving",
+    "demo-maria-t024": "not_driving",
+    "demo-maria-t025": "driving",
+    "demo-maria-t026": "driving",
+    "demo-maria-t027": "driving",
+    "demo-maria-t028": "not_driving",
+    "demo-maria-t029": "not_driving",
+    "demo-maria-t030": "not_driving",
+    "demo-maria-t031": "not_driving",
+    "demo-maria-t032": "driving",
+    "demo-maria-t033": "driving",
+    "demo-maria-t034": "driving",
+    "demo-maria-t035": "driving",
+    "demo-maria-t036": "driving",
+    "demo-maria-t037": "driving",
+    "demo-maria-t038": "not_driving",
+    "demo-maria-t039": "not_driving",
+    "demo-maria-t040": "not_driving",
+    "demo-maria-t041": "driving",
+    "demo-maria-t042": "not_driving",
+    "demo-maria-t043": "driving",
+    "demo-maria-t044": "driving",
+    "demo-maria-t045": "not_driving",
+    "demo-maria-t046": "not_driving",
+    "demo-maria-t047": "driving",
+    "demo-maria-t048": "driving",
+    "demo-maria-t049": "driving",
+    "demo-maria-t050": "not_driving",
+    "demo-maria-t051": "driving",
+    "demo-maria-t052": "driving",
+    "demo-maria-t053": "driving",
+    "demo-maria-t054": "not_driving",
+    "demo-maria-t055": "driving",
+    "demo-maria-t056": "driving",
+    "demo-maria-t057": "driving",
+    "demo-maria-t058": "not_driving",
+    "demo-maria-t059": "not_driving",
+    "demo-maria-t060": "not_driving",
+    "demo-maria-t061": "not_driving",
+    "demo-maria-t062": "not_driving",
+    "demo-maria-t063": "driving",
+    "demo-maria-t064": "driving",
+    "demo-maria-t065": "driving",
+    "demo-maria-t066": "driving",
+    "demo-maria-t067": "driving",
+    "demo-maria-t068": "driving"
+  },
+  "expected_months": [
+    {
+      "month": "2026-09",
+      "gross_income": 690,
+      "net_income": 610,
+      "active_hours": 52,
+      "online_hours": 66,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 690,
+        "net_income": 610,
+        "active_hours": 52,
+        "online_hours": 66,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-10",
+      "gross_income": 521,
+      "net_income": 431.66,
+      "active_hours": 30.5,
+      "online_hours": 41,
+      "overall_expected": "missing_data",
+      "acceptable": [
+        "missing_data",
+        "unsure"
+      ],
+      "complete": false,
+      "underlying": {
+        "gross_income": 754.5,
+        "net_income": 647.16,
+        "active_hours": 44.5,
+        "online_hours": 60.5,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-11",
+      "gross_income": 1240.1,
+      "net_income": 1071.54,
+      "active_hours": 71.5,
+      "online_hours": 97.5,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1240.1,
+        "net_income": 1071.54,
+        "active_hours": 71.5,
+        "online_hours": 97.5,
+        "overall": "meets"
+      }
+    }
+  ],
+  "letter_truth": {
+    "letter_type": "verification_request",
+    "notice_date": "2026-11-24",
+    "response_deadline": "2026-12-08",
+    "requested_items": [
+      "Comprobante de ingresos de cada mes indicado (estados de ganancias, talones de pago o registros de trabajo por cuenta propia)",
+      "Comprobante de horas trabajadas de cada mes indicado (actividad de la aplicación o resúmenes de horas)",
+      "Cualquier documento que muestre una exención que usted cree que le corresponde"
+    ],
+    "months_requested": [
+      "2026-10",
+      "2026-11"
+    ],
+    "language": "es",
+    "county_name": "County of Alameda Social Services",
+    "unreadable_reason": null
+  },
+  "notes": [
+    "October: DoorDash screenshots intentionally missing but DoorDash deposits are in the bank ledger.",
+    "November meets the income path across three apps (gross 1240.10, net 1071.54).",
+    "VENMO deposit (85.00) is not driving income; the user must label it."
+  ]
+}

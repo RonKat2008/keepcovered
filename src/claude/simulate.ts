@@ -44,7 +44,7 @@ export function truthLetter(truth: TruthSidecar): CountyLetterExtractionT | null
 export function truthTriage(truth: TruthSidecar): TriageResultT | null {
   const explicit = TriageResult.safeParse(truth.triage);
   if (explicit.success) return explicit.data;
-  const kind = DocKind.safeParse(truth.kind ?? truth.doc_kind);
+  const kind = DocKind.safeParse(truth.kind ?? truth.doc_kind ?? truth.expected_kind);
   const earnings = truthEarnings(truth);
   const letter = truthLetter(truth);
   const resolvedKind = kind.success ? kind.data : earnings ? "earnings_screenshot" : letter ? "county_letter" : null;

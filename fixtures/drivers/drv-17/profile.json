@@ -1,0 +1,20 @@
+{
+  "driver_id": "drv-17",
+  "display_name": "Diego Castellanos",
+  "lang": "es",
+  "apps": [
+    "doordash",
+    "uber",
+    "lyft"
+  ],
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "duplicate_rephotographed"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "driver_id": "drv-03",
+  "display_name": "Jamie Castellanos",
+  "lang": "en",
+  "apps": [
+    "lyft",
+    "instacart",
+    "uber"
+  ],
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "traps": [
+    "duplicate_exact"
+  ]
+}

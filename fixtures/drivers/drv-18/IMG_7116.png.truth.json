@@ -1,0 +1,13 @@
+{
+  "platform": "doordash",
+  "period_start": "2026-09-01",
+  "period_end": "2026-09-30",
+  "gross_earnings": 111.04,
+  "tips": 13.02,
+  "platform_fees": 15.05,
+  "net_payout": 95.99,
+  "online_hours": 11,
+  "active_hours": 9,
+  "trips_or_deliveries": 11,
+  "unreadable_reason": null
+}

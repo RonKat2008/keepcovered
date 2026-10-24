@@ -1,0 +1,341 @@
+{
+  "session_id": "demo-maria",
+  "lang": "es",
+  "months": [
+    {
+      "month": "2026-09",
+      "gross_income": 910.4,
+      "net_income": 731.1,
+      "online_hours": 74,
+      "active_hours": 49.5,
+      "other_activity_hours": 0,
+      "meets_income_path": true,
+      "meets_hours_path": false,
+      "overall": "meets",
+      "evidence_doc_ids": ["d-uber-sep", "d-dd-sep"],
+      "reasons": [
+        { "code": "income_met", "params": { "gross": 910.4 } },
+        { "code": "online_only_hours", "params": { "online": 74, "active": 49.5 } }
+      ],
+      "open_question_ids": []
+    },
+    {
+      "month": "2026-10",
+      "gross_income": 402.15,
+      "net_income": 318.7,
+      "online_hours": 40,
+      "active_hours": 26,
+      "other_activity_hours": 0,
+      "meets_income_path": "depends_on_open_question",
+      "meets_hours_path": false,
+      "overall": "unsure",
+      "evidence_doc_ids": ["d-uber-oct"],
+      "reasons": [
+        { "code": "income_short", "params": { "gross": 402.15, "short_by": 177.85 } },
+        { "code": "bank_only_income", "params": { "amount": 318.6, "count": 3 } }
+      ],
+      "open_question_ids": ["q-venmo-45"]
+    },
+    {
+      "month": "2026-11",
+      "gross_income": 1240.75,
+      "net_income": 1003.4,
+      "online_hours": 98,
+      "active_hours": 63.5,
+      "other_activity_hours": 0,
+      "meets_income_path": true,
+      "meets_hours_path": false,
+      "overall": "meets",
+      "evidence_doc_ids": ["d-uber-nov", "d-lyft-nov", "d-ic-nov"],
+      "reasons": [
+        { "code": "income_met", "params": { "gross": 1240.75 } },
+        { "code": "online_only_hours", "params": { "online": 98, "active": 63.5 } }
+      ],
+      "open_question_ids": []
+    }
+  ],
+  "letter": {
+    "letter_type": "verification_request",
+    "notice_date": "2026-11-08",
+    "response_deadline": "2026-12-08",
+    "requested_items": [
+      "Prueba de ingresos de trabajo por cuenta propia (septiembre a noviembre de 2026)",
+      "Horas trabajadas por mes, si las tiene"
+    ],
+    "months_requested": ["2026-09", "2026-10", "2026-11"],
+    "language": "es",
+    "county_name": "Alameda",
+    "unreadable_reason": null,
+    "source_doc_id": "d-letter",
+    "field_confidence": {
+      "letter_type": "high",
+      "notice_date": "high",
+      "response_deadline": "high",
+      "months_requested": "high"
+    }
+  },
+  "records": [
+    {
+      "platform": "uber",
+      "period_start": "2026-09-01",
+      "period_end": "2026-09-30",
+      "gross_earnings": 612.4,
+      "tips": 88,
+      "platform_fees": 140.2,
+      "net_payout": 472.2,
+      "online_hours": 52,
+      "active_hours": 34,
+      "trips_or_deliveries": 61,
+      "unreadable_reason": null,
+      "source_doc_id": "d-uber-sep",
+      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "high" },
+      "verification_notes": ["Both readers agreed on every field.", "Gross minus fees equals net payout."]
+    },
+    {
+      "platform": "doordash",
+      "period_start": "2026-09-01",
+      "period_end": "2026-09-30",
+      "gross_earnings": 298,
+      "tips": 64.5,
+      "platform_fees": 39.1,
+      "net_payout": 258.9,
+      "online_hours": 22,
+      "active_hours": 15.5,
+      "trips_or_deliveries": 38,
+      "unreadable_reason": null,
+      "source_doc_id": "d-dd-sep",
+      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "high" },
+      "verification_notes": ["Both readers agreed on every field."]
+    },
+    {
+      "platform": "uber",
+      "period_start": "2026-10-01",
+      "period_end": "2026-10-31",
+      "gross_earnings": 402.15,
+      "tips": 51.25,
+      "platform_fees": 83.45,
+      "net_payout": 318.7,
+      "online_hours": 40,
+      "active_hours": 26,
+      "trips_or_deliveries": 44,
+      "unreadable_reason": null,
+      "source_doc_id": "d-uber-oct",
+      "field_confidence": { "gross_earnings": "high", "net_payout": "medium", "active_hours": "high" },
+      "verification_notes": ["Readers disagreed on net_payout ($318.70 vs $316.70). Opus adjudicated: $318.70."]
+    },
+    {
+      "platform": "uber",
+      "period_start": "2026-11-01",
+      "period_end": "2026-11-30",
+      "gross_earnings": 540.25,
+      "tips": 72,
+      "platform_fees": 108.6,
+      "net_payout": 431.65,
+      "online_hours": 44,
+      "active_hours": 28.5,
+      "trips_or_deliveries": 57,
+      "unreadable_reason": null,
+      "source_doc_id": "d-uber-nov",
+      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "high" },
+      "verification_notes": ["Both readers agreed on every field."]
+    },
+    {
+      "platform": "lyft",
+      "period_start": "2026-11-01",
+      "period_end": "2026-11-30",
+      "gross_earnings": 410.5,
+      "tips": 40,
+      "platform_fees": 92.4,
+      "net_payout": 318.1,
+      "online_hours": 33,
+      "active_hours": 21,
+      "trips_or_deliveries": 39,
+      "unreadable_reason": null,
+      "source_doc_id": "d-lyft-nov",
+      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "medium" },
+      "verification_notes": ["Active hours read from a cropped chart; second reader agreed."]
+    },
+    {
+      "platform": "instacart",
+      "period_start": "2026-11-01",
+      "period_end": "2026-11-30",
+      "gross_earnings": 290,
+      "tips": 96,
+      "platform_fees": 36.35,
+      "net_payout": 253.65,
+      "online_hours": 21,
+      "active_hours": 14,
+      "trips_or_deliveries": 22,
+      "unreadable_reason": null,
+      "source_doc_id": "d-ic-nov",
+      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "high" },
+      "verification_notes": ["Both readers agreed on every field."]
+    }
+  ],
+  "reconcile": {
+    "records": [],
+    "duplicates": [
+      {
+        "kept_doc_id": "d-uber-nov",
+        "dropped_doc_ids": ["d-uber-nov-2"],
+        "reason": "Same period (Nov 1 to Nov 30) and same gross ($540.25). Counted once."
+      }
+    ],
+    "matches": [
+      { "source_doc_id": "d-uber-sep", "txn_ids": ["t-0907", "t-0914", "t-0921", "t-0928"], "amount_diff": 0 },
+      { "source_doc_id": "d-uber-oct", "txn_ids": ["t-1005", "t-1012", "t-1019u", "t-1026"], "amount_diff": 0 }
+    ],
+    "unmatched_deposits": [
+      {
+        "id": "t-1008",
+        "date": "2026-10-08",
+        "amount": 104.2,
+        "description": "DOORDASH DASHER DIRECT DEP",
+        "suggestion": { "txn_id": "t-1008", "platform": "doordash", "similarity": 0.94 }
+      },
+      {
+        "id": "t-1015",
+        "date": "2026-10-15",
+        "amount": 121.75,
+        "description": "DOORDASH DASHER DIRECT DEP",
+        "suggestion": { "txn_id": "t-1015", "platform": "doordash", "similarity": 0.94 }
+      },
+      {
+        "id": "t-1022",
+        "date": "2026-10-22",
+        "amount": 92.65,
+        "description": "DOORDASH INC PAYOUT",
+        "suggestion": { "txn_id": "t-1022", "platform": "doordash", "similarity": 0.89 }
+      },
+      {
+        "id": "t-1019",
+        "date": "2026-10-19",
+        "amount": 45,
+        "description": "VENMO CASHOUT",
+        "suggestion": null
+      }
+    ],
+    "user_labeled_income": []
+  },
+  "exemptions": [
+    {
+      "id": "medicare",
+      "outcome": "not_indicated",
+      "label_en": "You have Medicare (Part A or Part B)",
+      "label_es": "Tiene Medicare (Parte A o Parte B)",
+      "source": {
+        "doc": "acwdl-25-30",
+        "page": 4,
+        "quote": "Entitled to, or enrolled in, benefits under Medicare Part A of title XVIII or enrolled for benefits under Part B of title XVIII"
+      }
+    },
+    {
+      "id": "parent_caretaker_child_13_or_under",
+      "outcome": "not_indicated",
+      "label_en": "You take care of a child age 13 or younger",
+      "label_es": "Cuida a un niño de 13 años o menos",
+      "source": {
+        "doc": "acwdl-25-30",
+        "page": 4,
+        "quote": "When there are two parents in the household, both parents are eligible for this exemption."
+      }
+    },
+    {
+      "id": "medically_frail",
+      "outcome": "ask_navigator",
+      "label_en": "You have a serious health problem or disability",
+      "label_es": "Tiene un problema de salud grave o una discapacidad",
+      "source": {
+        "doc": "acwdl-25-30",
+        "page": 5,
+        "quote": "Medically frail or otherwise has special medical needs (as defined by the Secretary), including an individual who is:"
+      }
+    }
+  ],
+  "explanation": [
+    {
+      "text": "Para cada mes, el condado mira si su ingreso bruto llega a $580. ",
+      "citations": [
+        {
+          "source_id": "acwdl-25-30",
+          "title": "ACWDL 25-30",
+          "page": 7,
+          "cited_text": "An individual’s total gross income for a month must meet or exceed this amount"
+        }
+      ]
+    },
+    {
+      "text": "Usamos lo que ganó antes de las comisiones de la app, porque la regla habla de ingreso bruto. ",
+      "citations": []
+    },
+    {
+      "text": "Septiembre ($910.40) y noviembre ($1,240.75) pasan la línea de $580. ",
+      "citations": [
+        {
+          "source_id": "acwdl-25-30",
+          "title": "ACWDL 25-30",
+          "page": 7,
+          "cited_text": "Currently, this amount is $580 a month."
+        }
+      ]
+    },
+    {
+      "text": "En octubre faltan las capturas de DoorDash. Vimos 3 depósitos de DoorDash en su banco, pero sin capturas no sabemos su ingreso bruto. Si sube esas capturas, podemos volver a revisar octubre. ",
+      "citations": []
+    },
+    {
+      "text": "Cuando usted pide Medi-Cal, el condado revisa el mes justo antes de su solicitud. Por eso conviene tener la prueba de cada mes lista.",
+      "citations": [
+        {
+          "source_id": "acwdl-25-30",
+          "title": "ACWDL 25-30",
+          "page": 9,
+          "cited_text": "Counties shall verify compliance with the work and community engagement requirement in the month immediately prior to the month of application (“look-back month”)."
+        }
+      ]
+    }
+  ],
+  "deadlines": [
+    {
+      "id": "dl-gather",
+      "date": "2026-12-01",
+      "title_en": "Upload your November screenshots and October DoorDash screenshots",
+      "title_es": "Suba sus capturas de noviembre y las de DoorDash de octubre",
+      "kind": "reminder"
+    },
+    {
+      "id": "dl-letter",
+      "date": "2026-12-08",
+      "title_en": "Send your proof to the county (letter deadline)",
+      "title_es": "Envíe su prueba al condado (fecha límite de la carta)",
+      "kind": "respond_to_letter"
+    },
+    {
+      "id": "dl-rule",
+      "date": "2027-01-01",
+      "title_en": "The Medi-Cal work rule starts",
+      "title_es": "Empieza la regla de trabajo de Medi-Cal",
+      "kind": "rule_start"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-venmo-45",
+      "kind": "label_deposit",
+      "prompt_en": "Is this $45.00 Venmo deposit on October 19 from driving?",
+      "prompt_es": "¿Este depósito de Venmo de $45.00 del 19 de octubre es de manejar?",
+      "ref": "t-1019",
+      "options": [
+        { "value": "driving", "label_en": "Yes, from driving", "label_es": "Sí, de manejar" },
+        { "value": "not_driving", "label_en": "No, something else", "label_es": "No, es otra cosa" },
+        { "value": "unknown", "label_en": "I don't remember", "label_es": "No me acuerdo" }
+      ]
+    }
+  ],
+  "needs_navigator": true,
+  "navigator_reasons": [
+    "October is missing DoorDash screenshots, so the county may ask for more proof.",
+    "You answered \"not sure\" to the health question. A navigator can check if an exemption fits."
+  ],
+  "case_summary": "María, rideshare and delivery driver in Alameda County. 3 months reviewed: September and November look like they meet the $580 rule on gross income; October is open because DoorDash screenshots are missing. County letter asks for proof by December 8, 2026."
+}

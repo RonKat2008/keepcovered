@@ -127,7 +127,24 @@ export function reconcile(input: Input): ReconcileResult {
     const singles = candidates
       .filter((t) => Math.abs(t.amount - net) <= AMOUNT_TOLERANCE)
       .sort((a, b) => Math.abs(a.amount - net) - Math.abs(b.amount - net));
-    const chosen = singles.length > 0 ? [singles[0]] : bestSubset(candidates, net);
+    // Monthly summaries are paid out as several weekly deposits: try all same-platform deposits
+    // from the start of the period through the payout window before searching subsets.
+    const windowAll = incomeLike.filter(
+      (t) =>
+        !matchedIds.has(t.id) &&
+        input.labels[t.id] !== "not_driving" &&
+        rec.period_start !== null &&
+        t.date >= rec.period_start &&
+        t.date <= to &&
+        ((pattern?.test(t.description) ?? false) || suggestionById.get(t.id)?.platform === platform),
+    );
+    const windowSum = windowAll.reduce((s, t) => s + t.amount, 0);
+    const chosen =
+      singles.length > 0
+        ? [singles[0]]
+        : windowAll.length > 1 && Math.abs(windowSum - net) <= AMOUNT_TOLERANCE
+          ? windowAll
+          : bestSubset(candidates, net);
     if (!chosen) continue;
     chosen.forEach((t) => matchedIds.add(t.id));
     matches.push({

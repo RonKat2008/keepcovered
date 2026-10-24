@@ -1,0 +1,21 @@
+{
+  "driver_id": "drv-13",
+  "display_name": "Jordan Nakamura",
+  "lang": "en",
+  "apps": [
+    "doordash",
+    "uber",
+    "lyft"
+  ],
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "venmo_not_driving",
+    "instant_cashout_list"
+  ]
+}

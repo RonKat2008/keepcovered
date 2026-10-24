@@ -1,0 +1,258 @@
+{
+  "driver_id": "drv-16",
+  "documents": [
+    {
+      "file": "IMG_1508.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 382.65,
+        "tips": 31.12,
+        "platform_fees": 44.45,
+        "net_payout": 338.2,
+        "online_hours": 34.7,
+        "active_hours": 25.8,
+        "trips_or_deliveries": 39,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_9140.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 1094.2,
+        "tips": 116.1,
+        "platform_fees": 91.55,
+        "net_payout": 1002.65,
+        "online_hours": 50.2,
+        "active_hours": 34.3,
+        "trips_or_deliveries": 110,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_9927.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "gross_earnings": 1059.29,
+        "tips": 90.42,
+        "platform_fees": 166.3,
+        "net_payout": 892.99,
+        "online_hours": 83.2,
+        "active_hours": 65.3,
+        "trips_or_deliveries": 99,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_8076.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "gross_earnings": null,
+        "tips": null,
+        "platform_fees": 2.6,
+        "net_payout": 108.48,
+        "online_hours": null,
+        "active_hours": null,
+        "trips_or_deliveries": null,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "variant": "cashout_list",
+        "note": "Lists instant cash-outs only; not an earnings summary."
+      }
+    },
+    {
+      "file": "IMG_5506.png",
+      "kind": "county_letter",
+      "truth": {
+        "letter_type": "verification_request",
+        "notice_date": "2027-01-11",
+        "response_deadline": "2027-01-25",
+        "requested_items": [
+          "Proof of income for each month listed (earnings statements, pay stubs, or self-employment records)",
+          "Proof of hours worked for each month listed (app activity or hours summaries)",
+          "Any documents showing an exemption you believe applies to you"
+        ],
+        "months_requested": [
+          "2026-11",
+          "2026-12"
+        ],
+        "language": "en",
+        "county_name": "County of Alameda Social Services",
+        "unreadable_reason": null
+      },
+      "meta": {
+        "variant": "verification_request",
+        "lang": "en"
+      }
+    }
+  ],
+  "bank_truth": {
+    "drv-16-t001": "not_driving",
+    "drv-16-t002": "not_driving",
+    "drv-16-t003": "not_driving",
+    "drv-16-t004": "not_driving",
+    "drv-16-t005": "not_driving",
+    "drv-16-t006": "not_driving",
+    "drv-16-t007": "driving",
+    "drv-16-t008": "not_driving",
+    "drv-16-t009": "not_driving",
+    "drv-16-t010": "driving",
+    "drv-16-t011": "driving",
+    "drv-16-t012": "driving",
+    "drv-16-t013": "driving",
+    "drv-16-t014": "not_driving",
+    "drv-16-t015": "driving",
+    "drv-16-t016": "driving",
+    "drv-16-t017": "not_driving",
+    "drv-16-t018": "driving",
+    "drv-16-t019": "not_driving",
+    "drv-16-t020": "not_driving",
+    "drv-16-t021": "driving",
+    "drv-16-t022": "driving",
+    "drv-16-t023": "driving",
+    "drv-16-t024": "driving",
+    "drv-16-t025": "driving",
+    "drv-16-t026": "not_driving",
+    "drv-16-t027": "not_driving",
+    "drv-16-t028": "not_driving",
+    "drv-16-t029": "not_driving",
+    "drv-16-t030": "driving",
+    "drv-16-t031": "not_driving",
+    "drv-16-t032": "driving",
+    "drv-16-t033": "not_driving",
+    "drv-16-t034": "not_driving",
+    "drv-16-t035": "not_driving",
+    "drv-16-t036": "driving",
+    "drv-16-t037": "not_driving",
+    "drv-16-t038": "driving",
+    "drv-16-t039": "not_driving",
+    "drv-16-t040": "not_driving",
+    "drv-16-t041": "not_driving",
+    "drv-16-t042": "driving",
+    "drv-16-t043": "not_driving",
+    "drv-16-t044": "not_driving",
+    "drv-16-t045": "not_driving",
+    "drv-16-t046": "driving",
+    "drv-16-t047": "not_driving",
+    "drv-16-t048": "not_driving",
+    "drv-16-t049": "not_driving",
+    "drv-16-t050": "driving",
+    "drv-16-t051": "not_driving",
+    "drv-16-t052": "not_driving",
+    "drv-16-t053": "driving",
+    "drv-16-t054": "driving"
+  },
+  "expected_months": [
+    {
+      "month": "2026-10",
+      "gross_income": 382.65,
+      "net_income": 338.2,
+      "active_hours": 25.8,
+      "online_hours": 34.7,
+      "overall_expected": "does_not_meet",
+      "acceptable": [
+        "does_not_meet"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 382.65,
+        "net_income": 338.2,
+        "active_hours": 25.8,
+        "online_hours": 34.7,
+        "overall": "does_not_meet"
+      }
+    },
+    {
+      "month": "2026-11",
+      "gross_income": 1094.2,
+      "net_income": 1002.65,
+      "active_hours": 34.3,
+      "online_hours": 50.2,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1094.2,
+        "net_income": 1002.65,
+        "active_hours": 34.3,
+        "online_hours": 50.2,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-12",
+      "gross_income": 1059.29,
+      "net_income": 892.99,
+      "active_hours": 65.3,
+      "online_hours": 83.2,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1059.29,
+        "net_income": 892.99,
+        "active_hours": 65.3,
+        "online_hours": 83.2,
+        "overall": "meets"
+      }
+    }
+  ],
+  "letter_truth": {
+    "letter_type": "verification_request",
+    "notice_date": "2027-01-11",
+    "response_deadline": "2027-01-25",
+    "requested_items": [
+      "Proof of income for each month listed (earnings statements, pay stubs, or self-employment records)",
+      "Proof of hours worked for each month listed (app activity or hours summaries)",
+      "Any documents showing an exemption you believe applies to you"
+    ],
+    "months_requested": [
+      "2026-11",
+      "2026-12"
+    ],
+    "language": "en",
+    "county_name": "County of Alameda Social Services",
+    "unreadable_reason": null
+  }
+}

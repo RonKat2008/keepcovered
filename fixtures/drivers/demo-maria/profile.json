@@ -1,0 +1,21 @@
+{
+  "driver_id": "demo-maria",
+  "display_name": "María Ortega",
+  "lang": "es",
+  "apps": [
+    "uber",
+    "doordash",
+    "instacart"
+  ],
+  "months": [
+    "2026-09",
+    "2026-10",
+    "2026-11"
+  ],
+  "traps": [
+    "missing_app_statements",
+    "venmo_not_driving",
+    "duplicate_rephotographed",
+    "demo"
+  ]
+}

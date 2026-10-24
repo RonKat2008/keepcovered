@@ -1,0 +1,19 @@
+{
+  "driver_id": "drv-19",
+  "display_name": "Andrés Vance",
+  "lang": "es",
+  "apps": [
+    "doordash",
+    "instacart"
+  ],
+  "months": [
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "net_below_gross_above"
+  ]
+}

@@ -1,0 +1,632 @@
+{
+  "driver_id": "drv-20",
+  "documents": [
+    {
+      "file": "IMG_7457.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-07",
+        "gross_earnings": 237.12,
+        "tips": 18.68,
+        "platform_fees": 33.42,
+        "net_payout": 203.7,
+        "online_hours": 14.1,
+        "active_hours": 10.6,
+        "trips_or_deliveries": 15,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-07",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_3997.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "gross_earnings": 267.38,
+        "tips": 18.82,
+        "platform_fees": 32.67,
+        "net_payout": 234.71,
+        "online_hours": 13.8,
+        "active_hours": 10.2,
+        "trips_or_deliveries": 14,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6521.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-10-15",
+        "period_end": "2026-10-21",
+        "gross_earnings": 210.48,
+        "tips": 13.71,
+        "platform_fees": 29.04,
+        "net_payout": 181.44,
+        "online_hours": 10.6,
+        "active_hours": 7.8,
+        "trips_or_deliveries": 19,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-10-15",
+        "period_end": "2026-10-21",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_3535.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-10-22",
+        "period_end": "2026-10-28",
+        "gross_earnings": 214.95,
+        "tips": 15.19,
+        "platform_fees": 29.64,
+        "net_payout": 185.31,
+        "online_hours": 11,
+        "active_hours": 8.3,
+        "trips_or_deliveries": 11,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-10-22",
+        "period_end": "2026-10-28",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_1665.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-10-29",
+        "period_end": "2026-10-31",
+        "gross_earnings": 96.6,
+        "tips": 6.9,
+        "platform_fees": 11.96,
+        "net_payout": 84.64,
+        "online_hours": 4.5,
+        "active_hours": 3.4,
+        "trips_or_deliveries": 6,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-10-29",
+        "period_end": "2026-10-31",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5437.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-07",
+        "gross_earnings": 275.22,
+        "tips": 23.35,
+        "platform_fees": 55.97,
+        "net_payout": 219.25,
+        "online_hours": 13.5,
+        "active_hours": 9.6,
+        "trips_or_deliveries": 19,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-07",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6019.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-11-08",
+        "period_end": "2026-11-14",
+        "gross_earnings": 209.54,
+        "tips": 16.72,
+        "platform_fees": 49.98,
+        "net_payout": 159.56,
+        "online_hours": 10.5,
+        "active_hours": 7.4,
+        "trips_or_deliveries": 13,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-11-08",
+        "period_end": "2026-11-14",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_1596.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-11-15",
+        "period_end": "2026-11-21",
+        "gross_earnings": 183.72,
+        "tips": 15.29,
+        "platform_fees": 47.17,
+        "net_payout": 136.55,
+        "online_hours": 9.7,
+        "active_hours": 6.9,
+        "trips_or_deliveries": 12,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-11-15",
+        "period_end": "2026-11-21",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6366.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-11-22",
+        "period_end": "2026-11-28",
+        "gross_earnings": 212.65,
+        "tips": 15.85,
+        "platform_fees": 44.59,
+        "net_payout": 168.06,
+        "online_hours": 10.2,
+        "active_hours": 7.2,
+        "trips_or_deliveries": 12,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-11-22",
+        "period_end": "2026-11-28",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_5227.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-11-29",
+        "period_end": "2026-11-30",
+        "gross_earnings": 37.27,
+        "tips": 2.95,
+        "platform_fees": 8.36,
+        "net_payout": 28.91,
+        "online_hours": 1.8,
+        "active_hours": 1.2,
+        "trips_or_deliveries": 2,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-11-29",
+        "period_end": "2026-11-30",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_9603.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-07",
+        "gross_earnings": 68.81,
+        "tips": 7.09,
+        "platform_fees": 9.25,
+        "net_payout": 59.56,
+        "online_hours": 14.4,
+        "active_hours": 11.9,
+        "trips_or_deliveries": 4,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-07",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_5836.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-12-08",
+        "period_end": "2026-12-14",
+        "gross_earnings": 43.19,
+        "tips": 5.03,
+        "platform_fees": 5.61,
+        "net_payout": 37.58,
+        "online_hours": 8.1,
+        "active_hours": 6.5,
+        "trips_or_deliveries": 3,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-12-08",
+        "period_end": "2026-12-14",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_7583.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-12-15",
+        "period_end": "2026-12-21",
+        "gross_earnings": 36.44,
+        "tips": 3.66,
+        "platform_fees": 4.61,
+        "net_payout": 31.83,
+        "online_hours": 7,
+        "active_hours": 5.7,
+        "trips_or_deliveries": 3,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-12-15",
+        "period_end": "2026-12-21",
+        "variant": "weekly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_3175.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-12-22",
+        "period_end": "2026-12-28",
+        "gross_earnings": 52.2,
+        "tips": 6.98,
+        "platform_fees": 7.97,
+        "net_payout": 44.23,
+        "online_hours": 11.5,
+        "active_hours": 9.4,
+        "trips_or_deliveries": 3,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-12-22",
+        "period_end": "2026-12-28",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6097.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-12-29",
+        "period_end": "2026-12-31",
+        "gross_earnings": 21.12,
+        "tips": 2.31,
+        "platform_fees": 2.61,
+        "net_payout": 18.51,
+        "online_hours": 4,
+        "active_hours": 3.3,
+        "trips_or_deliveries": 1,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-12-29",
+        "period_end": "2026-12-31",
+        "variant": "weekly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_7102.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 506.72,
+        "tips": 36.18,
+        "platform_fees": 68.39,
+        "net_payout": 438.33,
+        "online_hours": 30.1,
+        "active_hours": 22.1,
+        "trips_or_deliveries": 27,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_9012.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 847.03,
+        "tips": 68.4,
+        "platform_fees": 177.64,
+        "net_payout": 669.39,
+        "online_hours": 55.6,
+        "active_hours": 39.6,
+        "trips_or_deliveries": 42,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_4397.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "gross_earnings": 279.3,
+        "tips": 31.58,
+        "platform_fees": 37.95,
+        "net_payout": 241.35,
+        "online_hours": 38.9,
+        "active_hours": 30.8,
+        "trips_or_deliveries": 15,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "variant": "monthly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_9679.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "uber",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "gross_earnings": null,
+        "tips": null,
+        "platform_fees": 1.55,
+        "net_payout": 234.71,
+        "online_hours": null,
+        "active_hours": null,
+        "trips_or_deliveries": null,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "uber",
+        "period_start": "2026-10-08",
+        "period_end": "2026-10-14",
+        "variant": "cashout_list",
+        "note": "Lists instant cash-outs only; not an earnings summary."
+      }
+    },
+    {
+      "file": "IMG_3638.png",
+      "kind": "county_letter",
+      "truth": {
+        "letter_type": "renewal",
+        "notice_date": "2027-01-11",
+        "response_deadline": "2027-02-10",
+        "requested_items": [
+          "Proof of income for each month listed",
+          "Bank statements showing deposits for the same months",
+          "Signed renewal form"
+        ],
+        "months_requested": [
+          "2026-10",
+          "2026-11",
+          "2026-12"
+        ],
+        "language": "en",
+        "county_name": "County of Alameda Social Services",
+        "unreadable_reason": null
+      },
+      "meta": {
+        "variant": "renewal",
+        "lang": "en"
+      }
+    }
+  ],
+  "bank_truth": {
+    "drv-20-t001": "not_driving",
+    "drv-20-t002": "driving",
+    "drv-20-t003": "driving",
+    "drv-20-t004": "not_driving",
+    "drv-20-t005": "driving",
+    "drv-20-t006": "driving",
+    "drv-20-t007": "not_driving",
+    "drv-20-t008": "not_driving",
+    "drv-20-t009": "driving",
+    "drv-20-t010": "not_driving",
+    "drv-20-t011": "driving",
+    "drv-20-t012": "not_driving",
+    "drv-20-t013": "not_driving",
+    "drv-20-t014": "driving",
+    "drv-20-t015": "driving",
+    "drv-20-t016": "driving",
+    "drv-20-t017": "not_driving",
+    "drv-20-t018": "not_driving",
+    "drv-20-t019": "driving",
+    "drv-20-t020": "driving",
+    "drv-20-t021": "not_driving",
+    "drv-20-t022": "driving",
+    "drv-20-t023": "driving",
+    "drv-20-t024": "not_driving",
+    "drv-20-t025": "driving",
+    "drv-20-t026": "driving",
+    "drv-20-t027": "not_driving",
+    "drv-20-t028": "not_driving",
+    "drv-20-t029": "not_driving",
+    "drv-20-t030": "not_driving",
+    "drv-20-t031": "driving",
+    "drv-20-t032": "not_driving",
+    "drv-20-t033": "driving",
+    "drv-20-t034": "driving",
+    "drv-20-t035": "driving",
+    "drv-20-t036": "not_driving",
+    "drv-20-t037": "driving",
+    "drv-20-t038": "driving",
+    "drv-20-t039": "not_driving",
+    "drv-20-t040": "not_driving",
+    "drv-20-t041": "driving",
+    "drv-20-t042": "not_driving",
+    "drv-20-t043": "driving",
+    "drv-20-t044": "not_driving",
+    "drv-20-t045": "driving",
+    "drv-20-t046": "driving",
+    "drv-20-t047": "not_driving",
+    "drv-20-t048": "driving",
+    "drv-20-t049": "driving",
+    "drv-20-t050": "driving",
+    "drv-20-t051": "not_driving",
+    "drv-20-t052": "driving",
+    "drv-20-t053": "driving",
+    "drv-20-t054": "not_driving",
+    "drv-20-t055": "driving",
+    "drv-20-t056": "not_driving",
+    "drv-20-t057": "not_driving",
+    "drv-20-t058": "not_driving",
+    "drv-20-t059": "not_driving",
+    "drv-20-t060": "driving",
+    "drv-20-t061": "not_driving",
+    "drv-20-t062": "not_driving",
+    "drv-20-t063": "driving",
+    "drv-20-t064": "driving",
+    "drv-20-t065": "driving",
+    "drv-20-t066": "driving"
+  },
+  "expected_months": [
+    {
+      "month": "2026-10",
+      "gross_income": 1533.25,
+      "net_income": 1328.13,
+      "active_hours": 62.4,
+      "online_hours": 84.1,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1533.25,
+        "net_income": 1328.13,
+        "active_hours": 62.4,
+        "online_hours": 84.1,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-11",
+      "gross_income": 1765.43,
+      "net_income": 1381.72,
+      "active_hours": 71.9,
+      "online_hours": 101.3,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 1765.43,
+        "net_income": 1381.72,
+        "active_hours": 71.9,
+        "online_hours": 101.3,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-12",
+      "gross_income": 501.06,
+      "net_income": 433.06,
+      "active_hours": 67.6,
+      "online_hours": 83.9,
+      "overall_expected": "unsure",
+      "acceptable": [
+        "unsure"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 501.06,
+        "net_income": 433.06,
+        "active_hours": 67.6,
+        "online_hours": 83.9,
+        "overall": "unsure"
+      }
+    }
+  ],
+  "letter_truth": {
+    "letter_type": "renewal",
+    "notice_date": "2027-01-11",
+    "response_deadline": "2027-02-10",
+    "requested_items": [
+      "Proof of income for each month listed",
+      "Bank statements showing deposits for the same months",
+      "Signed renewal form"
+    ],
+    "months_requested": [
+      "2026-10",
+      "2026-11",
+      "2026-12"
+    ],
+    "language": "en",
+    "county_name": "County of Alameda Social Services",
+    "unreadable_reason": null
+  }
+}

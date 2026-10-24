@@ -1,0 +1,523 @@
+{
+  "driver_id": "drv-29",
+  "documents": [
+    {
+      "file": "IMG_7824.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "gross_earnings": 115.3,
+        "tips": 7.35,
+        "platform_fees": 17.38,
+        "net_payout": 97.92,
+        "online_hours": 29.4,
+        "active_hours": 20,
+        "trips_or_deliveries": 7,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_8803.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 156.45,
+        "tips": 9.77,
+        "platform_fees": 15.39,
+        "net_payout": 141.06,
+        "online_hours": 74.6,
+        "active_hours": 58.6,
+        "trips_or_deliveries": 8,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_2385.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 168.72,
+        "tips": 17.54,
+        "platform_fees": 24.67,
+        "net_payout": 144.05,
+        "online_hours": 50,
+        "active_hours": 40.9,
+        "trips_or_deliveries": 9,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_1527.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "instacart",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "gross_earnings": 162.9,
+        "tips": 11.9,
+        "platform_fees": 24.86,
+        "net_payout": 138.04,
+        "online_hours": 45.7,
+        "active_hours": 35.9,
+        "trips_or_deliveries": 10,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "instacart",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5455.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "gross_earnings": 110.81,
+        "tips": 7.06,
+        "platform_fees": 14.77,
+        "net_payout": 96.04,
+        "online_hours": 26.3,
+        "active_hours": 17.8,
+        "trips_or_deliveries": 8,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5170.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 81.95,
+        "tips": 5.12,
+        "platform_fees": 7.4,
+        "net_payout": 74.55,
+        "online_hours": 38.2,
+        "active_hours": 30,
+        "trips_or_deliveries": 6,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_8416.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 169.37,
+        "tips": 17.6,
+        "platform_fees": 24.08,
+        "net_payout": 145.29,
+        "online_hours": 40.2,
+        "active_hours": 32.5,
+        "trips_or_deliveries": 14,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5108.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "lyft",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "gross_earnings": 141.21,
+        "tips": 10.32,
+        "platform_fees": 20.77,
+        "net_payout": 120.44,
+        "online_hours": 35.8,
+        "active_hours": 27.5,
+        "trips_or_deliveries": 9,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "lyft",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_8311.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "gross_earnings": 146.84,
+        "tips": 9.35,
+        "platform_fees": 20.04,
+        "net_payout": 126.8,
+        "online_hours": 34,
+        "active_hours": 22.9,
+        "trips_or_deliveries": 15,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_6611.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "gross_earnings": 75.05,
+        "tips": 4.69,
+        "platform_fees": 7.65,
+        "net_payout": 67.4,
+        "online_hours": 31.1,
+        "active_hours": 23.9,
+        "trips_or_deliveries": 8,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-10-01",
+        "period_end": "2026-10-31",
+        "variant": "monthly",
+        "photo": true
+      }
+    },
+    {
+      "file": "IMG_1091.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "gross_earnings": 91.95,
+        "tips": 9.56,
+        "platform_fees": 13.02,
+        "net_payout": 78.93,
+        "online_hours": 33.2,
+        "active_hours": 26.6,
+        "trips_or_deliveries": 11,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-11-01",
+        "period_end": "2026-11-30",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_5112.png",
+      "kind": "earnings_screenshot",
+      "truth": {
+        "platform": "doordash",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "gross_earnings": 170.9,
+        "tips": 12.48,
+        "platform_fees": 26.03,
+        "net_payout": 144.87,
+        "online_hours": 57,
+        "active_hours": 43.4,
+        "trips_or_deliveries": 21,
+        "unreadable_reason": null
+      },
+      "meta": {
+        "app": "doordash",
+        "period_start": "2026-12-01",
+        "period_end": "2026-12-31",
+        "variant": "monthly",
+        "photo": false
+      }
+    },
+    {
+      "file": "IMG_2844.png",
+      "kind": "county_letter",
+      "truth": {
+        "letter_type": "renewal",
+        "notice_date": "2027-01-10",
+        "response_deadline": "2027-02-09",
+        "requested_items": [
+          "Comprobante de ingresos de cada mes indicado",
+          "Estados de cuenta bancarios que muestren los depósitos de los mismos meses",
+          "Formulario de renovación firmado"
+        ],
+        "months_requested": [
+          "2026-10",
+          "2026-11",
+          "2026-12"
+        ],
+        "language": "es",
+        "county_name": "County of Alameda Social Services",
+        "unreadable_reason": null
+      },
+      "meta": {
+        "variant": "renewal",
+        "lang": "es"
+      }
+    }
+  ],
+  "bank_truth": {
+    "drv-29-t001": "not_driving",
+    "drv-29-t002": "not_driving",
+    "drv-29-t003": "driving",
+    "drv-29-t004": "not_driving",
+    "drv-29-t005": "not_driving",
+    "drv-29-t006": "driving",
+    "drv-29-t007": "driving",
+    "drv-29-t008": "driving",
+    "drv-29-t009": "not_driving",
+    "drv-29-t010": "driving",
+    "drv-29-t011": "driving",
+    "drv-29-t012": "not_driving",
+    "drv-29-t013": "not_driving",
+    "drv-29-t014": "not_driving",
+    "drv-29-t015": "not_driving",
+    "drv-29-t016": "not_driving",
+    "drv-29-t017": "driving",
+    "drv-29-t018": "driving",
+    "drv-29-t019": "not_driving",
+    "drv-29-t020": "driving",
+    "drv-29-t021": "not_driving",
+    "drv-29-t022": "not_driving",
+    "drv-29-t023": "driving",
+    "drv-29-t024": "driving",
+    "drv-29-t025": "driving",
+    "drv-29-t026": "not_driving",
+    "drv-29-t027": "not_driving",
+    "drv-29-t028": "driving",
+    "drv-29-t029": "not_driving",
+    "drv-29-t030": "not_driving",
+    "drv-29-t031": "driving",
+    "drv-29-t032": "not_driving",
+    "drv-29-t033": "driving",
+    "drv-29-t034": "driving",
+    "drv-29-t035": "driving",
+    "drv-29-t036": "not_driving",
+    "drv-29-t037": "not_driving",
+    "drv-29-t038": "driving",
+    "drv-29-t039": "not_driving",
+    "drv-29-t040": "driving",
+    "drv-29-t041": "driving",
+    "drv-29-t042": "not_driving",
+    "drv-29-t043": "not_driving",
+    "drv-29-t044": "driving",
+    "drv-29-t045": "not_driving",
+    "drv-29-t046": "not_driving",
+    "drv-29-t047": "driving",
+    "drv-29-t048": "driving",
+    "drv-29-t049": "not_driving",
+    "drv-29-t050": "driving",
+    "drv-29-t051": "driving",
+    "drv-29-t052": "driving",
+    "drv-29-t053": "driving",
+    "drv-29-t054": "not_driving",
+    "drv-29-t055": "driving",
+    "drv-29-t056": "not_driving",
+    "drv-29-t057": "not_driving",
+    "drv-29-t058": "driving",
+    "drv-29-t059": "driving",
+    "drv-29-t060": "driving",
+    "drv-29-t061": "driving",
+    "drv-29-t062": "driving",
+    "drv-29-t063": "driving",
+    "drv-29-t064": "driving",
+    "drv-29-t065": "driving",
+    "drv-29-t066": "driving",
+    "drv-29-t067": "not_driving",
+    "drv-29-t068": "driving",
+    "drv-29-t069": "driving",
+    "drv-29-t070": "driving",
+    "drv-29-t071": "not_driving",
+    "drv-29-t072": "not_driving",
+    "drv-29-t073": "not_driving",
+    "drv-29-t074": "not_driving",
+    "drv-29-t075": "driving",
+    "drv-29-t076": "driving",
+    "drv-29-t077": "driving",
+    "drv-29-t078": "driving",
+    "drv-29-t079": "not_driving",
+    "drv-29-t080": "driving",
+    "drv-29-t081": "not_driving",
+    "drv-29-t082": "not_driving",
+    "drv-29-t083": "driving",
+    "drv-29-t084": "driving",
+    "drv-29-t085": "driving",
+    "drv-29-t086": "not_driving",
+    "drv-29-t087": "driving",
+    "drv-29-t088": "driving",
+    "drv-29-t089": "not_driving",
+    "drv-29-t090": "driving",
+    "drv-29-t091": "not_driving",
+    "drv-29-t092": "not_driving",
+    "drv-29-t093": "not_driving",
+    "drv-29-t094": "not_driving",
+    "drv-29-t095": "driving",
+    "drv-29-t096": "driving",
+    "drv-29-t097": "driving",
+    "drv-29-t098": "not_driving",
+    "drv-29-t099": "not_driving",
+    "drv-29-t100": "not_driving",
+    "drv-29-t101": "driving",
+    "drv-29-t102": "driving",
+    "drv-29-t103": "driving",
+    "drv-29-t104": "driving",
+    "drv-29-t105": "driving",
+    "drv-29-t106": "driving"
+  },
+  "expected_months": [
+    {
+      "month": "2026-09",
+      "gross_income": 372.95,
+      "net_income": 320.76,
+      "active_hours": 60.7,
+      "online_hours": 89.7,
+      "overall_expected": "unsure",
+      "acceptable": [
+        "unsure"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 372.95,
+        "net_income": 320.76,
+        "active_hours": 60.7,
+        "online_hours": 89.7,
+        "overall": "unsure"
+      }
+    },
+    {
+      "month": "2026-10",
+      "gross_income": 313.45,
+      "net_income": 283.01,
+      "active_hours": 112.5,
+      "online_hours": 143.9,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 313.45,
+        "net_income": 283.01,
+        "active_hours": 112.5,
+        "online_hours": 143.9,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-11",
+      "gross_income": 430.04,
+      "net_income": 368.27,
+      "active_hours": 100,
+      "online_hours": 123.4,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 430.04,
+        "net_income": 368.27,
+        "active_hours": 100,
+        "online_hours": 123.4,
+        "overall": "meets"
+      }
+    },
+    {
+      "month": "2026-12",
+      "gross_income": 475.01,
+      "net_income": 403.35,
+      "active_hours": 106.8,
+      "online_hours": 138.5,
+      "overall_expected": "meets",
+      "acceptable": [
+        "meets"
+      ],
+      "complete": true,
+      "underlying": {
+        "gross_income": 475.01,
+        "net_income": 403.35,
+        "active_hours": 106.8,
+        "online_hours": 138.5,
+        "overall": "meets"
+      }
+    }
+  ],
+  "letter_truth": {
+    "letter_type": "renewal",
+    "notice_date": "2027-01-10",
+    "response_deadline": "2027-02-09",
+    "requested_items": [
+      "Comprobante de ingresos de cada mes indicado",
+      "Estados de cuenta bancarios que muestren los depósitos de los mismos meses",
+      "Formulario de renovación firmado"
+    ],
+    "months_requested": [
+      "2026-10",
+      "2026-11",
+      "2026-12"
+    ],
+    "language": "es",
+    "county_name": "County of Alameda Social Services",
+    "unreadable_reason": null
+  }
+}

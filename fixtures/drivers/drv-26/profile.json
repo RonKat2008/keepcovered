@@ -1,0 +1,20 @@
+{
+  "driver_id": "drv-26",
+  "display_name": "Avery Vance",
+  "lang": "en",
+  "apps": [
+    "uber",
+    "lyft"
+  ],
+  "months": [
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10",
+    "2026-11",
+    "2026-12"
+  ],
+  "traps": [
+    "near_miss_income"
+  ]
+}

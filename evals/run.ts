@@ -75,7 +75,7 @@ function loadDoc(driverId: string, doc: GtDoc, idx: number): InputDoc {
 }
 
 function isInjection(doc: GtDoc): boolean {
-  return Boolean(doc.meta?.injection) || /inject/i.test(doc.file) || /ignore previous|SYSTEM:/i.test(JSON.stringify(doc.truth));
+  return Boolean(doc.meta?.injection) || doc.truth.injection === true || doc.meta?.trap === "prompt_injection";
 }
 
 /** Pairs of documents whose truths describe the same statement: these should be deduped. */
@@ -211,7 +211,8 @@ async function evalDriver(gt: GroundTruth): Promise<DriverOutcome> {
   }
 
   const months = gt.expected_months.map((m) => m.month);
-  const statuses = computeMonthlyStatus({ months, records: rec.records, labeledIncome: rec.user_labeled_income, activities: [] }, rules);
+  const unreadableDocIds = read.filter((r) => r.record?.unreadable_reason).map((r) => r.input.id);
+  const statuses = computeMonthlyStatus({ months, records: rec.records, labeledIncome: rec.user_labeled_income, activities: [], unreadableDocIds }, rules);
   out.months = scoreMonths(gt.expected_months, statuses);
   for (const m of out.months.filter((x) => !x.statusCorrect)) failures.push(`${m.month}: expected ${m.expected}, got ${m.got}${m.falseMeets ? " (FALSE MEETS)" : ""}`);
 
@@ -220,7 +221,8 @@ async function evalDriver(gt: GroundTruth): Promise<DriverOutcome> {
     .filter((d) => d.truth.kind === "earnings_screenshot" && !(d.truth.truth as unknown as EarningsExtraction).unreadable_reason)
     .map((d) => truthRecord(d.input.id, d.truth.truth as unknown as EarningsExtraction));
   const truthRec = reconcile({ records: truthRecords, transactions, labels, suggestions });
-  const truthStatuses = computeMonthlyStatus({ months, records: truthRec.records, labeledIncome: truthRec.user_labeled_income, activities: [] }, rules);
+  const truthUnreadable = docs.filter((d) => d.truth.kind === "earnings_screenshot" && (d.truth.truth as unknown as EarningsExtraction).unreadable_reason).map((d) => d.input.id);
+  const truthStatuses = computeMonthlyStatus({ months, records: truthRec.records, labeledIncome: truthRec.user_labeled_income, activities: [], unreadableDocIds: truthUnreadable }, rules);
   out.monthsGivenTruth = scoreMonths(gt.expected_months, truthStatuses);
 
   out.costUsd = calls.reduce((s, c) => s + c.cost_usd, 0);
