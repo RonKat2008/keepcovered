@@ -358,8 +358,8 @@ export function PortalAgentView({ id }: { id: string }) {
                 {diff.map((row) => (
                   <tr key={row.field} className={cn("border-b border-rule align-top", !row.ok && "bg-short-tint")}>
                     <th scope="row" className="py-2 pr-2 font-semibold text-ink">{fieldLabel(row.field)}</th>
-                    <td className="break-all py-2 pr-2 text-ink">{row.packet}</td>
-                    <td className="break-all py-2 pr-2 text-ink">{row.form}</td>
+                    <td className="py-2 pr-2 text-ink [overflow-wrap:anywhere] [word-break:normal]">{row.packet}</td>
+                    <td className="py-2 pr-2 text-ink [overflow-wrap:anywhere] [word-break:normal]">{row.form}</td>
                     <td className="py-2">
                       {row.ok ? (
                         <Check className="size-5 text-meets" aria-label="OK" />
