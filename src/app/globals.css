@@ -4,25 +4,36 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/*
+  KeepCovered — "editorial civic".
+  Paper and ink, one signal color per month state:
+  meets = deep green, short = amber, open question = indigo, missing = gray hatch.
+*/
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-heading: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-sheet: var(--sheet);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-rule: var(--rule);
+  --color-meets: var(--meets);
+  --color-meets-tint: var(--meets-tint);
+  --color-short: var(--short);
+  --color-short-bar: var(--short-bar);
+  --color-short-tint: var(--short-tint);
+  --color-unsure: var(--unsure);
+  --color-unsure-tint: var(--unsure-tint);
+  --color-missing: var(--missing);
+  --color-missing-tint: var(--missing-tint);
+
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -46,85 +57,245 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  --ease-paper: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Base palette */
+  --paper: #efeadf;
+  --paper-deep: #e5ded0;
+  --sheet: #f9f6ef;
+  --ink: #1a2232;
+  --ink-soft: #4d5567;
+  --rule: #d3cab7;
+
+  /* Signal colors (text-safe on paper) */
+  --meets: #1d6a46;
+  --meets-tint: #d9e8dc;
+  --short: #8f5a07;
+  --short-bar: #d39121;
+  --short-tint: #f4e3bf;
+  --unsure: #3d3796;
+  --unsure-tint: #e0def3;
+  --missing: #77746c;
+  --missing-tint: #e2ddd2;
+
+  /* shadcn tokens mapped onto the palette */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--sheet);
+  --card-foreground: var(--ink);
+  --popover: var(--sheet);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--sheet);
+  --secondary: var(--paper-deep);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-deep);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--paper-deep);
+  --accent-foreground: var(--ink);
+  --destructive: #a3341f;
+  --border: var(--rule);
+  --input: var(--rule);
+  --ring: var(--unsure);
+  --radius: 0.75rem;
+
+  --text-display: clamp(2.3rem, 1.5rem + 3.4vw, 4.1rem);
+  --text-title: clamp(1.6rem, 1.25rem + 1.6vw, 2.4rem);
+  --text-figure: clamp(2rem, 1.6rem + 1.8vw, 2.9rem);
+  --space-section: clamp(3.5rem, 2.5rem + 4vw, 7rem);
+
+  --grain-opacity: 0.32;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --paper: #151b27;
+  --paper-deep: #1d2533;
+  --sheet: #1a2130;
+  --ink: #ece6d8;
+  --ink-soft: #a9adb8;
+  --rule: #343d4e;
+  --meets: #6fc39a;
+  --meets-tint: #1c3a2e;
+  --short: #e8b45a;
+  --short-bar: #d39121;
+  --short-tint: #3d3018;
+  --unsure: #a8a2f2;
+  --unsure-tint: #2a2a52;
+  --missing: #8f8c85;
+  --missing-tint: #262b35;
+  --destructive: #f08a74;
+  --grain-opacity: 0.18;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
   html {
     @apply font-sans;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11";
+  }
+  /* Paper grain: a fixed noise layer under everything. */
+  body {
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: var(--grain-opacity);
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.29  0 0 0 0 0.2  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .dark body::before {
+    mix-blend-mode: screen;
+  }
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+  :focus-visible {
+    outline: 3px solid var(--unsure);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--unsure-tint);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+    font-variation-settings: "SOFT" 50, "WONK" 0;
+    letter-spacing: -0.015em;
+  }
+  .text-display {
+    font-size: var(--text-display);
+    line-height: 1.02;
+    letter-spacing: -0.028em;
+  }
+  .text-title {
+    font-size: var(--text-title);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .text-figure {
+    font-size: var(--text-figure);
+    line-height: 1;
+    font-variant-numeric: lining-nums tabular-nums;
+    letter-spacing: -0.03em;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Diagonal hatch used for missing months */
+  .hatch {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      color-mix(in oklab, var(--missing) 38%, transparent) 0 2px,
+      transparent 2px 7px
+    );
+  }
+  /* Ruled ledger line under section titles */
+  .ledger-rule {
+    background-image: linear-gradient(var(--ink), var(--ink));
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+  }
+  .sheet {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    box-shadow:
+      0 1px 0 color-mix(in oklab, var(--ink) 6%, transparent),
+      0 14px 30px -22px color-mix(in oklab, var(--ink) 45%, transparent);
+  }
+  .tap {
+    min-height: 3rem;
+  }
+  .btn-ink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3.25rem;
+    padding: 0 1.4rem;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--sheet);
+    font-weight: 600;
+    font-size: 1.0625rem;
+    transition:
+      transform 160ms var(--ease-paper),
+      box-shadow 160ms var(--ease-paper),
+      background-color 160ms;
+    box-shadow: 0 6px 0 -2px color-mix(in oklab, var(--ink) 30%, transparent);
+  }
+  .btn-ink:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 0 -2px color-mix(in oklab, var(--ink) 30%, transparent);
+  }
+  .btn-ink:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 -1px color-mix(in oklab, var(--ink) 30%, transparent);
+  }
+  .btn-ink[aria-busy="true"]:disabled {
+    opacity: 0.8;
+    cursor: progress;
+  }
+  .btn-ink:disabled {
+    opacity: 0.45;
+    transform: none;
+    cursor: not-allowed;
+  }
+  .btn-line {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0 1.15rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    font-weight: 600;
+    background: transparent;
+    transition: background-color 160ms, color 160ms;
+  }
+  .btn-line:hover {
+    background: var(--ink);
+    color: var(--sheet);
+  }
+  .link-ink {
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: color-mix(in oklab, var(--ink) 40%, transparent);
+    transition: text-decoration-color 160ms;
+  }
+  .link-ink:hover {
+    text-decoration-color: var(--ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -12,10 +12,24 @@
       "meets_income_path": true,
       "meets_hours_path": false,
       "overall": "meets",
-      "evidence_doc_ids": ["d-uber-sep", "d-dd-sep"],
+      "evidence_doc_ids": [
+        "d-uber-sep",
+        "d-dd-sep"
+      ],
       "reasons": [
-        { "code": "income_met", "params": { "gross": 910.4 } },
-        { "code": "online_only_hours", "params": { "online": 74, "active": 49.5 } }
+        {
+          "code": "income_met",
+          "params": {
+            "gross": 910.4
+          }
+        },
+        {
+          "code": "online_only_hours",
+          "params": {
+            "online": 74,
+            "active": 49.5
+          }
+        }
       ],
       "open_question_ids": []
     },
@@ -29,12 +43,31 @@
       "meets_income_path": "depends_on_open_question",
       "meets_hours_path": false,
       "overall": "unsure",
-      "evidence_doc_ids": ["d-uber-oct"],
-      "reasons": [
-        { "code": "income_short", "params": { "gross": 402.15, "short_by": 177.85 } },
-        { "code": "bank_only_income", "params": { "amount": 318.6, "count": 3 } }
+      "evidence_doc_ids": [
+        "d-uber-oct"
       ],
-      "open_question_ids": ["q-venmo-45"]
+      "reasons": [
+        {
+          "code": "income_short",
+          "params": {
+            "gross": 402.15,
+            "short_by": 177.85
+          }
+        },
+        {
+          "code": "bank_only_income",
+          "params": {
+            "amount": 318.6,
+            "count": 3
+          }
+        }
+      ],
+      "open_question_ids": [
+        "q-dd-1008",
+        "q-dd-1015",
+        "q-dd-1022",
+        "q-venmo-45"
+      ]
     },
     {
       "month": "2026-11",
@@ -46,10 +79,25 @@
       "meets_income_path": true,
       "meets_hours_path": false,
       "overall": "meets",
-      "evidence_doc_ids": ["d-uber-nov", "d-lyft-nov", "d-ic-nov"],
+      "evidence_doc_ids": [
+        "d-uber-nov",
+        "d-lyft-nov",
+        "d-ic-nov"
+      ],
       "reasons": [
-        { "code": "income_met", "params": { "gross": 1240.75 } },
-        { "code": "online_only_hours", "params": { "online": 98, "active": 63.5 } }
+        {
+          "code": "income_met",
+          "params": {
+            "gross": 1240.75
+          }
+        },
+        {
+          "code": "online_only_hours",
+          "params": {
+            "online": 98,
+            "active": 63.5
+          }
+        }
       ],
       "open_question_ids": []
     }
@@ -62,7 +110,11 @@
       "Prueba de ingresos de trabajo por cuenta propia (septiembre a noviembre de 2026)",
       "Horas trabajadas por mes, si las tiene"
     ],
-    "months_requested": ["2026-09", "2026-10", "2026-11"],
+    "months_requested": [
+      "2026-09",
+      "2026-10",
+      "2026-11"
+    ],
     "language": "es",
     "county_name": "Alameda",
     "unreadable_reason": null,
@@ -88,8 +140,15 @@
       "trips_or_deliveries": 61,
       "unreadable_reason": null,
       "source_doc_id": "d-uber-sep",
-      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "high" },
-      "verification_notes": ["Both readers agreed on every field.", "Gross minus fees equals net payout."]
+      "field_confidence": {
+        "gross_earnings": "high",
+        "net_payout": "high",
+        "active_hours": "high"
+      },
+      "verification_notes": [
+        "Both readers agreed on every field.",
+        "Gross minus fees equals net payout."
+      ]
     },
     {
       "platform": "doordash",
@@ -104,8 +163,14 @@
       "trips_or_deliveries": 38,
       "unreadable_reason": null,
       "source_doc_id": "d-dd-sep",
-      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "high" },
-      "verification_notes": ["Both readers agreed on every field."]
+      "field_confidence": {
+        "gross_earnings": "high",
+        "net_payout": "high",
+        "active_hours": "high"
+      },
+      "verification_notes": [
+        "Both readers agreed on every field."
+      ]
     },
     {
       "platform": "uber",
@@ -120,8 +185,14 @@
       "trips_or_deliveries": 44,
       "unreadable_reason": null,
       "source_doc_id": "d-uber-oct",
-      "field_confidence": { "gross_earnings": "high", "net_payout": "medium", "active_hours": "high" },
-      "verification_notes": ["Readers disagreed on net_payout ($318.70 vs $316.70). Opus adjudicated: $318.70."]
+      "field_confidence": {
+        "gross_earnings": "high",
+        "net_payout": "medium",
+        "active_hours": "high"
+      },
+      "verification_notes": [
+        "Readers disagreed on net_payout ($318.70 vs $316.70). Opus adjudicated: $318.70."
+      ]
     },
     {
       "platform": "uber",
@@ -136,8 +207,14 @@
       "trips_or_deliveries": 57,
       "unreadable_reason": null,
       "source_doc_id": "d-uber-nov",
-      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "high" },
-      "verification_notes": ["Both readers agreed on every field."]
+      "field_confidence": {
+        "gross_earnings": "high",
+        "net_payout": "high",
+        "active_hours": "high"
+      },
+      "verification_notes": [
+        "Both readers agreed on every field."
+      ]
     },
     {
       "platform": "lyft",
@@ -152,8 +229,14 @@
       "trips_or_deliveries": 39,
       "unreadable_reason": null,
       "source_doc_id": "d-lyft-nov",
-      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "medium" },
-      "verification_notes": ["Active hours read from a cropped chart; second reader agreed."]
+      "field_confidence": {
+        "gross_earnings": "high",
+        "net_payout": "high",
+        "active_hours": "medium"
+      },
+      "verification_notes": [
+        "Active hours read from a cropped chart; second reader agreed."
+      ]
     },
     {
       "platform": "instacart",
@@ -168,8 +251,14 @@
       "trips_or_deliveries": 22,
       "unreadable_reason": null,
       "source_doc_id": "d-ic-nov",
-      "field_confidence": { "gross_earnings": "high", "net_payout": "high", "active_hours": "high" },
-      "verification_notes": ["Both readers agreed on every field."]
+      "field_confidence": {
+        "gross_earnings": "high",
+        "net_payout": "high",
+        "active_hours": "high"
+      },
+      "verification_notes": [
+        "Both readers agreed on every field."
+      ]
     }
   ],
   "reconcile": {
@@ -177,13 +266,33 @@
     "duplicates": [
       {
         "kept_doc_id": "d-uber-nov",
-        "dropped_doc_ids": ["d-uber-nov-2"],
+        "dropped_doc_ids": [
+          "d-uber-nov-2"
+        ],
         "reason": "Same period (Nov 1 to Nov 30) and same gross ($540.25). Counted once."
       }
     ],
     "matches": [
-      { "source_doc_id": "d-uber-sep", "txn_ids": ["t-0907", "t-0914", "t-0921", "t-0928"], "amount_diff": 0 },
-      { "source_doc_id": "d-uber-oct", "txn_ids": ["t-1005", "t-1012", "t-1019u", "t-1026"], "amount_diff": 0 }
+      {
+        "source_doc_id": "d-uber-sep",
+        "txn_ids": [
+          "t-0907",
+          "t-0914",
+          "t-0921",
+          "t-0928"
+        ],
+        "amount_diff": 0
+      },
+      {
+        "source_doc_id": "d-uber-oct",
+        "txn_ids": [
+          "t-1005",
+          "t-1012",
+          "t-1019u",
+          "t-1026"
+        ],
+        "amount_diff": 0
+      }
     ],
     "unmatched_deposits": [
       {
@@ -191,21 +300,33 @@
         "date": "2026-10-08",
         "amount": 104.2,
         "description": "DOORDASH DASHER DIRECT DEP",
-        "suggestion": { "txn_id": "t-1008", "platform": "doordash", "similarity": 0.94 }
+        "suggestion": {
+          "txn_id": "t-1008",
+          "platform": "doordash",
+          "similarity": 0.94
+        }
       },
       {
         "id": "t-1015",
         "date": "2026-10-15",
         "amount": 121.75,
         "description": "DOORDASH DASHER DIRECT DEP",
-        "suggestion": { "txn_id": "t-1015", "platform": "doordash", "similarity": 0.94 }
+        "suggestion": {
+          "txn_id": "t-1015",
+          "platform": "doordash",
+          "similarity": 0.94
+        }
       },
       {
         "id": "t-1022",
         "date": "2026-10-22",
         "amount": 92.65,
         "description": "DOORDASH INC PAYOUT",
-        "suggestion": { "txn_id": "t-1022", "platform": "doordash", "similarity": 0.89 }
+        "suggestion": {
+          "txn_id": "t-1022",
+          "platform": "doordash",
+          "similarity": 0.89
+        }
       },
       {
         "id": "t-1019",
@@ -320,15 +441,99 @@
   ],
   "questions": [
     {
+      "id": "q-dd-1008",
+      "kind": "label_deposit",
+      "prompt_en": "Is this $104.20 DoorDash deposit on October 8 from driving?",
+      "prompt_es": "¿Este depósito de DoorDash de $104.20 del 8 de octubre es de manejar?",
+      "ref": "t-1008",
+      "options": [
+        {
+          "value": "driving",
+          "label_en": "Yes, from driving",
+          "label_es": "Sí, de manejar"
+        },
+        {
+          "value": "not_driving",
+          "label_en": "No, something else",
+          "label_es": "No, es otra cosa"
+        },
+        {
+          "value": "unknown",
+          "label_en": "I don't remember",
+          "label_es": "No me acuerdo"
+        }
+      ]
+    },
+    {
+      "id": "q-dd-1015",
+      "kind": "label_deposit",
+      "prompt_en": "Is this $121.75 DoorDash deposit on October 15 from driving?",
+      "prompt_es": "¿Este depósito de DoorDash de $121.75 del 15 de octubre es de manejar?",
+      "ref": "t-1015",
+      "options": [
+        {
+          "value": "driving",
+          "label_en": "Yes, from driving",
+          "label_es": "Sí, de manejar"
+        },
+        {
+          "value": "not_driving",
+          "label_en": "No, something else",
+          "label_es": "No, es otra cosa"
+        },
+        {
+          "value": "unknown",
+          "label_en": "I don't remember",
+          "label_es": "No me acuerdo"
+        }
+      ]
+    },
+    {
+      "id": "q-dd-1022",
+      "kind": "label_deposit",
+      "prompt_en": "Is this $92.65 DoorDash deposit on October 22 from driving?",
+      "prompt_es": "¿Este depósito de DoorDash de $92.65 del 22 de octubre es de manejar?",
+      "ref": "t-1022",
+      "options": [
+        {
+          "value": "driving",
+          "label_en": "Yes, from driving",
+          "label_es": "Sí, de manejar"
+        },
+        {
+          "value": "not_driving",
+          "label_en": "No, something else",
+          "label_es": "No, es otra cosa"
+        },
+        {
+          "value": "unknown",
+          "label_en": "I don't remember",
+          "label_es": "No me acuerdo"
+        }
+      ]
+    },
+    {
       "id": "q-venmo-45",
       "kind": "label_deposit",
       "prompt_en": "Is this $45.00 Venmo deposit on October 19 from driving?",
       "prompt_es": "¿Este depósito de Venmo de $45.00 del 19 de octubre es de manejar?",
       "ref": "t-1019",
       "options": [
-        { "value": "driving", "label_en": "Yes, from driving", "label_es": "Sí, de manejar" },
-        { "value": "not_driving", "label_en": "No, something else", "label_es": "No, es otra cosa" },
-        { "value": "unknown", "label_en": "I don't remember", "label_es": "No me acuerdo" }
+        {
+          "value": "driving",
+          "label_en": "Yes, from driving",
+          "label_es": "Sí, de manejar"
+        },
+        {
+          "value": "not_driving",
+          "label_en": "No, something else",
+          "label_es": "No, es otra cosa"
+        },
+        {
+          "value": "unknown",
+          "label_en": "I don't remember",
+          "label_es": "No me acuerdo"
+        }
       ]
     }
   ],

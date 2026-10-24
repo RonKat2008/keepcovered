@@ -4,6 +4,8 @@ import type { AgentEvent, CaseResult } from "../lib/schemas";
 import type { MemorySessionStore } from "./memory";
 import type { SessionDoc, SessionMeta, SessionStore } from "./types";
 
+// Convex codegen (_generated/api) only exists after `npx convex dev`; anyApi is untyped by design.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const api = anyApi as any;
 
 /**

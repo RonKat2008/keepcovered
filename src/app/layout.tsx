@@ -1,30 +1,38 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Fraunces, Inter_Tight } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin", "latin-ext"],
+  axes: ["SOFT", "opsz"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Hackathon starter",
-  description: "Next.js + Supabase + Claude starter",
+  title: "KeepCovered",
+  description:
+    "Turn your Uber, Lyft, DoorDash and Instacart screenshots into month-by-month proof for the Medi-Cal work rule.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#efeadf",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}
+    <html lang="en" className={`${fraunces.variable} ${interTight.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col">
+        {children}
         <Toaster />
       </body>
     </html>

@@ -37,8 +37,9 @@ let started = false;
 export async function startTelemetry(): Promise<boolean> {
   const connectionString = process.env.APPLICATIONINSIGHTS_CONNECTION_STRING;
   if (!connectionString || started) return started;
-  const { useAzureMonitor } = await import("@azure/monitor-opentelemetry");
-  useAzureMonitor({
+  // Not a React hook despite the name; aliased so the hooks lint rule does not misfire.
+  const { useAzureMonitor: startAzureMonitor } = await import("@azure/monitor-opentelemetry");
+  startAzureMonitor({
     azureMonitorExporterOptions: { connectionString },
     // Processor mutates attributes at span end, before the batch exporter reads them.
     spanProcessors: [createRedactingSpanProcessor() as never],
