@@ -1,0 +1,2 @@
+-- Demo data. Runs after migrations on `supabase db reset` (local only).
+-- Add INSERT statements here to populate your tables for demos.

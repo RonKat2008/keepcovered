@@ -1,0 +1,15 @@
+-- Example migration. Uncomment and adapt, then run `supabase db reset` (local)
+-- or `supabase db push` (linked project).
+
+-- create table public.profiles (
+--   id uuid primary key references auth.users (id) on delete cascade,
+--   display_name text,
+--   created_at timestamptz not null default now()
+-- );
+--
+-- alter table public.profiles enable row level security;
+--
+-- create policy "Users can select their own profile"
+--   on public.profiles for select
+--   to authenticated
+--   using ((select auth.uid()) = id);
