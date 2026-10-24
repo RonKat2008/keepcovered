@@ -151,7 +151,10 @@ export function CaseView({ id }: { id: string }) {
               <div className="min-w-0 space-y-14">
                 <Section id="months-title" title={t("result.months.title")}>
                   <p className="-mt-1 mb-4 text-[0.98rem] text-ink-soft">{t("result.months.needs")}</p>
-                  <MonthLedger months={result.months} answered={state.answered} onOpenQuestion={(qid) => reopen(qid)} />
+                  <MonthLedger
+                    months={result.months}
+                    answered={state.answered}
+                    askableIds={result.questions.map((q) => q.id)} onOpenQuestion={(qid) => reopen(qid)} />
                 </Section>
 
                 <Section id="explain-title" title={t("explain.title")}>

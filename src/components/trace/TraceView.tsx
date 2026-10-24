@@ -21,6 +21,8 @@ export function TraceView({ id }: { id: string }) {
   const events = state.events;
   const totals = traceTotals(events);
   const count = Math.max(events.length, 1);
+  // Backends may send absolute epoch ms; show time since the first event.
+  const t0 = events.length ? Math.min(...events.map((e) => e.at)) : 0;
   const num = (n: number) => new Intl.NumberFormat(lang === "es" ? "es-US" : "en-US").format(n);
 
   return (
@@ -86,7 +88,7 @@ export function TraceView({ id }: { id: string }) {
             <tbody>
               {events.map((e) => (
                 <tr key={e.id} className="border-b border-rule align-top last:border-0" data-decided-by={decidedBy(e)}>
-                  <td className="px-4 py-3 tabular text-ink-soft">{(e.at / 1000).toFixed(1)}s</td>
+                  <td className="px-4 py-3 tabular text-ink-soft">+{((e.at - t0) / 1000).toFixed(1)}s</td>
                   <td className="px-4 py-3 font-mono text-[0.8rem] text-ink">{e.step}</td>
                   <td className="px-4 py-3 text-ink">
                     <span className="font-semibold">{e.title}</span>

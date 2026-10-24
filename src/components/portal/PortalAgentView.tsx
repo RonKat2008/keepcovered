@@ -25,6 +25,12 @@ type Phase = "starting" | "running" | "review" | "submitting" | "submitted" | "e
 type LogItem = { id: number; text: string; simulated?: boolean };
 type Point = { x: number; y: number };
 
+/** "income_amount" → "Income amount" */
+function fieldLabel(field: string): string {
+  const spaced = field.replace(/[_-]+/g, " ").trim();
+  return spaced.charAt(0).toUpperCase() + spaced.slice(1);
+}
+
 function actionText(action: PortalAction | string | null | undefined): string | null {
   if (!action) return null;
   if (typeof action === "string") return action;
@@ -46,6 +52,7 @@ export function PortalAgentView({ id }: { id: string }) {
   const [diff, setDiff] = useState<PortalDiffRow[]>([]);
   const [confirmation, setConfirmation] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isSheetCollapsed, setIsSheetCollapsed] = useState(false);
   // Fixture sketch state
   const [sketchPage, setSketchPage] = useState<"signin" | "report" | "upload" | "review">("signin");
   const [filled, setFilled] = useState<Record<string, string>>({});
@@ -310,15 +317,32 @@ export function PortalAgentView({ id }: { id: string }) {
           <motion.section
             aria-labelledby="review-title"
             initial={reduced ? false : { y: "100%" }}
-            animate={{ y: 0 }}
+            animate={{ y: isSheetCollapsed ? "calc(100% - 5.25rem)" : 0 }}
             exit={reduced ? { opacity: 0 } : { y: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 32 }}
-            className="fixed inset-x-0 bottom-0 z-40 mx-auto max-h-[78vh] w-full max-w-3xl overflow-y-auto rounded-t-[1.75rem] border-x border-t border-rule bg-sheet px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-24px_50px_-24px_rgba(26,34,50,0.55)] sm:px-8"
+            className={cn(
+              "fixed inset-x-0 bottom-0 z-40 mx-auto max-h-[78vh] w-full max-w-3xl rounded-t-[1.75rem] border-x border-t border-rule bg-sheet px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-1 shadow-[0_-24px_50px_-24px_rgba(26,34,50,0.55)] sm:px-8 lg:inset-x-auto lg:right-8 lg:w-[34rem] lg:max-w-none",
+              isSheetCollapsed ? "overflow-hidden" : "overflow-y-auto",
+            )}
           >
-            <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-rule" aria-hidden />
-            <h2 id="review-title" className="font-display text-[1.6rem] font-medium text-ink">
-              {t("portal.review.title")}
-            </h2>
+            <div className="pt-2">
+              <span className="mx-auto mb-3 block h-1.5 w-12 rounded-full bg-rule" aria-hidden />
+              <div className="flex items-center justify-between gap-3">
+                <h2 id="review-title" className="font-display text-[1.6rem] font-medium text-ink">
+                  {t("portal.review.title")}
+                </h2>
+                <button
+                  type="button"
+                  onClick={() => setIsSheetCollapsed((c) => !c)}
+                  aria-expanded={!isSheetCollapsed}
+                  aria-controls="review-body"
+                  className="tap rounded-full px-4 text-[0.9rem] font-semibold text-ink-soft hover:bg-paper-deep hover:text-ink"
+                >
+                  {isSheetCollapsed ? t("portal.review.show") : t("portal.review.hide")}
+                </button>
+              </div>
+            </div>
+            <div id="review-body">
             <p className="mt-1 text-[0.98rem] text-ink-soft">{t("portal.review.body")}</p>
             {summary && <p className="mt-3 text-[0.98rem] leading-relaxed text-ink">{summary}</p>}
             <table className="mt-4 w-full border-collapse text-left text-[0.9rem]">
@@ -333,7 +357,7 @@ export function PortalAgentView({ id }: { id: string }) {
               <tbody>
                 {diff.map((row) => (
                   <tr key={row.field} className={cn("border-b border-rule align-top", !row.ok && "bg-short-tint")}>
-                    <th scope="row" className="py-2 pr-2 font-semibold text-ink">{row.field}</th>
+                    <th scope="row" className="py-2 pr-2 font-semibold text-ink">{fieldLabel(row.field)}</th>
                     <td className="break-all py-2 pr-2 text-ink">{row.packet}</td>
                     <td className="break-all py-2 pr-2 text-ink">{row.form}</td>
                     <td className="py-2">
@@ -361,6 +385,7 @@ export function PortalAgentView({ id }: { id: string }) {
             >
               {phase === "submitting" ? t("portal.submitting") : t("portal.submit")}
             </button>
+            </div>
           </motion.section>
         )}
       </AnimatePresence>

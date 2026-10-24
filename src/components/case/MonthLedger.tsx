@@ -23,10 +23,12 @@ type Props = {
   months: MonthStatus[];
   /** Question ids the user already answered */
   answered: Record<string, string>;
+  /** Ids of questions the user can actually answer (others are open rule questions for the navigator) */
+  askableIds: string[];
   onOpenQuestion: (questionId: string) => void;
 };
 
-export function MonthLedger({ months, answered, onOpenQuestion }: Props) {
+export function MonthLedger({ months, answered, askableIds, onOpenQuestion }: Props) {
   const { lang, t } = useLang();
   const reduced = useReducedMotion();
   const ref = useRef<HTMLOListElement>(null);
@@ -45,7 +47,7 @@ export function MonthLedger({ months, answered, onOpenQuestion }: Props) {
         const meta = STATUS_META[m.overall];
         const Icon = meta.icon;
         const isMissing = m.overall === "missing_data";
-        const openQs = m.open_question_ids.filter((q) => !(q in answered));
+        const openQs = m.open_question_ids.filter((q) => askableIds.includes(q) && !(q in answered));
         const money = (n: number) => fmtMoney(n, lang);
         const hours = (n: number) => `${fmtNumber(n, lang)} h`;
         return (

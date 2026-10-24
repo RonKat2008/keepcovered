@@ -34,6 +34,7 @@ export function HeroLedger() {
       className="sheet relative rounded-[1.25rem] px-5 pb-5 pt-6 sm:px-7 sm:pb-7 sm:pt-8"
       aria-label={t("hero.threshold")}
     >
+      <p className="mb-8 text-[0.85rem] font-semibold text-ink-soft">{t("hero.example")}</p>
       <div className="relative">
         {/* the $580 line runs through every row */}
         <div

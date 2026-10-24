@@ -11,16 +11,7 @@ import { useReducedMotion } from "@/components/motion/useReducedMotion";
 import { cn } from "@/lib/utils";
 import { Questionnaire } from "./Questionnaire";
 import { UploadStack, type UploadItem } from "./UploadStack";
-
-const SAMPLE_DOCS: UploadItem[] = [
-  { id: "s-uber-sep", name: "uber_septiembre.png", sample: { app: "Uber", period: "Sep 2026" } },
-  { id: "s-dd-sep", name: "doordash_sept.png", sample: { app: "DoorDash", period: "Sep 2026" } },
-  { id: "s-uber-oct", name: "uber_octubre.png", sample: { app: "Uber", period: "Oct 2026" } },
-  { id: "s-uber-nov", name: "uber_noviembre.png", sample: { app: "Uber", period: "Nov 2026" } },
-  { id: "s-lyft-nov", name: "lyft_nov.png", sample: { app: "Lyft", period: "Nov 2026" } },
-  { id: "s-ic-nov", name: "instacart_nov.jpg", sample: { app: "Instacart", period: "Nov 2026" } },
-  { id: "s-letter", name: "carta_condado.jpg", sample: { app: "", period: "", letter: true } },
-];
+import { loadSampleFiles, sampleAppCount, sampleItems } from "./sampleDocs";
 
 const MIN_SCAN_MS = 1800;
 
@@ -35,7 +26,8 @@ export const StartFlow = forwardRef<StartFlowHandle>(function StartFlow(_props, 
   const [step, setStep] = useState<Step>(0);
   const [items, setItems] = useState<UploadItem[]>([]);
   const [files, setFiles] = useState<Record<string, File>>({});
-  const [isDemo, setIsDemo] = useState(false);
+  const [sampleFiles, setSampleFiles] = useState<string[] | null>(null);
+  const isDemo = sampleFiles !== null;
   const [answers, setAnswers] = useState<ExemptionAnswers>({});
   const [isSending, setIsSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -57,18 +49,18 @@ export const StartFlow = forwardRef<StartFlowHandle>(function StartFlow(_props, 
       if (previewUrl) urlsRef.current.push(previewUrl);
       return { id, name: file.name, previewUrl, file };
     });
-    setIsDemo(false);
-    setItems((prev) => [...prev.filter((p) => !p.sample), ...newItems.map(({ id, name, previewUrl }) => ({ id, name, previewUrl }))]);
+    setSampleFiles(null);
+    setItems((prev) => [...prev, ...newItems.map(({ id, name, previewUrl }) => ({ id, name, previewUrl }))]);
     setFiles((prev) => ({ ...prev, ...Object.fromEntries(newItems.map((n) => [n.id, n.file])) }));
     setError(null);
   }, []);
 
   const loadSamples = useCallback(() => {
-    setItems(SAMPLE_DOCS);
+    setItems([]);
     setFiles({});
-    setIsDemo(true);
     setStep(0);
     setError(null);
+    loadSampleFiles().then(setSampleFiles);
   }, []);
 
   useImperativeHandle(ref, () => ({
@@ -77,13 +69,16 @@ export const StartFlow = forwardRef<StartFlowHandle>(function StartFlow(_props, 
   }));
 
   const remove = (id: string) => {
-    setItems((prev) => {
-      const next = prev.filter((p) => p.id !== id);
-      if (!next.some((p) => p.sample)) setIsDemo(false);
-      return next;
-    });
+    if (isDemo) {
+      // The sample set goes to the backend as a whole (demo=maria), so removing one clears it.
+      setSampleFiles(null);
+      return;
+    }
+    setItems((prev) => prev.filter((p) => p.id !== id));
     setFiles((prev) => Object.fromEntries(Object.entries(prev).filter(([k]) => k !== id)));
   };
+
+  const docs = sampleFiles ? sampleItems(sampleFiles, lang) : items;
 
   const send = async () => {
     setIsSending(true);
@@ -113,7 +108,7 @@ export const StartFlow = forwardRef<StartFlowHandle>(function StartFlow(_props, 
   const titles = [t("flow.upload.title"), t("flow.questions.title"), t("flow.send.title")];
   const answeredCount = Object.keys(answers).length;
   const docCount =
-    items.length === 1 ? t("flow.upload.count.one") : t("flow.upload.count", { count: items.length });
+    docs.length === 1 ? t("flow.upload.count.one") : t("flow.upload.count", { count: docs.length });
   const slide = reduced
     ? { initial: false as const, animate: { opacity: 1 }, exit: { opacity: 0 } }
     : {
@@ -152,11 +147,11 @@ export const StartFlow = forwardRef<StartFlowHandle>(function StartFlow(_props, 
             <div className="mt-3">
               <p className="max-w-[60ch] text-[1.02rem] leading-relaxed text-ink-soft">{t("flow.upload.body")}</p>
 
-              {items.length > 0 && (
+              {docs.length > 0 && (
                 <div className="mt-6">
-                  <UploadStack items={items} isScanning={false} onRemove={remove} />
+                  <UploadStack items={docs} isScanning={false} onRemove={remove} />
                   <p className="mt-3 text-[0.95rem] font-semibold text-ink">
-                    {isDemo ? t("flow.upload.demo.active") : docCount}
+                    {isDemo && sampleFiles ? t("flow.upload.demo.active", { apps: sampleAppCount(sampleFiles) }) : docCount}
                   </p>
                 </div>
               )}
@@ -217,13 +212,13 @@ export const StartFlow = forwardRef<StartFlowHandle>(function StartFlow(_props, 
                 </button>
               </div>
 
-              {items.length === 0 && <p className="mt-4 text-[0.92rem] text-ink-soft">{t("flow.upload.empty")}</p>}
+              {docs.length === 0 && <p className="mt-4 text-[0.92rem] text-ink-soft">{t("flow.upload.empty")}</p>}
 
               <div className="mt-7 flex justify-end">
                 <button
                   type="button"
                   className="btn-ink w-full sm:w-auto"
-                  disabled={items.length === 0}
+                  disabled={docs.length === 0}
                   onClick={() => goTo(1)}
                 >
                   {t("flow.next")}
@@ -253,7 +248,7 @@ export const StartFlow = forwardRef<StartFlowHandle>(function StartFlow(_props, 
             <div className="mt-3">
               <p className="max-w-[60ch] text-[1.02rem] leading-relaxed text-ink-soft">{t("flow.send.body")}</p>
               <div className="mt-6 grid items-center gap-6 sm:grid-cols-[1fr_1fr]">
-                <UploadStack items={items} isScanning={isSending} onRemove={remove} showList={false} />
+                <UploadStack items={docs} isScanning={isSending} onRemove={remove} showList={false} />
                 <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-[0.98rem]">
                   <dt className="text-ink-soft">{t("flow.summary.docs")}</dt>
                   <dd className="font-semibold text-ink">{docCount}</dd>
@@ -278,7 +273,7 @@ export const StartFlow = forwardRef<StartFlowHandle>(function StartFlow(_props, 
                   type="button"
                   className="btn-ink"
                   onClick={send}
-                  disabled={isSending || items.length === 0}
+                  disabled={isSending || docs.length === 0}
                   data-testid="build-proof"
                   aria-busy={isSending}
                 >
