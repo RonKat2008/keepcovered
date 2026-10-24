@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { MotionConfig, motion } from "motion/react";
 import { CalendarClock, MessageCircleQuestion } from "lucide-react";
@@ -47,6 +47,14 @@ export function CaseView({ id }: { id: string }) {
     ? [...pending.filter((q) => q.id === focusId), ...pending.filter((q) => q.id !== focusId)]
     : pending;
   const isSheetOpen = (!isDone || isUserOpened) && queue.some((q) => !deferred.includes(q.id));
+
+  // When the result lands, move focus from the (now closed) question sheet to the headline.
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    if (!isDone) return;
+    const id = window.setTimeout(() => headingRef.current?.focus({ preventScroll: true }), 450);
+    return () => window.clearTimeout(id);
+  }, [isDone]);
 
   const { answer: answerCase } = state;
   const answer = useCallback(
@@ -114,7 +122,12 @@ export function CaseView({ id }: { id: string }) {
             className="pt-8 sm:pt-12"
           >
             <header className="max-w-4xl">
-              <h1 className="font-display text-display font-medium text-ink [text-wrap:balance]" data-testid="result-heading">
+              <h1
+                ref={headingRef}
+                tabIndex={-1}
+                className="font-display text-display font-medium text-ink outline-none [text-wrap:balance]"
+                data-testid="result-heading"
+              >
                 {headline(result, t)}
               </h1>
               <p className="mt-4 max-w-[56ch] text-[1.1rem] leading-relaxed text-ink-soft">{t("result.county")}</p>
@@ -174,7 +187,7 @@ export function CaseView({ id }: { id: string }) {
                   </summary>
                   <div className="mt-5">
                     <AgentTimeline events={state.events} isRunning={false} />
-                    <Link href={`/trace/${encodeURIComponent(id)}?lang=${lang}`} className="link-ink font-semibold text-ink">
+                    <Link href={`/trace/${encodeURIComponent(id)}?lang=${lang}`} className="link-ink inline-flex min-h-11 items-center font-semibold text-ink">
                       {t("case.trace.link")}
                     </Link>
                   </div>

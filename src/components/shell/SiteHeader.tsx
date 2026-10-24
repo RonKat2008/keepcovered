@@ -29,7 +29,7 @@ export function SiteHeader({ children }: { children?: React.ReactNode }) {
         {t("nav.skip")}
       </a>
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 pb-2 pt-4 sm:px-8 sm:pt-6">
-        <Link href={`/?lang=${lang}`} className="rounded-md" aria-label="KeepCovered">
+        <Link href={`/?lang=${lang}`} className="inline-flex min-h-11 items-center rounded-md" aria-label="KeepCovered">
           <Wordmark />
         </Link>
         <div className="flex items-center gap-2">

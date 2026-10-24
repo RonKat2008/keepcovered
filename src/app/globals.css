@@ -73,12 +73,12 @@
   /* Signal colors (text-safe on paper) */
   --meets: #1d6a46;
   --meets-tint: #d9e8dc;
-  --short: #8f5a07;
+  --short: #7a4c04;
   --short-bar: #d39121;
   --short-tint: #f4e3bf;
   --unsure: #3d3796;
   --unsure-tint: #e0def3;
-  --missing: #77746c;
+  --missing: #5e5b54;
   --missing-tint: #e2ddd2;
 
   /* shadcn tokens mapped onto the palette */
@@ -124,7 +124,7 @@
   --short-tint: #3d3018;
   --unsure: #a8a2f2;
   --unsure-tint: #2a2a52;
-  --missing: #8f8c85;
+  --missing: #aaa79f;
   --missing-tint: #262b35;
   --destructive: #f08a74;
   --grain-opacity: 0.18;
@@ -203,7 +203,7 @@
   .hatch {
     background-image: repeating-linear-gradient(
       -45deg,
-      color-mix(in oklab, var(--missing) 38%, transparent) 0 2px,
+      color-mix(in oklab, var(--missing) 30%, transparent) 0 2px,
       transparent 2px 7px
     );
   }

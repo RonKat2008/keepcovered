@@ -51,14 +51,29 @@ export function Questionnaire({ answers, onChange }: Props) {
               <span>{text}</span>
             </p>
             <div role="radiogroup" aria-labelledby={labelId} className="mt-3 flex flex-wrap gap-2 pl-7">
-              {CHOICES.map((c) => {
+              {CHOICES.map((c, ci) => {
                 const checked = answers[q.id] === c.value;
+                // Radio-group contract: one tab stop per question, arrow keys move and select.
+                const hasChoice = answers[q.id] !== undefined;
+                const isTabStop = hasChoice ? checked : ci === 0;
                 return (
                   <button
                     key={c.value}
                     type="button"
                     role="radio"
                     aria-checked={checked}
+                    tabIndex={isTabStop ? 0 : -1}
+                    onKeyDown={(e) => {
+                      const step = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
+                      if (step === 0) return;
+                      e.preventDefault();
+                      const target = CHOICES[(ci + step + CHOICES.length) % CHOICES.length];
+                      onChange({ ...answers, [q.id]: target.value });
+                      const group = e.currentTarget.parentElement;
+                      requestAnimationFrame(() =>
+                        group?.querySelector<HTMLElement>(`[data-value="${target.value}"]`)?.focus(),
+                      );
+                    }}
                     data-question={q.id}
                     data-value={c.value}
                     onClick={() => {

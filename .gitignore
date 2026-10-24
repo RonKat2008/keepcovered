@@ -44,3 +44,4 @@ uploads/
 /test-results/
 /playwright-report/
 .env*.local
+docs/demo/*.webm

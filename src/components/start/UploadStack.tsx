@@ -113,7 +113,7 @@ export function UploadStack({ items, isScanning, onRemove, showList = true }: Pr
               <button
                 type="button"
                 onClick={() => onRemove(item.id)}
-                className="inline-flex size-9 shrink-0 items-center justify-center rounded-full text-ink-soft hover:bg-paper-deep hover:text-ink"
+                className="inline-flex size-11 shrink-0 items-center justify-center rounded-full text-ink-soft hover:bg-paper-deep hover:text-ink"
                 aria-label={t("flow.upload.remove", { name: item.name })}
                 disabled={isScanning}
               >

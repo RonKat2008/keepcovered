@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter_Tight } from "next/font/google";
+import { LangSync } from "@/components/lang/LangSync";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${fraunces.variable} ${interTight.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <LangSync />
         {children}
         <Toaster />
       </body>

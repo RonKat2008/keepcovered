@@ -29,7 +29,7 @@ export function TraceView({ id }: { id: string }) {
     <>
       <SiteHeader />
       <main id="main" className="mx-auto w-full max-w-6xl flex-1 px-4 pb-24 pt-8 sm:px-8 sm:pt-12">
-        <Link href={`/case/${encodeURIComponent(id)}?lang=${lang}`} className="link-ink text-[0.95rem] font-semibold text-ink">
+        <Link href={`/case/${encodeURIComponent(id)}?lang=${lang}`} className="link-ink inline-flex min-h-11 items-center text-[0.95rem] font-semibold text-ink">
           {t("trace.back")}
         </Link>
         <h1 className="mt-4 font-display text-title font-medium text-ink">{t("trace.title")}</h1>
@@ -71,7 +71,12 @@ export function TraceView({ id }: { id: string }) {
           </div>
         </dl>
 
-        <div className="mt-8 overflow-x-auto rounded-2xl border border-rule bg-sheet">
+        <div
+          className="mt-8 overflow-x-auto rounded-2xl border border-rule bg-sheet"
+          role="region"
+          aria-label={t("trace.title")}
+          tabIndex={0}
+        >
           <table className="w-full min-w-[56rem] border-collapse text-left text-[0.88rem]">
             <thead>
               <tr className="border-b-2 border-ink text-[0.8rem] text-ink-soft">

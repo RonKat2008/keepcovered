@@ -57,6 +57,7 @@ export function PortalAgentView({ id }: { id: string }) {
   const [sketchPage, setSketchPage] = useState<"signin" | "report" | "upload" | "review">("signin");
   const [filled, setFilled] = useState<Record<string, string>>({});
   const logId = useRef(0);
+  const reviewTitleRef = useRef<HTMLHeadingElement>(null);
   const pendingPoint = useRef<Point | null>(null);
 
   const pushLog = useCallback((text: string, simulated?: boolean) => {
@@ -192,11 +193,20 @@ export function PortalAgentView({ id }: { id: string }) {
 
   const showSheet = phase === "review" || phase === "submitting";
 
+  // When the review sheet first appears, move focus to its heading so keyboard and
+  // screen-reader users land on it instead of searching the page for the Submit button.
+  const isReviewing = phase === "review";
+  useEffect(() => {
+    if (!isReviewing) return;
+    const id = window.setTimeout(() => reviewTitleRef.current?.focus(), 150);
+    return () => window.clearTimeout(id);
+  }, [isReviewing]);
+
   return (
     <MotionConfig reducedMotion="user">
       <SiteHeader />
       <main id="main" className="mx-auto w-full max-w-6xl flex-1 px-4 pb-[28rem] pt-8 sm:px-8 sm:pt-12 lg:pb-24">
-        <Link href={`/case/${encodeURIComponent(id)}?lang=${lang}`} className="link-ink text-[0.95rem] font-semibold text-ink">
+        <Link href={`/case/${encodeURIComponent(id)}?lang=${lang}`} className="link-ink inline-flex min-h-11 items-center text-[0.95rem] font-semibold text-ink">
           {t("portal.back")}
         </Link>
         <h1 className="mt-4 font-display text-title font-medium text-ink">
@@ -328,7 +338,12 @@ export function PortalAgentView({ id }: { id: string }) {
             <div className="pt-2">
               <span className="mx-auto mb-3 block h-1.5 w-12 rounded-full bg-rule" aria-hidden />
               <div className="flex items-center justify-between gap-3">
-                <h2 id="review-title" className="font-display text-[1.6rem] font-medium text-ink">
+                <h2
+                  id="review-title"
+                  ref={reviewTitleRef}
+                  tabIndex={-1}
+                  className="font-display text-[1.6rem] font-medium text-ink outline-none"
+                >
                   {t("portal.review.title")}
                 </h2>
                 <button
@@ -342,7 +357,7 @@ export function PortalAgentView({ id }: { id: string }) {
                 </button>
               </div>
             </div>
-            <div id="review-body">
+            <div id="review-body" inert={isSheetCollapsed}>
             <p className="mt-1 text-[0.98rem] text-ink-soft">{t("portal.review.body")}</p>
             {summary && <p className="mt-3 text-[0.98rem] leading-relaxed text-ink">{summary}</p>}
             <table className="mt-4 w-full border-collapse text-left text-[0.9rem]">

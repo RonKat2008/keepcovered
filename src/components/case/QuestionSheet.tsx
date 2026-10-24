@@ -38,22 +38,60 @@ export function QuestionSheet({ queue, answeredCount, isOpen, onAnswer, onDismis
   const reduced = useReducedMotion();
   const [sending, setSending] = useState<string | null>(null);
   const firstRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
   // Portals need document.body, which only exists on the client.
   const mounted = useSyncExternalStore(noopSubscribe, () => true, () => false);
   const question = isOpen ? (queue[0] ?? null) : null;
 
+  const isShown = question !== null;
+  const questionId = question?.id;
+
+  // Remember where focus was so closing the sheet puts the driver back there.
   useEffect(() => {
-    if (!question) return;
+    if (!isShown) return;
+    returnFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    return () => {
+      const el = returnFocusRef.current;
+      returnFocusRef.current = null;
+      if (el && document.contains(el)) el.focus();
+    };
+  }, [isShown]);
+
+  useEffect(() => {
+    if (!questionId) return;
     const id = window.setTimeout(() => firstRef.current?.focus(), 120);
+    return () => window.clearTimeout(id);
+  }, [questionId]);
+
+  // Escape closes; Tab stays inside the sheet (it is aria-modal).
+  useEffect(() => {
+    if (!isShown) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onDismiss();
+      if (e.key === "Escape") {
+        onDismiss();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const nodes = dialogRef.current?.querySelectorAll<HTMLElement>("button:not([disabled]), [href], input, [tabindex]:not([tabindex='-1'])");
+      if (!nodes || nodes.length === 0) return;
+      const first = nodes[0];
+      const last = nodes[nodes.length - 1];
+      const active = document.activeElement;
+      if (!dialogRef.current?.contains(active)) {
+        e.preventDefault();
+        first.focus();
+      } else if (e.shiftKey && active === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     window.addEventListener("keydown", onKey);
-    return () => {
-      window.clearTimeout(id);
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [question, onDismiss]);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isShown, onDismiss]);
 
   if (!mounted) return null;
 
@@ -95,6 +133,7 @@ export function QuestionSheet({ queue, answeredCount, isOpen, onAnswer, onDismis
             aria-hidden
           />
           <motion.div
+            ref={dialogRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="question-title"
@@ -104,6 +143,12 @@ export function QuestionSheet({ queue, answeredCount, isOpen, onAnswer, onDismis
             transition={{ type: "spring", stiffness: 340, damping: 32 }}
             className="relative w-full max-w-lg overflow-hidden rounded-t-[1.75rem] bg-sheet px-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-20px_50px_-20px_rgba(26,34,50,0.5)] sm:mb-6 sm:rounded-[1.75rem]"
           >
+            {/* Polite announcement for each new question; the visible text below is not live itself. */}
+            <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+              {total > 1 ? t("question.counter", { n: answeredCount + 1, total }) : t("question.title")}
+              {". "}
+              {lang === "es" ? question.prompt_es : question.prompt_en}
+            </p>
             <div className="mx-auto mb-4 h-1.5 w-12 rounded-full bg-rule" aria-hidden />
             <div className="flex items-center justify-between gap-3">
               <p className="text-[0.9rem] font-semibold text-unsure">

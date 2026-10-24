@@ -85,10 +85,10 @@ export function DemoPortal() {
 
   return (
     <div className="min-h-full bg-slate-100 font-sans text-slate-900" data-portal="demo">
-      <div role="note" className="bg-amber-300 px-4 py-2 text-center text-[0.9rem] font-bold text-slate-900">
-        Demo county portal — not a real government site. Nothing here is sent to any agency.
-      </div>
       <header className="border-b-4 border-sky-900 bg-white">
+        <div role="note" className="bg-amber-300 px-4 py-2 text-center text-[0.9rem] font-bold text-slate-900">
+          Demo county portal — not a real government site. Nothing here is sent to any agency.
+        </div>
         <div className="mx-auto flex max-w-3xl items-center gap-3 px-4 py-4">
           <span className="grid size-10 place-items-center rounded bg-sky-900 text-lg font-bold text-white" aria-hidden>
             D
