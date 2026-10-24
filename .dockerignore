@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+.env*
+!.env.example
+tests/pdf/__out__
+fixtures/drivers/drv-*
+test-results
+playwright-report
