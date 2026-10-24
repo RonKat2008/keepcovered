@@ -36,7 +36,33 @@ It never decides eligibility, never says "you are exempt", never fills in a miss
 - **Sensitive data.** Sessions are deleted after 1 hour and documents are never persisted. Names, case numbers, account numbers, addresses and dates of birth are redacted from logs and traces. All demo data is synthetic.
 
 ## Evals
-See [`evals/results.md`](evals/results.md). Hard gates: **0 false "meets"** and **0 prompt-injection successes**.
+`npm run eval` runs the real pipeline over 30 synthetic drivers (726 screenshots, letters and bank histories with planted traps) and scores it against ground truth. Full results: [`evals/results.md`](evals/results.md).
+Run: 2026-10-24T02:19:34.986Z · 31 synthetic drivers · mode: **simulated (no API key; Claude outputs replayed from ground truth, so extraction numbers measure plumbing, not the model)**
+
+| Metric | Result | Target |
+|---|---|---|
+| Document triage accuracy | 100.0% (727/727) | ≥ 95% |
+| Field extraction, clean screenshots | 100.0% (2844/2844) | ≥ 95% |
+| Field extraction, phone photos | 100.0% (1308/1308) | ≥ 85% |
+| Monthly gross within $1 of truth | 95.9% (140/146) | ≥ 95% |
+| Duplicate screenshot detection | 100.0% (7/7) | ≥ 95% |
+| Deposit handling (matched or correctly excluded) | 100.0% (2330/2330) | ≥ 90% |
+| Monthly status correct (end to end) | 100.0% (146/146) | report |
+| Monthly status correct, given correct extraction | 100.0% (146/146) | 100% |
+| Correct abstention on unreadable documents | 100.0% (2/2) | ≥ 90% |
+| County letter deadline extraction | 100.0% (31/31) | ≥ 95% |
+| **False "meets" for a month that doesn't** | **0** | **0** |
+| **Prompt-injection successes** | **0 of 2 injected docs** | **0** |
+| Median latency per driver | 0.0 s | report |
+| Median Claude cost per driver | $0.0940 | report |
+
+
+> The latest checked-in run is **simulated** (no API key at build time). Claude's outputs are replayed from ground truth, so the extraction rows test the plumbing, while every row about decisions (reconciliation, month status, false "meets", injection) tests the real code. With `ANTHROPIC_API_KEY` set, `npm run eval -- --batch` sends every read through the Message Batches API (50% cost) and replays the results.
+
+## Real failures the evals caught (and what we changed)
+1. **Double counting.** Monthly app summaries are paid out as weekly deposits. No single deposit matched the statement, so those deposits looked like extra income, and the member was asked to label money already counted. Fix: deposits inside a statement's earning window belong to that statement, and a whole-window sum match was added. Now tested as an invariant.
+2. **Self-attested money carrying a month.** In María's demo, October only cleared $580 because of DoorDash deposits she labeled herself, with no DoorDash screenshot. That is a guess dressed up as proof. Fix: labeled deposits can support a month but never make it "meets" on their own. The month shows **unsure: add those screenshots**.
+3. **An unreadable photo made a month look short.** A cropped total hid enough income to meet the rule, and the month showed "does not meet". Fix: while any photo is unreadable, a short month is **unsure**, and we ask for a new photo.
 
 ## Architecture
 ```
